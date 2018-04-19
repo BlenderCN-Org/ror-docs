@@ -4,8 +4,8 @@ site_author: Rigs of Rods Community
 site_url: http://anotherfoxguy.com/ror-docs/
 
 repo_name: RigsOfRods/docs.rigsofrods.org
-repo_url: https://github.com/RigsOfRods/docs.rigsofrods.org
-edit_uri: master/docs/
+repo_url: https://github.com/AnotherFoxGuy/ror-docs
+edit_uri: blob/master/docs/
 
 copyright: 'Copyright &copy; 2018 Rigs of Rods Community'
 
