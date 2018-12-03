@@ -11,6 +11,6 @@ copyright: 'Copyright &copy; 2018 Rigs of Rods Community'
 
 theme:
   name: 'material'
-
-extra_css:
-  - 'stylesheets/extra.css'
+  palette:
+    primary: 'grey'
+    accent: 'orange'
