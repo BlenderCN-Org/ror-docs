@@ -6,7 +6,7 @@ categories: [terrain-creation]
 
 
 
-# Basic Principle
+## Basic Principle
 
 The tracks are simple meshes that are placed on the map.
 They have a collision mesh on which all rail vehicles drive.
@@ -27,7 +27,7 @@ Main reason is the nodecount, e.g. on a 4 axle wagon we can save approx.
 
 ![](/images/rail-vehicles-basic-concept2.jpg)
 
-## Basic node and beam principles
+### Basic node and beam principles
 
 To make your rail vehicle working well, you need to obtain certain principles.
 
@@ -44,7 +44,7 @@ To make your rail vehicle working well, you need to obtain certain principles.
 * Make your wheels very hard using the spring and damping options.
 * Make the bogie node and beam very stiff using `set_beam_defaults`.
 
-## Building a railway line
+### Building a railway line
 
 When you want to create your track layout in a 3d modeling program (Blender, 3ds Max),
 you need to make sure the coordinates in the 3d modeling program are the same as in RoR.
@@ -70,21 +70,21 @@ Move the pivot point of the track to (0, 0, 0) and export the mesh.
 Now you just need to place it on (0, 0, 0) in the terrn file and probably get the angles right.
 Everything should be ingame then.
 
-# Making track by extracting spline from heightmap
+## Making track by extracting spline from heightmap
 
 If you choose to place your track using a 3d modeling program, you can also
 generate track from a spline
 
-## Introduction
+### Introduction
 
 This tutorial is made in 3ds Max, but should also be valid for Blender.
 It will show you how to extract a Spline from a heightmap and use it for placing roads or railway lines.
 
-## Step 1
+### Step 1
 
 Convert heightmap raw to bmp with ImageMagick
 
-## Step 2
+### Step 2
 
 Create a plane in 3ds Max, apply a 3d displacement modifier, load your converted heightmap
 and assign the height found in the maps *.cfg there.
@@ -92,39 +92,39 @@ Subdivide your plane to the accuracy you want
 ![](/images/rail-track-heightmap-spline-1.jpg)
 
 
-## Step 3
+### Step 3
 
 Create a spine representing the longitudinal track layout
 ![](/images/rail-track-heightmap-spline-2.jpg)
 
-## Step 4
+### Step 4
 
 Convert the heightmap to a poly object
 
-## Step 5
+### Step 5
 
 Extrude the spline to make it solid
 
 ![](/images/rail-track-heightmap-spline-3.jpg)
 
-## Step 6
+### Step 6
 
 Choose the spline solid, add a ProBoolean modifier, check substract, choose the heightmap solid
 
-## Step 7
+### Step 7
 
 Choose the outermost edge of the resulting body, right click, choose create contour ->now you have your spline following the heightmap
 
 ![](/images/rail-track-heightmap-spline-4.jpg)
 ![](/images/rail-track-heightmap-spline-5.jpg)
 
-## Step 8
+### Step 8
 
 Use the Lofting tool to create a road or train track.
 Correct your spline, twist the loft for banked curves, texture etc.
 You can also use the normalize spline modifier for better accuracy or smoothness.
 
-# See also
+## See also
 
 If you have a question on the system, please post to
 *TODO: fix old forum link*

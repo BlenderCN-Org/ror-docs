@@ -13,7 +13,7 @@ If you're new to terrain creation, read [intro to terrain creation](/terrain-cre
 <br>
 <br>
 
-# Terrain 2 (.terrn2) file format
+## Terrain 2 (.terrn2) file format
 
 ``` bash
 # ==============================================================================
@@ -103,7 +103,7 @@ If you're new to terrain creation, read [intro to terrain creation](/terrain-cre
 
 Generate GUID for your map: <http://www.guidgenerator.com/>
 
-# Ogre Terrain Config (.otc)
+## Ogre Terrain Config (.otc)
 
 ``` bash
 # ==============================================================================
@@ -218,7 +218,7 @@ MaxPixelError=3
 DebugBlendMaps=false
 ```
 
-# Ogre Terrain Page Config (.otc)
+## Ogre Terrain Page Config (.otc)
 
 The terrain consists of pages. Number of pages is defined by PagesX and PagesZ (described above). There must be at least 1 page.
 
@@ -226,13 +226,13 @@ For each page, there must be an .otc file. File name format is set by PageFileFo
 
 The page-config file specifies a heightmap to use for the page and terrain texture layers.
 
-## Format overview
+### Format overview
 
 -   **Line1:** Heightmap <span style="color:#BD0058">(file name)</span>. For example: my\_heightmap.png
 -   **Line2:** Number of layers <span style="color:#BD0058">(integral number in range 1-6)</span> The OgreTerrain component has a limit of 6 layers (5 blendmaps)
 -   **Line3 and further:** Layer definitions (see below)
 
-## Layer definitions
+### Layer definitions
 
 -   Lines starting with semicolon ''' ' ; ' ''' are comments
 -   Layer definition line has these values, separated by ''' ' , ' ''' comma :
@@ -249,7 +249,7 @@ Layers \#1 - \#5 only cover areas which have a corresponding color in the **blen
 
 For explanation of used images, see [Images & color channels](/tools-tutorials/images-color-channels)
 
-## Example
+### Example
 
 ``` bash
 31-heightmap.png
@@ -265,7 +265,7 @@ For explanation of used images, see [Images & color channels](/tools-tutorials/i
 1024 , 31-shadow_diffusespecular.dds , 31-shadow_normalheight.dds , 31-shadow.png   , R, 0.8
 ```
 
-# Terrain Objects (.tobj)
+## Terrain Objects (.tobj)
 
 Defines object placement on terrain. More info in archived wikipage "Placing_objects_on_terrains_(For_0.38_and_0.4)"
 

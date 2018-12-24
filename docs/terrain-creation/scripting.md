@@ -6,18 +6,18 @@ categories: [terrain-creation]
 
 
 
-# Event box
+## Event box
 
 this simple example will create an oil depot that reacts on trucks that drive into it.
 
-## Prerequisites
+### Prerequisites
 
 -   move nhelens.zip to the "My Documents/Rigs of Rods/terrains" folder and unpack all its files to a new directory "nhelens"
 -   remove the old nhelens.zip to prevent collisions
 -   Enable "Debug Collision Meshes" in your RoR configurator ('Settings'&gt;'Debug'&gt;'Debug Collision Meshes') to be able to see the debug visualization for events
 -   get an oil-well mesh and a fitting .odef file: <http://forumold.rigsofrods.com/index.php?topic=28551.msg355869#msg355869>
 
-## Defining the event box
+### Defining the event box
 
 Specified using following keywords:
 
@@ -35,7 +35,7 @@ Example:
     event trigger truck
     endbox
 
-## Programming the AngelScript file
+### Programming the AngelScript file
 
 -   create a file named <filename>.terrn.as, so in our case the file should be called "a1da0UID-nhelens.terrn.as" when the terrain we use is called "a1da0UID-nhelens.terrn"
 
@@ -65,7 +65,7 @@ Example:
         calledLast = inst;
     }
 
-## Test-Run
+### Test-Run
 
 you should see something like this:
 
@@ -88,7 +88,7 @@ if you do not see an oil loader, check the AngelScript.log file for errors. With
     17:31:14: Executing main()
     17:31:14: The script finished successfully.
 
-## Result
+### Result
 
 What happens if you drive a truck into the pink event box:
 
@@ -101,7 +101,7 @@ look at your AngelScript.log (on Windows, it's located under MyDocuments\Rigs of
 
     02:55:05: SE| my-oil-well-1 event triggered
 
-## Whats next
+### Whats next
 
 you could:
 
@@ -109,7 +109,7 @@ you could:
 -   direct the user to the oil unloading station after "loading the oil" (sleeping) for some time
 -   increase the node weight of a certain node inside of the tanker trailer to simulate the loaded oil.
 
-## Advanced Examples
+### Advanced Examples
 
 for example this script will create two oil rigs and will redirect the user to collect and drop oil between them:
 
@@ -230,7 +230,7 @@ Adding a race (advanced method)
 
 The easiest way to explain this method is by looking at some examples.
 
-### North Saint Helens
+#### North Saint Helens
 
 This example script is usable to add a race to the North Saint Helens terrain (a1da0UID-nhelens.terrn).
 
@@ -317,7 +317,7 @@ void eventCallback(int eventnum, int value) {
 
 ```
 
-### Island
+#### Island
 
 This example script is usable to add a race to the Island terrain (496aUID-island.terrn).
 
@@ -352,7 +352,7 @@ void eventCallback(int eventnum, int value) {
 
 ```
 
-### Bajarama
+#### Bajarama
 
 This example script shows a race with an unlimited amount of laps (a never ending race). It is usable with the Bajarama terrain (8c07UID-bajarama.terrn).
 
@@ -393,7 +393,7 @@ void eventCallback(int eventnum, int value) {
 
 ```
 
-### Flat Map (v10.1)
+#### Flat Map (v10.1)
 
 This example script illustrates how to add multiple races to one terrain and is usable for the Flat Map terrain (f4afUID-flat\_map\_full32xa.terrn).
 
@@ -456,7 +456,7 @@ void eventCallback(int eventnum, int value) {
 }
 ```
 
-### F1 Test Track
+#### F1 Test Track
 
 This example script illustrates how to use custom checkpoint objects and multiple races on one terrain. The script can be used with the F1 Test Track terrain (2af11UID-f1\_testtrack.terrn).
 
@@ -561,7 +561,7 @@ void eventCallback(int eventnum, int value) {
 }
 ```
 
-### F1 Test Track (with penalty events)
+#### F1 Test Track (with penalty events)
 
 We can also penalty events if the player hits a specific part of the checkpoint.
 
@@ -719,15 +719,15 @@ void on_penaltyEvent(dictionary@ info)
 2.  Another way to add penalty seconds is using the [races.addPenaltySeconds(int seconds)](http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2) method.
 3.  You can also register callback functions for other events: <http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2>
 
-# More Advanced Functionality
+## More Advanced Functionality
 
-## Documentation and questions
+### Documentation and questions
 
 See [reference manual](http://development.rigsofrods.org/angelscript/). Studying the script files of other terrains may also greatly help you.
 
 In case of questions/suggestions/complains, get in touch [in the forums](http://www.rigsofrods.org/forum-19.html).
 
-## Example: Extending RacesManager
+### Example: Extending RacesManager
 
 Here's an example where we inherit from the racesManager class and add functionality. (In this case, we limit the allowed vehicles, so the race won't start if certain vehicles aren't used). You can test this script by adding it to the North Saint Helens terrain.
 

@@ -6,11 +6,10 @@ categories: [terrain-creation]
 
 A collision mesh is a "substitute" or "replacement" mesh for a given model. Except, this mesh does not replace the original model, it is transparent and simplifies your model. It does not simplify how it looks, but how it behaves as an object in Rigs of Rods. For example, if you want to model a log cabin with a detailed roof, drainpipes, and window frames, then the framerate/physic lag in Rigs of Rods would be a single digit. However, a collision mesh will make it behave like it is the most simple model out there. Now that you \[hopefully\] comprehend this concept, let's begin the tutorial.
 
-How to make a collision mesh
-============================
+## How to make a collision mesh
 
-Step I: Getting the Resources
------------------------------
+### Step I: Getting the Resources
+
 
 In order to success in this tutorial/guide, you must have the following programs and utilities. SketchUp will be used as an example, but any other modeling program with an OGRE exporter shall work fine.
 
@@ -20,8 +19,7 @@ In order to success in this tutorial/guide, you must have the following programs
 
 [1](http://wiki.rigsofrods.com/pages/Making_an_object_in_Google_SketchUp) (For object placement and more information)
 
-Step II: Modeling the complex object
-------------------------------------
+### Step II: Modeling the complex object
 
 If you have a profession in SketchUp, you may know how to make some pretty nice stuff. For example, here is a complex house I made.
 
@@ -33,8 +31,7 @@ If you have a profession in SketchUp, you may know how to make some pretty nice 
 
 As you may see, I get ~25 frames-per-second, while I normally get ~100 around a simpler object. A collision mesh will polish up the framerate and physic lag.
 
-Step III: Modeling the collision mesh
--------------------------------------
+### Step III: Modeling the collision mesh
 
 You want to make the collision mesh be exactly around the model, or else it will be out of place. My best suggestion is to model over it, but snapping your model to the original model. So, here is my model:
 
@@ -48,8 +45,7 @@ As you may see, I left out the window detail, door detail, roof detail, the stai
 
 Once you are done modeling it, make sure it is right around your model.
 
-Step IV: The exporting process
-------------------------------
+### Step IV: The exporting process
 
 Once it is put next to the model (make sure they are separate groups), select only ONE of them, and click the following...
 
@@ -80,8 +76,7 @@ Then the series of windows pop up.
 
 You are done exporting!
 
-Step V: Editing in notepad
---------------------------
+### Step V: Editing in notepad
 
 As a standard procedure for SketchUp, go to the following directory:
 
@@ -126,7 +121,7 @@ Once I placed the object, look how much better my framerate is compared to the o
 
 ![](/images/collisionmeshes-house-ingame-2.png)
 
-# Collision Mesh Troubleshooting
+## Collision Mesh Troubleshooting
 
 So you just made an absolutely amazing \[insert amazing, knock-your-socks-off object for RoR here\] If you're like me, the reason you've been procrastinating so much on exporting is because you don't want to deal with the complicated and irritating task of getting collision meshes to work. They never seem to work the first time, and you can't identify the problem, resulting in gray hairs, chronic anxiety, and eventual cardiac failure if the problem persists. This guide will give you some helpful hints as to fixing the problems. Please note: By "failures" I mean the truck falls through the mesh and gets stuck.
 

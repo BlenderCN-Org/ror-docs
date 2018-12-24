@@ -3,10 +3,7 @@ layout: page
 title:  "Object format (.odef)"
 categories: [terrain-creation]
 ---
-
-
-
-# Introduction
+### Introduction
 
 The `.odef` format specifies a static object that can be placed on a terrain.
 These files are placed in the same zip as the object's mesh files. Rigs of Rods will not load the object if the file does not exist!
@@ -50,7 +47,7 @@ The `.odef` file must be always closed with `end`
 
 If there are no Begin box nor Begin mesh sections, the object will be throughable.
 
-# Commands
+## Commands
 
 These commands can be called outside or inside a beginbox or beginmesh
 
@@ -58,7 +55,7 @@ These commands can be called outside or inside a beginbox or beginmesh
 
 For example you create a file called `myRedBuilding.odef` and inside you specify `setMeshMaterial myRedColor`, `myRedColor` is defined on any .material file you need to create.
 
-# Begin box
+## Begin box
 
 Specifies a box that can be used for collisions or events.
 
@@ -98,7 +95,7 @@ endbox
 
 Whenever the character (RoRbot) enters the box specifies by boxcoords, a trigger `shopplane` will be triggered, so the spawn menu will be shown.
 
-# Begin mesh
+## Begin mesh
 
 You can use a existing mesh that RoR collision system will use.
 
@@ -124,7 +121,7 @@ endmesh
 end
 ```
 
-# Animations
+## Animations
 
 If your object has an animation you can play it with this additional line:
 
@@ -136,7 +133,7 @@ Example from the terrain [Fall Run](https://forum.rigsofrods.org/downloads.php?d
 
 Notes: These objects wont be collide-able, and the animation will loop forever
 
-# Particles
+## Particles
 
 You can add chimneys or other particle effects to your object using this:
 

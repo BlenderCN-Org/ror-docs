@@ -6,11 +6,11 @@ categories: [terrain-creation]
 
 
 
-# Introduction
+## Introduction
 
 As of Rigs of Rods 0.4.x, terrain objects are stored in `.tobj` files, they contain placements for all objects/trees/grass/etc on a terrain. This page will show you how to add/move terrain objects. There are multiple ways to do this, however this page will only explain the two easiest methods.
 
-# Adding a new object
+## Adding a new object
 
 For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/downloads.php?do=file&id=6) using Rigs of Rods version 0.4.7.0.
 
@@ -59,7 +59,7 @@ Save the file and reopen Rigs of Rods. Your new object should appear roughly whe
 
 To precisely place your object, you can use the built-in "terrain/object editor" that is included with 0.4.7.0. I'll explain how to use it below.
 
-# Moving objects
+## Moving objects
 
 Note: The editor cannot move roads/Paged Geometry trees/grass.
 

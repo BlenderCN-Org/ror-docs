@@ -8,11 +8,11 @@ categories: [terrain-creation]
 
 Creating a terrain for Rigs of Rods is quite technically involved and largely manual process. This page aims to give you an overview of required work, as well as guides and advice for your own projects.
 
-# Anatomy of terrain
+## Anatomy of terrain
 
 Before you start making your own terrain, you need to know and understand what does a terrain consist of and how it all works together.
 
-## Ground
+### Ground
 
 Obviusly the most signifficant part of the terrain. Ground provides a surface for land vehicles to drive on, airplanes to take off from/land on etc. Ground has shape, physical properties like friction and visual attributes.
 
@@ -24,13 +24,13 @@ Visual appearence is archieved using tiling textures, texture blending (a.k.a sp
 
 An alternative approach to creating ground is to implement it as static object. In this case, none of the above applies. The shape would be defined by the mesh (3d model) geometry. Physics property setup is different. Visual appearence is specified by material script.
 
-## Water
+### Water
 
 Another typical part of a landscape. Bodies of water can vary in size from small ponds to lakes and seas.
 
 RoR implements water as a single body covering the whole map and penetrating all objects. It's specified as "water height" attribute of the map. All areas below the specified height will be flooded.
 
-## Static objects
+### Static objects
 
 Anything that doesn't move. Mostly buildings of all kinds, but also roads, structures like bridges, and finally roads and other tracks.
 
@@ -40,15 +40,15 @@ Static objects may also have a collision mesh and associated friction settings, 
 
 Static object may also trigger special events. A "truck shop" building will, when entered, will display a vehicle menu. A "load spawner" deck will bring up a menu with trailers and loads. And so on.
 
-## Stationary dynamic objects
+### Stationary dynamic objects
 
 Stationary or semi-stationary objects like cranes, hall doors, bridges or wind turbines are made from dynamic physical model, just like vehicles, except they're completely or partially fixed to the ground.
 
-# The basic structure
+## The basic structure
 
 Terrains are distributed as ZIP archives containing a set of terrain-definition files and various resources. A terrain _must_ be in a ZIP archive, otherwise it doesn't load correctly.
 
-## The files
+### The files
 * **.terrn2**: Entry point for the terrain. This is the only required file for a terrain to have.
 
 ```
@@ -109,7 +109,7 @@ Note that, there is no editor which would create these files for you. You need t
 
 Templates can be found [here.](https://forum.rigsofrods.org/content-creation/150-template-raw-png-terrains.html).
 
-## The heightmap
+### The heightmap
 
 As said above, RoR's primary mechanism for shaping a terrain are heightmaps. We use 8-bit or 16-bit unsigned integer RAW heightmaps. As of 0.4.x, using a PNG image for the heightmap is also supported.
 
@@ -166,78 +166,78 @@ NormalMappingEnabled=0
 
 Example for a PNG heightmap:
 ```
-# the amount of pages in this terrain
-# 0, 0 means that you only have one page
+## the amount of pages in this terrain
+## 0, 0 means that you only have one page
 PagesX=0
 PagesZ=0
 
 PageFileFormat=my-terrain-page-{X}-{Z}.otc
 
-# the factor with what the heightmap values get multiplied with
+## the factor with what the heightmap values get multiplied with
 WorldSizeY=0
 
-# The world size of the terrain
+## The world size of the terrain
 WorldSizeX=3000
 WorldSizeZ=3000
 
-# Sets the default size of blend maps for a new terrain. This is the resolution of each blending layer for a new terrain. default: 1024
+## Sets the default size of blend maps for a new terrain. This is the resolution of each blending layer for a new terrain. default: 1024
 LayerBlendMapSize=2048
 
-# disableCaching=1 will always enforce regeneration of the terrain, useful if you want to change the terrain config (.otc) and test it. Does not cache the objects on it.
+## disableCaching=1 will always enforce regeneration of the terrain, useful if you want to change the terrain config (.otc) and test it. Does not cache the objects on it.
 disableCaching=1
 
 #optimizations
 
-# Minimum batch size (along one edge) in vertices; must be 2^n+1. The terrain will be divided into tiles, and this is the minimum size of one tile in vertices (at any LOD). default: 17
+## Minimum batch size (along one edge) in vertices; must be 2^n+1. The terrain will be divided into tiles, and this is the minimum size of one tile in vertices (at any LOD). default: 17
 minBatchSize=17
 
-# Maximum batch size (along one edge) in vertices; must be 2^n+1 and <= 65. The terrain will be divided into hierarchical tiles, and this is the maximum size of one tile in vertices (at any LOD). default: 65
+## Maximum batch size (along one edge) in vertices; must be 2^n+1 and <= 65. The terrain will be divided into hierarchical tiles, and this is the maximum size of one tile in vertices (at any LOD). default: 65
 maxBatchSize=65
 
-# Whether to support a light map over the terrain in the shader, if it's present (default true).
+## Whether to support a light map over the terrain in the shader, if it's present (default true).
 LightmapEnabled=1
 
-# Whether to support normal mapping per layer in the shader (default true).
+## Whether to support normal mapping per layer in the shader (default true).
 NormalMappingEnabled=1
 
-# Whether to support specular mapping per layer in the shader (default true).
+## Whether to support specular mapping per layer in the shader (default true).
 SpecularMappingEnabled=1
 
-# Whether to support parallax mapping per layer in the shader (default true).
+## Whether to support parallax mapping per layer in the shader (default true).
 ParallaxMappingEnabled=0
 
-# Whether to support a global colour map over the terrain in the shader, if it's present (default true).
+## Whether to support a global colour map over the terrain in the shader, if it's present (default true).
 GlobalColourMapEnabled=0
 
-# Whether to use depth shadows (default false).
+## Whether to use depth shadows (default false).
 ReceiveDynamicShadowsDepth=0
 
-# Sets the default size of composite maps for a new terrain, default: 1024
+## Sets the default size of composite maps for a new terrain, default: 1024
 CompositeMapSize=1024
 
-# Set the distance at which to start using a composite map if present, default: 4000
+## Set the distance at which to start using a composite map if present, default: 4000
 CompositeMapDistance=5000
 
-# the default size of 'skirts' used to hide terrain cracks, default: 30
+## the default size of 'skirts' used to hide terrain cracks, default: 30
 SkirtSize=30
 
-#  Sets the default size of lightmaps for a new terrain, default: 1024
+##  Sets the default size of lightmaps for a new terrain, default: 1024
 LightMapSize=1024
 
-# Whether the terrain will be able to cast shadows, default: 0
+## Whether the terrain will be able to cast shadows, default: 0
 CastsDynamicShadows=0
 
-# Set the maximum screen pixel error that should  be allowed when rendering, default:
+## Set the maximum screen pixel error that should  be allowed when rendering, default:
 MaxPixelError=0
 
-# dump the blend maps to files named blendmap_layer_X.png
+## dump the blend maps to files named blendmap_layer_X.png
 DebugBlendMaps=0
 ```
 
 
 
 
-## Ground textures
+### Ground textures
 
 See also: [Ogre Terrain Page Config (.otc)](/terrain-creation/terrn2-subsystem/#ogre-terrain-page-config-otc)
 
@@ -274,7 +274,7 @@ mapname.raw
 5, mapname_Cracked2_DS.dds,mapname_Cracked_NM.dds,mapname_RGB.png, G, 1.0
 ```
 
-# Static objects
+## Static objects
 
 All static objects/grass/etc on a terrain are defined in a `.tobj` file, multiple of these files can be defined in the `.terrn2`.
 
