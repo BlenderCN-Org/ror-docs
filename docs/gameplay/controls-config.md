@@ -6,15 +6,15 @@ categories: [gameplay]
 
 
 
-# Intro
+## Intro
 
 Rigs of Rods is a simulator which strives for maximum reallism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.
 
 Input is configured by editing configuration file [input.map](#config-file-inputmap) or by using the [Input Mapping Tool](#configuring-controls-with-the-input-mapping-tool). In-game configuration of controls is not implemented yet.
 
-# Keyboard layout
+## Keyboard layout
 
-## General keys
+### General keys
 
 ![](/images/input-map-general.png)
 
@@ -55,7 +55,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td style="color: #127220">Increase time change rate</td><td style="color: #127220">Shift (Use in combination with Inc./Dec. time keys)</td></tr>
 </table>
 
-## Land vehicle keys
+### Land vehicle keys
 
 ![](/images/input-map-truck.png)
 
@@ -129,7 +129,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
 	<tr><td>COMMANDS 84</td><td>CTRL + SHIFT + ALT + F12</td></tr>
 </table>
 
-## Aerial and marine keys
+### Aerial and marine keys
 
 ![](/images/input-map-aerial-and-marine.png)
 
@@ -189,7 +189,7 @@ because some planes could have more than 4 engines and you couldn't control them
     <tr><td>Respawn Last Vehicle</td><td>Ctrl+.(period)</td></tr>
 </table>
 
-# Config file 'input.map'
+## Config file 'input.map'
 
 For all keys, see the [input.map](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/input.map) file on GitHub.
 
@@ -206,11 +206,11 @@ This binds the <b>BOAT\_CENTER\_RUDDER</b> event to the <b>Down</b> arrow on you
 
 A list of all valid events can be found in the [Keypress Events](#keypress-events) section.
 
-## Keyboard
+### Keyboard
 
 For the keyboard there are several special things:
 
-### Modifiers:
+#### Modifiers:
 -   <b>CTRL</b>
 -   <b>SHIFT</b>
 -   <b>ALT</b>
@@ -219,7 +219,7 @@ Combine them with a + sign. Example:
 
     CAMERA_FREE_MODE    Keyboard    EXPL+SHIFT+C
 
-### The EXPL tag
+#### The EXPL tag
 
 A special keyword used in defining commands.
 
@@ -233,7 +233,7 @@ In this example, COMMANDS_01 would be triggered if you press CTRL+F1, as F1 is p
     COMMANDS_01                    Keyboard             F1
     COMMANDS_13                    Keyboard             CTRL+F1
 
-### List of usable keys
+#### List of usable keys
 
 ```
 0
@@ -383,11 +383,11 @@ Z
 ```
 
 
-## Joystick, Wheel or gamepad
+### Joystick, Wheel or gamepad
 
 This category covers all analogue input devices detected by the operating system, so all gamepads, joysticks, wheels, pedals, etc.
 
-### JoystickButton
+#### JoystickButton
 
 Arguments:
 
@@ -398,7 +398,7 @@ Arguments:
 AIRPLANE_THROTTLE_DOWN    JoystickButton    0    2
 ```
 
-### JoystickAxis
+#### JoystickAxis
 
 Arguments:
 
@@ -418,7 +418,7 @@ Arguments:
 AIRPLANE_STEER_RIGHT    JoystickAxis    0    1    UPPER+DEADZONE = 0.15
 ```
 
-### JoystickPov
+#### JoystickPov
 
 Arguments:
 
@@ -431,7 +431,7 @@ Arguments:
 CHARACTER_FORWARD    JoystickPov    0    0    North
 ```
 
-### JoystickSlider, JoystickSliderX, JoystickSliderY
+#### JoystickSlider, JoystickSliderX, JoystickSliderY
 
 Arguments:
 
@@ -444,7 +444,7 @@ Arguments:
 TRUCK_MANUAL_CLUTCH    JoystickSliderY    0    Y    0    REVERSE+DEADZONE = -30
 ```
 
-# Keypress Events
+## Keypress Events
 
 **Keypress event identification in RoR 0.4.7.0+**
 
@@ -694,16 +694,16 @@ TRUCK_TOGGLE_VIDEOCAMERA
 TRUCK_TRACTION_CONTROL      
 ```
 
-# Mouse
+## Mouse
 
 
-### Required applications
+#### Required applications
 
 [vJoy joystick emulator](http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download)
 
 [FreePIE input emulator](http://andersmalmgren.github.io/FreePIE/index.html)
 
-### Setting up the input map and FreePIE script
+#### Setting up the input map and FreePIE script
 
 After installing the above applications, download [this zip file](/download/RoR_Mouse_Control.zip) which contains the required input map and FreePIE script.
 
@@ -711,7 +711,7 @@ There will be two files in the zip: `vJoy_Device.map` and `MouseControl.py`.
 
 Extract both files into `Documents\Rigs of Rods 0.4\config`.
 
-### Using FreePIE
+#### Using FreePIE
 
 Open FreePIE and press `File -> Open`. Browse to the `MouseControl.py` file you downloaded earlier:
 
@@ -735,23 +735,23 @@ For example the numbers `40` and `80` in the script are the sensitivity of the c
 
 Mouse middle button in the script above, will reset the axises in game, in this case the steering and throttle.
 
-# Configuring controls with the Input Mapping Tool
+## Configuring controls with the Input Mapping Tool
 
 The easiest way to configure your device for use in Rigs of Rods is to use the [Input Mapping Tool](https://forum.rigsofrods.org/downloads.php?do=file&id=156).
 
-## vJoy Conflicts
+### vJoy Conflicts
 
 **NOTE: If you have vJoy installed, you will have to disable it before running the tool!**
 
 ![vJoyDisable](/images/vJoyDisable.png)
 
-## Launching the tool
+### Launching the tool
 
 After downloading, extract the zip into a new folder. Then double-click `Run.bat` to launch the tool.
 
 ![5](/images/InputMappingTool-1.png)
 
-## Adding new inputs
+### Adding new inputs
 
 To begin adding inputs, click `Add`.
 
@@ -782,7 +782,7 @@ Repeat the process for all the inputs you want to add.
 
 Once you're done, it's time to export the keymap.
 
-## Exporting the keymap
+### Exporting the keymap
 
 First, you'll need to get the correct file name of your file.
 

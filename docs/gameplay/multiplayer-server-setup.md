@@ -8,7 +8,7 @@ categories: [gameplay]
 
 This tutorial will guide you through the process of setting up a Rigs of Rods multiplayer server.
 
-# Assumptions
+## Assumptions
 
 Ok, so some people probably don't understand a lot of this so I'm going to explain it as simply as possible.
 
@@ -19,7 +19,7 @@ Ok, so some people probably don't understand a lot of this so I'm going to expla
 -   IP Addresses: IP addresses are like the computer's version of a name. Each computer has a unique name and part of that is the IP address.'' This is the only important part if you are running a LAN server''
 -   How to find, change, and test all of the above
 
-## Bandwidth
+### Bandwidth
 
 Before you begin it is important for you to test the speed of your internet connection, most importantly your upload speed.
 
@@ -33,7 +33,7 @@ Take a look at the upload speed. On the image above it displays 361kb/s as an up
 As of RoRnet\_2.1, when starting the server you may append "-speed" as a command.
 Input your upload speed in kilobits and the maximum amount of users will be automatically determined. For example: rorserver -speed 361
 
-## Ping
+### Ping
 
 Ping is also a determining factor as to how enjoyable playing on your server will be. Consider the following:
 
@@ -95,7 +95,7 @@ See how much farther the packets have to travel to reach the second server than 
 
 This is important to consider when it comes to deciding if it is realistic for you to be hosting a server on your computer. If you have people physically near you, even if you have a not-so-fast connection, your clients will experience a much more enjoyable game than the clients who are connected to the server that is physically located across the world from them on a faster connection. As a real-world example, think about how in online multiplayer games you rarely see someone from North America playing on a European server.
 
-## Packet Loss
+### Packet Loss
 
 Packet loss is the next important issue we will cover. Think about the words "packet loss". In simple terms, if you experience packet loss, some packets that are being set to/from the client/server are being lost, or dropped. This packet loss can cause a number of things, such as delayed reactions of what the client sees and what the server "sees". Packet loss can be tested by the ping command. Lets look closely again at the ping commands that we performed above:
 
@@ -105,7 +105,7 @@ Packet loss is the next important issue we will cover. Think about the words "pa
 
 No packets were lost in this transmission. If you see a number larger than say, 1-2%, this is of concern because the symptoms discussed above may occur.
 
-# Port Forwarding
+## Port Forwarding
 
 Chances are that if you are on a home connection, then your computer is connected to one of those boxes such as D-Link, Linksys, Netgear, etc., which are often called "Routers," or even ISRs (Integrated Service Routers \[Cisco terminology\]) -- they are a combination of a tiny router, a firewall, and DHCP server, and a switch and a few other components which may be configured by the user, or more formally the network administrator. Anyway, if you are not behind one of these boxes, or your computer that will act as a server is connected directly to the internet, you can probably skip this section.
 
@@ -121,7 +121,7 @@ You need to forward one of the following:
 
 -   TCP Port range 12000-12500.
 
-## How to Open a port on your Router
+### How to Open a port on your Router
 
 I will be using a generic D-Link system for this tutorial. Please check your manual or the link above for your own equipment.
 
@@ -139,19 +139,19 @@ I will be using a generic D-Link system for this tutorial. Please check your man
 
 You should have successfully opened a port now!
 
-## Troubleshooting
+### Troubleshooting
 
 Didn't enter a correct Port number: **port numbers are usually 12000-12500**
 
 Server can't register at master server: **You didn't forward correctly. Try again**
 
-# Creating a Rigs of Rods Server
+## Creating a Rigs of Rods Server
 
 We're now ready to start setting up the Rigs of Rods server.
 
-## Windows
+### Windows
 
-### Pre-built packages
+#### Pre-built packages
 
 If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
 
@@ -160,7 +160,7 @@ If you don't want to compile the server yourself, you can download the correct p
 [For 0.38.67 to 0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
 
 
-### Building yourself
+#### Building yourself
 The programs listed below are required to build the server, restart your computer after installing all the below tools!
 
 - [Visual Studio 2015 Community Edition](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409) C++ tools must be installed:
@@ -171,132 +171,13 @@ The programs listed below are required to build the server, restart your compute
 
 - [Git](https://git-scm.com/) (Leave all options to their defaults)
 
-### Getting the source
+#### Getting the source
 
 Create a folder where you want the source to be ( I will be using `C:\ror-server`)
 
 While in the folder, do `SHIFT + Right click -> Open command prompt window here`.
 
 A Command Prompt window should now be open.
-
-Depending on what RoR version you are using, the clone command will be different.
-
-### 0.4.7.0
-
-If you want to run a server for 0.4.7.0, run this command:
-
-`git clone https://github.com/Michael10055/ror-server-rornet238.git`
-
-### Latest GitHub commit/AppVeyor builds
-
-To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
-
-`git clone https://github.com/RigsOfRods/ror-server.git`
-
-### 0.38.67 to 0.4.6RC3
-
-If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
-
-`git clone https://github.com/Michael10055/ror-server-rornet237.git`
-
-After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
-
-### Running CMake
-Open CMake, input the source and build paths:
-
-![cmake1](/images/cmake-1-server.png)
-
-Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
-
-![cmake2](/images/cmake-2-server.png)
-
-Click `Finish`.
-
-(**Optional**) Change build options - It is highly recommended to enable Angelscript support.
-
-![cmake3](/images/cmake-3-server.png)
-
-It is highly recommended to enable Angelscript support.
-
-Click `Configure` again till all fields are white then press `Generate`.
-
-You should now have a `build` folder with `rorserver.sln` inside of it.
-
-### Compiling
-
-Open `rorserver.sln`
-
-Set the build to `Release`
-
-![vs2](/images/VS-server-release.png)
-
-Click `Build -> Build Solution
-
-![vs3](/images/VS-server-build.png)
-
-Wait for it to compile. Your build should be successful.
-
-![vs4](/images/VS-server-finish.png)
-
-You should now have `rorserver.exe` inside of the `bin` directory.
-
-### Configuration
-Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
-
-![f1](/images/server-config-1.png)
-
-Rename the files: (example: `tutorial-`):
-
-![f2](/images/server-config-2.png)
-
-
-Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page. If you're running your server on a VPS, you most likely can skip this step.
-
-If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future), see the [Setting up admins/moderators](#userauth-setup) section.
-
-### Running the server
-In the `bin` directory,
-`SHIFT + Right click -> Open command prompt window here`
-
-To start the server:
-
-`rorserver.exe -c your-config.cfg`
-
-Your server should now be running and registered on the server list!
-
-To stop the server, press `CTRL+C` or close the command prompt.
-
-## Linux
-(requires a `terminal` and `sudo` access)
-
-#### Required tools
-(Debian/Ubuntu)
-
-- `sudo apt-get install build-essential`
-- `sudo apt-get install nano`
-- `sudo apt-get install cmake`
-- `sudo apt-get install git`
-
-(CentOS)
-
-- `sudo yum groupinstall 'Development Tools'`
-- `sudo yum install nano`
-- `sudo yum install cmake`
-- `sudo yum install git`
-
-### Getting the source
-
-Create rorserver user with no login rights:
-
-`useradd rorserver -s /bin/false`
-
-Make a directory where you want your source to be:
-
-`mkdir ror-server`
-
-Change into the created directory:
-
-`cd ror-server`
 
 Depending on what RoR version you are using, the clone command will be different.
 
@@ -320,11 +201,130 @@ If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
+#### Running CMake
+Open CMake, input the source and build paths:
+
+![cmake1](/images/cmake-1-server.png)
+
+Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
+
+![cmake2](/images/cmake-2-server.png)
+
+Click `Finish`.
+
+(**Optional**) Change build options - It is highly recommended to enable Angelscript support.
+
+![cmake3](/images/cmake-3-server.png)
+
+It is highly recommended to enable Angelscript support.
+
+Click `Configure` again till all fields are white then press `Generate`.
+
+You should now have a `build` folder with `rorserver.sln` inside of it.
+
+#### Compiling
+
+Open `rorserver.sln`
+
+Set the build to `Release`
+
+![vs2](/images/VS-server-release.png)
+
+Click `Build -> Build Solution
+
+![vs3](/images/VS-server-build.png)
+
+Wait for it to compile. Your build should be successful.
+
+![vs4](/images/VS-server-finish.png)
+
+You should now have `rorserver.exe` inside of the `bin` directory.
+
+#### Configuration
+Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
+
+![f1](/images/server-config-1.png)
+
+Rename the files: (example: `tutorial-`):
+
+![f2](/images/server-config-2.png)
+
+
+Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page. If you're running your server on a VPS, you most likely can skip this step.
+
+If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future), see the [Setting up admins/moderators](#userauth-setup) section.
+
+#### Running the server
+In the `bin` directory,
+`SHIFT + Right click -> Open command prompt window here`
+
+To start the server:
+
+`rorserver.exe -c your-config.cfg`
+
+Your server should now be running and registered on the server list!
+
+To stop the server, press `CTRL+C` or close the command prompt.
+
+### Linux
+(requires a `terminal` and `sudo` access)
+
+##### Required tools
+(Debian/Ubuntu)
+
+- `sudo apt-get install build-essential`
+- `sudo apt-get install nano`
+- `sudo apt-get install cmake`
+- `sudo apt-get install git`
+
+(CentOS)
+
+- `sudo yum groupinstall 'Development Tools'`
+- `sudo yum install nano`
+- `sudo yum install cmake`
+- `sudo yum install git`
+
+#### Getting the source
+
+Create rorserver user with no login rights:
+
+`useradd rorserver -s /bin/false`
+
+Make a directory where you want your source to be:
+
+`mkdir ror-server`
+
+Change into the created directory:
+
+`cd ror-server`
+
+Depending on what RoR version you are using, the clone command will be different.
+
+##### 0.4.7.0
+
+If you want to run a server for 0.4.7.0, run this command:
+
+`git clone https://github.com/Michael10055/ror-server-rornet238.git`
+
+##### Latest GitHub commit/AppVeyor builds
+
+To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
+
+`git clone https://github.com/RigsOfRods/ror-server.git`
+
+##### 0.38.67 to 0.4.6RC3
+
+If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
+
+`git clone https://github.com/Michael10055/ror-server-rornet237.git`
+
+After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
+
 Change into the source folder (The folder name might be different depending on which `git clone` command you used):
 
 `cd ror-server`
 
-### Running CMake
+#### Running CMake
 
 (**Optional**) Change build options - It is highly recommended to enable Angelscript support.
 
@@ -342,7 +342,7 @@ cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 
 
 
-### Compiling
+#### Compiling
 
 `make -j2`
 
@@ -352,7 +352,7 @@ Your build should be successful:
 
 You should now have a `rorserver` binary in the `/bin` directory.
 
-### Configuration
+#### Configuration
 
 
 Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
@@ -397,7 +397,7 @@ You will need to port forward your servers port in your router settings. See the
 
 If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future), see the [Setting up admins/moderators](#userauth-setup) section.
 
-### Running the server
+#### Running the server
 
 To start the server:
 
@@ -414,7 +414,7 @@ To stop the server, use the kill command with the `pid`:
 
 `sudo kill pid`
 
-# Troubleshooting
+## Troubleshooting
 
 Many things can go wrong with your server, here's a small selection of problems that may occur:
 
@@ -437,7 +437,7 @@ Many things can go wrong with your server, here's a small selection of problems 
 If you come across a problem, please post in the appropriate [help/support forum](https://forum.rigsofrods.org/forum-15.html).
 If you have a solution for your problem, please add the problem and solution to this list.
 
-# UserAuth setup
+## UserAuth setup
 
 If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future) and have your server working, this section will teach you how to set up the `.auth` file.
 

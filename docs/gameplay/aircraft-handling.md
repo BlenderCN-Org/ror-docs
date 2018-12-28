@@ -4,7 +4,7 @@ title:  "Aircraft handling"
 categories: [gameplay]
 ---
 
-# How to use the autopilot
+## How to use the autopilot
 
 You can find the autopilot on top of your dashboard in a plane. Upon startup it looks like this:
 
@@ -16,7 +16,7 @@ The autopilot has different modes you can engage or disengage by
 pressing the buttons. When you change a value, the change is
 immediately applied to the current mode.
 
-## Heading modes
+### Heading modes
 
 <a href="/images/autopilot-heading.jpg" >
 <img alt="Autopilot heading.jpg" src="/images/autopilot-heading.jpg" width="200" height="40" /></a>
@@ -26,7 +26,7 @@ immediately applied to the current mode.
 </li><li> <b>NAV</b> (Radio Navigation): engage when approaching a runway equipped with an ILS equipment (the red and white antennas). The airplane will first try to intercept the runway axis, then stay along it until you pass the runway edge.
 </li></ul>
 
-### Heading Listings
+#### Heading Listings
 
 <p>This is a list of headings to use for ILS on included maps.
 </p>
@@ -34,7 +34,7 @@ immediately applied to the current mode.
 </li><li>Aspen main runway - 190 degrees
 </li></ul>
 
-### Altitude modes
+#### Altitude modes
 
 <p>
 
@@ -47,18 +47,18 @@ immediately applied to the current mode.
 </li><li> <b>NAV+V/S</b> (Vertical Radio Navigation): when both NAV and V/S are selected, the altitude is controlled by the ILS system. So when approaching a runway with <b>NAV</b>, engage <b>V/S</b> to make the plane descend to the runway.
 </li></ul>
 
-### Speed mode
+#### Speed mode
 
 <ul><li> <b>ATHR</b> (Auto-Throttles) set the speed of the airplane as selected in IAS (Indicated Air Speed, in knots).
 </li></ul>
 
-### other buttons
+#### other buttons
 
 <ul><li> <b>GPWS</b> (Ground Proximity Warning System): when engaged, a recorded voice calls altitude and warns in case of dangerous maneuvers close to the ground.
 </li><li> <b>BRKS</b> (Parking brakes)
 </li></ul>
 
-## Horizontal Navigation Indicator (HSI)
+### Horizontal Navigation Indicator (HSI)
 
 <div class="floatleft">
 
@@ -81,7 +81,7 @@ It includes:
 <p>They tell you how far you are from the optimal trajectory when you do an ILS approach. The optimal position is when both bars are at the center of the display.
 </p>
 
-## How to do a successful instruments approach with the ILS
+### How to do a successful instruments approach with the ILS
 
 <ol><li>ensure the approach you want to do is equipped with an ILS:
 <ul><li>check if there are red and white antennas at the end of the runway, at the side where you will touch down. Be sure the approach is clear of obstacles.

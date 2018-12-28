@@ -10,13 +10,13 @@ categories: [gameplay]
 
 This is the configurator. It is how you set the options for how RoR looks and how it plays. It is also how you access multiplayer servers.
 
-# Video tutorial
+## Video tutorial
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/z60VoTbJao0" frameborder="0" allowfullscreen></iframe>
 
-# Settings
+## Settings
 
-## Render System
+### Render System
 
 -   **Render System** - The rendering system to use. Either D3D9 or OpenGL on Windows, or just OpenGL on Linux/Mac.
 -   **FSAA** - The amount of full screen antialiasing you want.
@@ -25,7 +25,7 @@ This is the configurator. It is how you set the options for how RoR looks and ho
 -   **VSync** - Turns on [vertical synchronization](http://en.wikipedia.org/wiki/Vertical_sync).
 -   **Video Mode** - The resolution you want to play RoR at. Custom resolutions can be specified in [ogre.cfg](ogre.cfg "wikilink"), but note that the truck HUD will not scale properly.
 
-## Graphics
+### Graphics
 
 -   **Texture Filtering** - The type of filtering to do on textures.
 -   **Sky Type** - Type of horizon/sky to use. Sandstorm is essentially no sky while Caelum has a sky and sun with clouds and artificial time.
@@ -42,7 +42,7 @@ This is the configurator. It is how you set the options for how RoR looks and ho
 -   **DOF** - Enable depth of field effect.
 -   **Screenshot Format** - What format to save screenshots in.
 
-## Gameplay
+### Gameplay
 
 -   **Language** - Language to use.
 -   **Default Gearbox Mode** - Default mode for gearbox on cars.
@@ -52,7 +52,7 @@ This is the configurator. It is how you set the options for how RoR looks and ho
 -   **User Token** - User token for Multiplayer.
 -   **disable creak sound** - Disables creaking sound.
 
-## Advanced
+### Advanced
 
 -   **Sound Device** - What device to drive for sounds.
 -   **Thread number** - How many threads RoR can use.
@@ -64,7 +64,7 @@ This is the configurator. It is how you set the options for how RoR looks and ho
 -   **Hydrax Water System** - Experimental high quality water effects. Windows only!
 -   **Disable Overview Map** - For experimenting only!
 
-## Debug
+### Debug
 
 -   **Ingame Console** - Enables scripting console ingame.
 -   **Debug Truck Mass** - Output mass of every node of a truck in [RoR.log](/gameplay/jargon#rorlog)
@@ -81,10 +81,10 @@ This is the configurator. It is how you set the options for how RoR looks and ho
 -   **Preselected Map** - Map selected at startup.
 -   **Preselected Truck** - Truck selected at startup.
 
-# Controls
+## Controls
 
 See [controls and configuration](/gameplay/controls-config)
 
-# About
+## About
 
 Shows detailed information about the version, build date, ect. Also shows credits and used libraries.
