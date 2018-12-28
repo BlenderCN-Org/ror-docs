@@ -3,7 +3,9 @@ site_description: Rigs of Rods project documentation
 site_author: Rigs of Rods Community
 site_url: https://rigsofrods.cf/
 
-repo_name: RigsOfRods/docs.rigsofrods.org
+docs_dir: source
+
+repo_name: AnotherFoxGuy/ror-docs
 repo_url: https://github.com/AnotherFoxGuy/ror-docs
 edit_uri: blob/master/docs/
 
@@ -12,5 +14,5 @@ copyright: 'Copyright &copy; 2018 Rigs of Rods Community'
 theme:
   name: 'material'
   palette:
-    primary: 'grey'
+    primary: 'blue'
     accent: 'orange'
