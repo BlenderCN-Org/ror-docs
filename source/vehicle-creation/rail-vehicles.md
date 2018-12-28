@@ -24,9 +24,9 @@ Please note that this train does not work as well as expected.
 Main reasons are the low mass of the train, the really short wheelbase and the fact
 that tires in RoR are not perfectly round. All this results in a quite bumpy ride.
 
-# Building a small locomotive
+## Building a small locomotive
 
-## Step 1: Bogie
+### Step 1: Bogie
 
 The bogie is the main part of our train.
 It holds the wheels and avoids the train from sliding off the rails.
@@ -40,7 +40,7 @@ Give them a mass of `50`kg using the `l`-option in the nodes section.
 
 ![bogie]
 
-## Step 2: Placement node
+### Step 2: Placement node
 
 In order to spawn the train correctly in the train spawner,
 node `0` needs to be in the center of the train, `0.53` meters below the lowest edge of the wheel (See Fig. 4).
@@ -52,7 +52,7 @@ Node `0` needs to have the `c`-option in the nodes section for no ground detecti
 
 ![fig2-node0]
 
-## Step 3: Wheels
+### Step 3: Wheels
 
 Now it's time to place the wheels between the upper nodes of the bogie.
 Remember to set the radius correctly.
@@ -66,7 +66,7 @@ Fig. 4 ("front view") shows the important sizes of what we have so far
 ![fig3-wheels]
 ![fig4-front-view]
 
-## Step 4: Chassis
+### Step 4: Chassis
 
 It's time to build a chassis and, on this train, connect it directly to the bogie.
 
@@ -75,7 +75,7 @@ It's time to build a chassis and, on this train, connect it directly to the bogi
 
 ![fig5-chassis]
 
-## Step 5: Couplers
+### Step 5: Couplers
 
 Now we add simple couplers to the front and back of the train.
 We are using hooknodes with the auto-lock option.
@@ -85,7 +85,7 @@ We are using hooknodes with the auto-lock option.
 
 ![fig6-couplers]
 
-## Step 6: Support beams
+### Step 6: Support beams
 
 The last step is to add more beams to make the structure stable. We can also add [contacters](/vehicle-creation/fileformat-truck/#contacters) and [ropables](/vehicle-creation/fileformat-truck/#ropables).
 
@@ -100,7 +100,7 @@ The last step is to add more beams to make the structure stable. We can also add
 ![fig8-support-beams-view-right]
 ![fig9-support-beams-view-front]
 
-## Step 7: Tweaking the truckfile
+### Step 7: Tweaking the truckfile
 
 Now the node and beam of our train is finished, now it's time to tweak the truckfile.
 
@@ -109,9 +109,9 @@ Download the finished train and look into the truckfile: [Railrunner](https://fo
 Please note the comments in there!
 
 
-# Building a wagon
+## Building a wagon
 
-## Step 1: Bogie
+### Step 1: Bogie
 
 The bogie is the main part of our wagon. It holds the wagon on the rails.
 It has the shape of a trapezoid prism, the lower side is smaller than the upper.
@@ -124,7 +124,7 @@ Give them a mass of `50`kg using the "l"-option in the nodes section.
 
 ![fig10-wagon-bogie]
 
-## Step 2: Placement node
+### Step 2: Placement node
 
 In order to spawn the wagon correctly in the train spawner,
 node `0` needs to be in the center of the train, `0.53` meters below the upper four nodes of our bogie.
@@ -137,7 +137,7 @@ Node `0` needs to have the "c"-option in the nodes section for no ground detecti
 
 ![fig11-wagon-node0] ![fig12-wagon-sizes]
 
-## Step 4: Chassis
+### Step 4: Chassis
 
 We add the chassis.
 
@@ -146,7 +146,7 @@ We add the chassis.
 
 ![fig13-wagon-chassis]
 
-## Step 5: Couplers
+### Step 5: Couplers
 
 Now we add simple couplers to the front and back of the wagon. We are using hooknodes with the auto-lock option (Attention: disable high quality reflective effects in RoR, otherwise it will crash).
 
@@ -156,7 +156,7 @@ Now we add simple couplers to the front and back of the wagon. We are using hook
 ![fig14-wagon-couplers]
 
 
-## Step 6: Support beams
+### Step 6: Support beams
 The last step is to add more beams to make the structure stable. We can also add contacters and ropables.
 
 [fig15-wagon-supports]: /images/rail-vehicles-tutorial-wagon-supports.png
@@ -170,7 +170,7 @@ The last step is to add more beams to make the structure stable. We can also add
 ![fig16-wagon-supports-right]
 ![fig17-wagon-supports-front]
 
-## Step 7: Tweaking the truckfile
+### Step 7: Tweaking the truckfile
 
 Now the node and beam of our wagon is finished, it's time to tweak the truckfile.
 
@@ -178,9 +178,9 @@ Download the finished train and look into the truckfile: [Railrunner](https://fo
 
 Please note the comments in there!
 
-# Coupling Systems
+## Coupling Systems
 
-## Automatic couplers
+### Automatic couplers
 
 If you want to make your train compatible to BigBoy's American trains (Janney (AAR) coupler),
 this is the coupling system for you. It is a very easy automatic system.
@@ -206,14 +206,14 @@ triggers
 
 ![fig18-wagon-supports-front]
 
-## Buffers and chain coupling
+### Buffers and chain coupling
 
 This is the standard European buffer and chain coupling.
 It is much more complex than the automatic coupling above.
 As this is quite complicated and hard to rebuild, please use the node and beam of the
 [Rbns 641 freight wagon](https://forum.rigsofrods.org/downloads.php?do=file&id=192) as a template.
 
-### Chain coupling
+#### Chain coupling
 
 [fig19-eu-chain-coupling]: /images/rail-vehicles-tutorial-eu-chain-coupling.png
 {: width="100%"}
@@ -256,7 +256,7 @@ triggers
   nd1,   nd2, 0.001, 1.100, -34, -34, icH  ;lock hookgroup -34 (chain goes to rest position)
 ```
 
-### Buffers
+#### Buffers
 
 [fig24-eu-buffers-height]: /images/rail-vehicles-tutorial-eu-buffers-height.png
 {: width="100%"}
@@ -271,7 +271,7 @@ One side has a contactable slidenode connected to a shock. The other side has a 
 
 ![fig25-eu-buffers-principle]
 
-# Troubleshooting
+## Troubleshooting
 
 Q: My train is stuck in the rail or positioned wrong when spawning:
 

@@ -12,11 +12,11 @@ categories: [tools-tutorials]
 
 
 
-# Introduction
+## Introduction
 
 Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing existing meshes using Blender, from installing the plug-ins to exporting.
 
-# Required software
+## Required software
 
 - [Blender](https://www.blender.org/download/) (2.78c at the time of writing)
 - [Blender2ogre plug-in](/download/blender2ogre-0.6.0.zip)
@@ -25,7 +25,7 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 - (Optional) [OgreCommandLineTools-Windows](https://sourceforge.net/projects/ogre/files/ogre-tools/1.7.2/OgreCommandLineTools_1.7.2.zip/download) (If you don't want to use the OgreXMLConverter located in your RoR install directory)
 - (Optional) [OgreMeshTool](https://code.google.com/archive/p/ogre-meshtool/downloads)
 
-# Getting started
+## Getting started
 
 If you're following this tutorial, chances are you probably already have a mesh you want to edit. In this tutorial I'll be editing Box5Diesel's Ram EXT.
 Open the `.zip` file for the vehicle, and extract the correct `.mesh` file(s) and the textures (`.dds`, `.png`, etc) into a folder you can easily access:
@@ -56,7 +56,7 @@ You should now have a `.mesh.xml` file in the same folder:
 
 We're ready to launch Blender now.
 
-# Installing Blender plug-ins
+## Installing Blender plug-ins
 
 First, download the two plug-ins from the links above and place them in any folder. **Do not extract.**
 
@@ -81,7 +81,7 @@ Once both plug-ins are enabled, select "Save User Settings":
 
 You can now close the `User Preferences` window.
 
-# Importing the mesh
+## Importing the mesh
 
 Select `File` -> `Import` -> `Torchlight OGRE (.mesh)`:
 
@@ -112,7 +112,7 @@ It should look similar to this now:
 
 ![12](/images/blender-edit-objectsjoined.png)
 
-# Fixing object shading
+## Fixing object shading
 
 You'll probably notice that your mesh is very blocky/has lots of shading errors. To fix this:
 
@@ -136,7 +136,7 @@ The `Edge Split` Modifier should now be selected. The default `Split Angle` (30)
 
 ![17](/images/blender-edit-edgesplit2.png)
 
-# Applying the texture
+## Applying the texture
 
 Now we can apply the texture. Press the `TAB` key to go into Edit Mode if you're not in it already and click the circle icon on the bottom left -> `UV/Image Editor`:
 
@@ -169,13 +169,13 @@ It should now look similar to this:
 
 ![24](/images/blender-edit-applyingtexture7.png)
 
-# Editing the mesh
+## Editing the mesh
 
 You're now ready to start editing the mesh. For this tutorial, I removed the stacks from the bed:
 
 ![25](/images/blender-edit-editedmesh.png)
 
-# Setting the object name and material
+## Setting the object name and material
 
 Go to the right tool menu and select the triangle icon -> Change the name. This will be the name of your object when you export it:
 
@@ -191,7 +191,7 @@ To find your material name, either look at the object name or open the `.mesh.xm
 
 ![29](/images/blender-edit-mat2.png)
 
-# Exporting
+## Exporting
 
 Before we export, if you moved the object while editing it you will need to apply `Scale/Rotation/Location` by pressing `CTRL+A` otherwise it will be placed wrong in-game:
 
@@ -216,7 +216,7 @@ If you want to "preview" your `.mesh` instead of going in-game, you can use Ogre
 
 ![35](/images/blender-edit-preview-ogremeshtool.png)
 
-# Testing in-game
+## Testing in-game
 
 Now just edit the `.truck` file to match the name of your new mesh and drag the new mesh file back into the `.zip` and test in-game:
 
@@ -225,7 +225,7 @@ Now just edit the `.truck` file to match the name of your new mesh and drag the 
 Congratulations!
 
 
-# Troubleshooting
+## Troubleshooting
 
 **Q:** My mesh is flipped in-game!
 

@@ -12,7 +12,7 @@ To make trucks in Rigs of Rods, you need to understand how the game functions. R
 
 Vehicles are specified using [truck file format](/vehicle-creation/fileformat-truck). You can edit it using Notepad, Wordpad, or a basic text editor of your choice. Be prepared to devote a chunk of time to learning the syntax and testing your vehicle!
 
-# Planning
+## Planning
 
 It is wise to plan your truck before you begin your work in RoR. Things to keep in mind:
 
@@ -24,7 +24,7 @@ Often you build a strong chassis base that supports a cab structure, lowers the 
 
 A good chassis is **strong**, **light** (less nodes, more frames per second) and is **modular** so that other parts of the vehicle can be attached (cab, suspensions, loads, and etc.).
 
-## The draft
+### The draft
 
 This example will walk through a minimalistic design: a single-cell cubic structure, with three segments. It is a good idea to start out simple, as a complex design can lead to frustration.
 
@@ -32,7 +32,7 @@ This example will walk through a minimalistic design: a single-cell cubic struct
 
 Yes, we are going to do this sorry piece of soapbox... ;-)
 
-## The Blueprint
+### The Blueprint
 
 Now that we know the big picture, we do a scaled plan of the truck. Using drawing paper and a pen saves a lot of time, and is **very important** for the next steps, because the drawing will serve as a reference for nodes, and having this sheet of paper under the keyboard helps a lot! This is also the time to find the dimensions (1.00 unit in RoR = 1 meter) of the truck.
 
@@ -46,11 +46,11 @@ Notice the reference vectors:
 -    Y id bottom to top
 -    Z right to left
 
-# The truck file
+## The truck file
 
 Create a text file in the _MyDocuments\Rigs of Rods XX\vehicles_ directory. Call it _tutorial.truck_.
 
-## Required sections
+### Required sections
 
 Not including certain sections can yield different results, from making the vehicle explode upon spawning, to its nonappearance in the selection menu.
 
@@ -74,7 +74,7 @@ After adding the nodes, define some points of reference on the chassis with the 
     ;x,y,z,bindings
     0.5, 0.5, 1.0, 0,1,2,3,4,5,6,7
 
-## Nodes and Beams
+### Nodes and Beams
 
 Don't forget that nodes are perfect ball joints, not shaped connectors. If you create a box of only structural beams, it will fold. You need to add reinforcements.
 
@@ -192,6 +192,6 @@ Here is the chassis rendered in RoR:
 
 ![](/images/softbody-tutorial-soapbox-hull-ingame.jpg)
 
-# Weight tuning
+## Weight tuning
 
 See: [Weight tuning](/vehicle-creation/weight-tuning/)

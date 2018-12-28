@@ -11,23 +11,23 @@ The engine sections are used for vehicles which are driven through their wheels 
 
 This section specifies torque, gearing and RPM ranges of the engine being used.
 
-# Settings  
+## Settings  
 
 See [fileformat-truck#engine](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#engine) for reference manual.
 
-# Torque  
+## Torque  
 
 Tuning torque in RoR is a tricky topic, since the current air resistance simulation is overstrong. Setting torque to provide realistic acceleration at low speeds results in severely stunted top speeds. Setting it to provide higher top speeds results in very strong acceleration.
 
 Engine Inertia also has a **VERY** important role in engine behavior since this value also determines how fast a vehicle can accelerate
 
-## Differential ratio  
+### Differential ratio  
 
 Differential ratio represents gear reduction ratio between input pinion gear and the ring gear of the differential. This parameter acts as global gear conversion ratio.
 
 It means that if, lets say first gear has ratio `13.86` and differential ratio is `2.0`, actual first gear reduction is `27.72` `(2.0 * 13.86)`. If you are using real gearbox parameters, bear this in mind and look for real differential ratios too.
 
-## Gear ratios
+### Gear ratios
 
 Gear ratios of forward gears. For every turn of the wheel must engine turn this many times (not counting the differential ratio). When setting various gear ratios, try to make smaller difference between higher gears.
 
@@ -35,7 +35,7 @@ Please note that in sample gear setting the difference (ratio) between first and
 
 There must be between 3 and 15 forward gears. **The last gear must be followed by a `-1` value.**
 
-## More information
+### More information
 
 A great source of practical gear ratios is from [Eaton Fuller](http://www.roadranger.com/Roadranger/productssolutions/transmissions/index.htm).
 
@@ -48,14 +48,14 @@ If your vehicle decelerates in a gear you may not have enough power, or too high
 
 If you know a little about vehicles there is a [Gear Ratio Guide](http://www.grimmjeeper.com/gears.html), but a decent knowledge of transmissions, transfer cases, underdrives and correct rear end gears is highly recommended.
 
-# Engoption
+## Engoption
 
 This optional section allows the user to specify whether the engine is for a car or heavy truck and the engine inertia of the vehicle.
 
-## Settings  
+### Settings  
  See [fileformat-truck#engoption](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#engoption) for reference manual.
 
-## Engine Inertia  
+### Engine Inertia  
 
 The default game value is `10.0`, which is correct for a large diesel engine, Use higher values to make engines accelerate more slowly and stall more difficultly, which may be useful for vehicles towing large masses. This value should be lowered for smaller, light engines (Is the multiplier different for car and truck engines?)
 
@@ -65,14 +65,14 @@ If your engine doesn't change its RPM's during gear change, your engine inertia 
 
 If a vehicle is feeling sluggish, and hard to brake, it is better to decrease the inertia than increase the brake force, and torque.
 
-## Engine Type  
+### Engine Type  
 
 Using `c` for cars or `t` for trucks specifies characteristics of the engines.
 
 Car engines use a different sound to truck engines and have no turbocharger. They also have less inertia by default. (t) is the default.
 
 
-## Torque Curve
+### Torque Curve
 
 This section allows you to define a torque curve for your vehicle. It is optional.
 

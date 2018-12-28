@@ -6,14 +6,14 @@ categories: [vehicle-creation]
 
 
 
-# Wings
+## Wings
 
 Wings in RoR are a little bit of magic.
 They introduce aerodynamic effects onto planes, boats, and trucks.
 Although propulsion engines (motors, props, screws) cannot be combined,
 wings can be added to any sort of vehicle to provide aerodynamic force.
 
-## Introduction
+### Introduction
 The wing section declares parts of the chassis as wings, and that they should bear aerodynamic forces. Each line of this section designs a '''wing segment''', that is a homogeneous part of a wing. You can (and you should!) make a plane's wing from several contiguous wing segments. Rudder and elevators are also made with one or more wing segments.
 
 Each wing segment is bounded by 8 nodes, that defines the "bounding box" of the wing, specifically its span, chord and thickness. You must ensure that these nodes are properly interconnected by beams to ensure the structural integrity of the wing.
@@ -22,7 +22,7 @@ Each wing segment is bounded by 8 nodes, that defines the "bounding box" of the 
 
 A very important aerodynamic parameter is the wing airfoil. The airfoil is the tear-like shape of the wing, and its exact geometry is very important for the characteristics and performances of real-world wings. RoR uses precomputed performances curves from standard airfoils, interpolated from wing tunnel tests. These curves are stored in .afl files.
 
-## Airfoils
+### Airfoils
 
 Standard airfoils provided in RoR are:
 * NACA64.1.412 - actual airfoil of the wing tip of the Hercules C-130
@@ -34,7 +34,7 @@ You can get more airfoil from the popular X-Plane flight simulator.
 RoR is compatible with X-Plane .afl, but you must convert their end-of-line
 style from MacOS to Windows using an advanced text editor, or RoR will crash.
 
-## Example Wing
+### Example Wing
 Here's an example:
 
 ![](/images/aerial-wing-example.jpg)
@@ -65,7 +65,7 @@ wings
 22,20,21,19,24,26,23,25, 0.509, 0.999, 0.555, 0.751, 0.752, 0.999, 0.752, 0.751, n, 1.0, 0, 0, NACA64.1.412.afl
 ```
 
-# Air Brakes
+## Air Brakes
 
 (Version 0.35 or later)
 
@@ -97,7 +97,7 @@ airbrakes
 95, 105, 113, 125, 0.2, 0.0, 0.0, 2.0, 3.0, 60.0, 0.044, 0.205, 0.124, 0.146
 ```
 
-# Propeller engines
+## Propeller engines
 
 To add a propeller engine to your creation, first you need to make the
 node and beam part of the engine (its the same for either type of engine, turboprop or pistonprop).
@@ -161,7 +161,7 @@ props
 
 ![](/images/aerial-propellers-softbody4.png)
 
-## Turboprops section
+### Turboprops section
 
 Now that you have everything done in the props section we can move on to the turboprops section.
 
@@ -194,7 +194,7 @@ turboprops
 0,5,1,2,3,4, 3000.0, Clark-Y.afl
 ```
 
-## Pistonprops section
+### Pistonprops section
 
 The pistonprops section is pretty much the same as the turboprops section only with 2 more parameters and different sounds in-game.
 
@@ -215,7 +215,7 @@ pistonprops
 0,5,1,2,3,4, -1, 3000.0, -10, Clark-Y.afl
 ```
 
-## Set_beam_defaults
+### Set_beam_defaults
 Its quite possible that you will have to use set_beam_defaults to make it so that your engine doesn't explode once you have it spinning. First I would try with out using set_beam_defaults and if the engines explode when spinning I would add set_beam_defaults to the engines beams and raise the deform and break values until you can run the engine at full throttle with out it breaking.
 The settings that this example uses may be a bit extreme but you get the idea.
 
@@ -233,7 +233,7 @@ set_beam_defaults that the example engine uses:
 set_beam_defaults -1, -1, 2000000, 3000000,
 ```
 
-# Fusedrag
+## Fusedrag
 
 A fuse drag can be used for a couple of things.
 

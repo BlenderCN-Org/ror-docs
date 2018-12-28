@@ -6,7 +6,7 @@ categories: [vehicle-creation]
 
 
 
-# Introduction
+## Introduction
 
 <b><font color="red">SUMOWEIGHT ?</font></b>
 
@@ -41,7 +41,7 @@ Spawns in the street cars (146) category.
 
 <b><font color="green">Step by step weight tuning</font></b>
 
-# Minimass
+## Minimass
 
 [Truck file format - minimass](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#minimass)
 
@@ -56,7 +56,7 @@ You can use [set_node_defaults](http://docs.rigsofrods.org/vehicle-creation/file
 
 A minimass setting lower then you minimum loadweight to a node makes no sense and will not provide any benefit.
 
-# Set_beam_defaults
+## Set_beam_defaults
 
 [Truck file format - set_beam_defaults](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#set_beam_defaults)
 
@@ -70,7 +70,7 @@ For lightweight nodes always use LOW damping settings, if you want parts of your
 
 NEVEREVER use high dampings, they are responsible for truck explosions at spawn most of the times.
 
-# Wheels
+## Wheels
 
 [Truck file format - wheels](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#wheels)
 
@@ -85,7 +85,7 @@ If the wheels collapse too often or explode when hitting a wall, gently add some
 
 Increasing the spring rate gently works fine too. Test in small steps until you are satisfied.
 
-# Overall weight
+## Overall weight
 
 [Truck file format - globals](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#globals)
 
@@ -100,7 +100,7 @@ Please note: Your load weight in this line ( second entry ) should be at least t
 
 it does NOT apply to the truck weight if you set it higher then the actual sum of your loadweights.
 
-# Shocks
+## Shocks
 
 [Truck file format - shocks/shocks2](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#shocks)
 
@@ -117,7 +117,7 @@ If your trucks spawns stable, gently alter spring and damping settings until you
 
 Overall guideline: lightweight trucks use low numbers ;)
 
-# Engine/Engoption/Brakes
+## Engine/Engoption/Brakes
 
 [Truck file format - engine](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#engine)
 
@@ -137,7 +137,7 @@ brakes
 
 Low settings for torque, brakes and clutch avoid exploding wheels at higher speeds and while braking hard.
 
-# Fusedrag
+## Fusedrag
 
 [Truck file format - fusedrag](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#fusedrag)
 
@@ -148,7 +148,7 @@ fusedrag
 
 Your truck not accelerating propper and wheels spinning fast ? Use a small fusedrag.
 
-# Testing
+## Testing
 
 Open RoRConfig -> Debug tab -> Select "Beam Break Debug". This will log broken beams to the RoR.log file (Located in `Rigs of Rods/logs/RoR.log`), a vital tool for weight tuning.
 

@@ -8,7 +8,7 @@ categories: [vehicle-creation]
 
 Before we begin, we need to ensure some basic understanding of flares, nodes, and planes (no, not the flying type).
 
-# The Definition of a Flare
+## The Definition of a Flare
 
 Flares are basically lights that originate
 from a set of chosen nodes, which can be manipulated via the appropriate
@@ -16,7 +16,7 @@ values in the `.truck`, `.load`, `.trailer`, .`boat` or `.plane` file.
 There are multiple types of flares, ranging from brake lights,
 to turn signals, to headlights, to specialty lighting.
 
-# The Coordinate Plane
+## The Coordinate Plane
 
 Flares operate on a different coordinate plane than nodes,
 for some reason. Note these changes:
@@ -51,13 +51,13 @@ for some reason. Note these changes:
 <td> Front/Back
 </td></tr></table>
 
-# Time Warning
+## Time Warning
 
 Furthermore, be advised that adding flares to a vehicle
 will sometimes take quite a bit of time, depending on the type of vehicle,
 number of nodes, number of flares, etc. You've been warned.
 
-# Preparing the chassis
+## Preparing the chassis
 
 Before we begin, you'll absolutely need a truck editor, such as the [Editorizer](/tools-tutorials/visual-editors).
 
@@ -84,7 +84,7 @@ If you cannot find REF,X,Y nodes because they aren't where you want the lights
 you can add three nodes, in the same fashion as noted above, and use them to base your flares off of,
 but that's too advanced to go in this tutorial.
 
-# Getting to Know Notepad
+## Getting to Know Notepad
 
 Next up is man's best friend--the Windows notepad. If you're using another operating system,
 and/or another editor, that's fine, as long as it can save in ANSI format--it'll save you problems later on.
@@ -99,7 +99,7 @@ Once the line "flares" is added, you'll need to hit enter once, starting a new s
     ;RefNode,X,Y,OffsetX,OffsetY, Type, ControlNumber, BlinkDelay, size MaterialName
 
 
-# Tutorial
+## Tutorial
 
 So imagine a flat plane with 4 nodes, the direction of the planes face up, down, left or right determines where your flare will be.
 
@@ -160,7 +160,7 @@ Same thing apply for rear lights, top lights, side lights, just needs to have a 
 
 <hr>
 
-# Syntax
+## Syntax
 
 Borrowed from [Truck file format](/vehicle-creation/fileformat-truck#flares):
 
@@ -191,7 +191,7 @@ Hint: Use the material name `tracks/aimflare` for help in positioning a flare.
 
 Alright, back on topic: below the syntax, you should begin listing your nodes, keeping in mind their location on the vehicle, and the coordinate plane. You'll probably need to save, open up RoR, and test out the flares quite a few times before the placement of the flare is perfect.
 
-# Adding Symmetrical Flares  
+## Adding Symmetrical Flares  
 
 Okay, so you finally have that headlight, taillight, marker light, whatever-light
 in place. Now, you need one for the opposite side. Never fear, however, because
@@ -224,7 +224,7 @@ This guide uses headlamps as an example, but this technique can be used to place
 
 
 
-# Troubleshooting Flares
+## Troubleshooting Flares
 
 Should the flare seem to stick to the interior of the vehicle when you select REF, X and Y nodes from the left side of the chassis, just use three nodes&nbsp;directly opposite on the right side of the chassis&nbsp;instead.&nbsp; This should thereby make the flare stick to the outside of the vehicle.
 
@@ -232,14 +232,14 @@ If you had to add nodes to a vehicle to place flares, and the flares seem to swi
 
 If a flare isn't illuminating when you attempt to turn it on, verify that the syntax is correct; the flare line has the correct REF, X & Y nodes; that it is of the correct type; and that the control number (if it's a user-controlled light) is correct.  The flare could be showing up inside the vehicle, check the wireframe (hit K).  If this is the case, see above.
 
-# Custom flares
+## Custom flares
 
 Some times, default flares get a little boring, because there are not enough flash patterns or not enough colors. In this tutorial, you will learn how to make your own flare texture and your own flash patterns.
 
 If you want to make your own custom flare textures, you will need a decent photo-editing program.
 
 
-## Making your flare texture
+### Making your flare texture
 
 (You only need this step if you want to make your own flare texture/color. If you will use default flares, skip to step 3)
 
@@ -259,7 +259,7 @@ For this tutorial, I will go with `Flash1`. Following that step, you must make a
 
 Once you have saved the flashes, put them into the vehicle's `.zip` file you will be editing.
 
-## The Material file and the Material code
+### The Material file and the Material code
 
 Locate the `.material` file in your vehicles .ZIP folder and open it with notepad. You will need to copy and paste the following code below...
 
@@ -332,7 +332,7 @@ material tracks/Flash1
 
 Save your `.material` file after completing this.
 
-## Editing the truck file
+### Editing the truck file
 
 Open the `.truck` file, and find the [flares](/vehicle-creation/fileformat-truck#flares) section. To test these flashes, I would use the headlights as an example. So copy the headlight codes, and paste them below. You may have to change them from headlights, to custom flares. So if you see this in the headlight line: f, -1, you need to change that to: u, 1 because that makes it a user controlled flare (A flare you activate by pressing Ctrl+1)
 Then, instead of end of the headlight code saying default, change it to: tracks/Flash1 so it flashes your custom flare pattern.
@@ -343,7 +343,7 @@ Once you test it in game, it is a simple on/off flashing pattern.
 
 ![8](/images/flares-custom-04-1stgen.png)
 
-## Lets go one step further
+### Lets go one step further
 
 Now that you can easily make an off/on flashing pattern, let's get more complex.
 

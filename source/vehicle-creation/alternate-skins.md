@@ -8,9 +8,9 @@ categories: [vehicle-creation]
 
 This page serves as an overview page on how to create and modify custom skins.
 
-# Step-by-step guide
+## Step-by-step guide
 
-## Step 1 - GUID
+### Step 1 - GUID
 
 Skins are matched against vehicles via GUID (Globally-Unique-IDentifier).
 
@@ -20,7 +20,7 @@ Ideally, all vehicles should have one. You might need to regen the cache, so the
 
 It is recommended to generate a GUID using [this site](http://www.guidgenerator.com/).
 
-## Step 2 - the .skin file
+### Step 2 - the .skin file
 
 Create a file named "MySkinName.skin" (replace MySkinName with any string without spaces) with the following content:
 
@@ -50,19 +50,19 @@ There are 2 ways how to replace the original vehicle graphics with yours:
     below. The principle is the same - you name the original material and then
     the new, replacement material.
 
-## Step 3 - the package
+### Step 3 - the package
 
 Put all the files into a zip archive named "sarens.skinzip"
 and put that into the packs folder (NOT .skinzip.zip, just .skinzip).
 The .skinzip is important, as it will force RoR to always load this zip
 to parse the skin information from it.
 
-## Step 4 - the game
+### Step 4 - the game
 
 Start the game and select the truck, it should have a valid GUID in the selection menu.
 When pressing enter, the skin selection GUI will be displayed.
 
-# Skin file reference
+## Skin file reference
 
 ```
 Sarens Skin for Sennebogen 5500
@@ -101,7 +101,7 @@ You can use this line as much as you like. As noted earlier, this only works wit
 
 `GUID` - The GUID that matches the GUID in the `.truck` file. See [Step 1 - GUID](#step-1---guid).
 
-# Replacing OGRE Materials (.material)
+## Replacing OGRE Materials (.material)
 
 If your vehicle uses a `.material` file for its textures, you will have to use `replaceMaterial` instead of `replaceTexture`.
 
@@ -109,7 +109,7 @@ If your vehicle uses a `.material` file for its textures, you will have to use `
 
 ![antonov-thumb](/images/skins-example-antonov.png)
 
-## Step 1 - The material
+### Step 1 - The material
 
 Copy the existing material file (`5822UID-an-12.material`) and change the material and texture name(s), like so:
 
@@ -134,7 +134,7 @@ material 5822UID-tracks/An12-Green
 ```
 
 
-## Step 2 - The .skin file
+### Step 2 - The .skin file
 
 To find out the original material name,
 open the An-12's zip file, open the `.airplane` file then find the globals section
@@ -165,11 +165,11 @@ the new material (from step 3)<br> If you want to replace more than
 one materials (for example for the props or anything else,
 just add lines with the correct format.
 
-## Step 3 - Packaging
+### Step 3 - Packaging
 
 Like above - package your skin files to .skinzip, and enjoy it ingame!
 
-## More examples
+### More examples
 
 An example skin that replaces materials: [1982 DI Sportster Scheme: HotWheels Challenge](https://forum.rigsofrods.org/downloads.php?do=file&id=242)
 

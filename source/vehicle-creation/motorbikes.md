@@ -10,7 +10,7 @@ This tutorial covers the theory and concepts used to build real 2-wheeled vehicl
 
 Based off [this forum thread](https://www.rigsofrods.org/old-forum/forums/120-Mod-tech/95634/page-0001.html).
 
-# Theory
+## Theory
 
 Motorbikes are counter-intuitive, to turn left, you must steer right a little first and vice-versa. It is because of this that the player cannot control the steering directly (with hydros) because the response time is too long and there is no feedback like when you ride a bicycle. So you must use [animators](/vehicle-creation/fileformat-truck#animators) and the `roll` option. This is what we use to turn the front wheel.
 
@@ -18,13 +18,13 @@ The roll means the angle between the camera plane and the ground plane, so you c
 
 ![motorbike](/images/motorbike-scheme.png)
 
-# Construction
+## Construction
 To make a motorcycle or similar you need to have good knowledge about node-beam systems and have experience of vehicle creation. A lot of details will not be covered because it should be obvious to an experienced user.
 
 The image above shows how the motorbike operates, note how the front wheel is able to slide up and down on four [slidenodes](/vehicle-creation/fileformat-truck#slide-nodes).
 
 
-# Wheels
+## Wheels
 The wheels should be as thin as possible and be made very stiff to stop flexing and be sure to only power the rear wheel. I added a snode out to the side for both front (`n51`) and back (`n50`) wheels to stop them form flexing so much. These snodes must be contactless, so use the node option `c`, instead of the usual `n`.
 
 I used wheels that were 0.1m thick at the front and 0.12m thick at the back.
@@ -44,7 +44,7 @@ wheels
 ```
 
 
-## How to only power the rear wheel
+### How to only power the rear wheel
 
 This bit is important, you **must** define an [axle](/vehicle-creation/fileformat-truck#axles),
 making sure the differentials are set to split "d(s)" and only the rear wheel is powered.
@@ -54,7 +54,7 @@ w1(27 28), w2(29 30), d(s)
 ```
 
 
-# Steering
+## Steering
 
 The steering assembly is able to move up and down with the suspension on slide nodes and controls the balance of the bike.
 
@@ -69,17 +69,17 @@ Note how the short and long limit are quite small, you don't need a large number
 
 See [animators](/vehicle-creation/fileformat-truck#animators).
 
-# Camera
+## Camera
 
 You can control the lean angle of the bike by controlling the lean angle of the camera, and you do this using [hydros](/vehicle-creation/fileformat-truck#hydros) as usual, just make sure they turn the camera assembly the opposite way from where you want the bike to go. I recommend trying about 20 deg then gradually increasing until a balance between control and stability is found. Offroad bikes should have less because of lower grip.
 
-# Mass
+## Mass
 
 Due to RoR I didnt bother trying to get my bike too light, It wasn't a key issue.
 If you want to get a realistic weight the biggest issue will be the wheels,
 they are designed to work best on trucks and if your bike is 100kg, then there is clearly going to be a problem.
 
-# Engine
+## Engine
 
 The bike I have provided is sort of a low geared, lightweight racing bike, enough power to pop a wheelie in first gear if you drop the clutch but will top out at about 200kph.
 
@@ -96,18 +96,18 @@ engoption
 0.02, c, 100.0, 0.1, 0.2, 0.1
 ```
 
-# Suspension
+## Suspension
 
 Should be quite stiff with high damping to stop the bike bouncing and jigglying around. Any shaking is bad for the stabilization and control.
 
-# Example Bike
+## Example Bike
 
 ![motorbike-example-ingame](/images/motorbike-example-ingame.png)
 
 [Polaris_GP2.5.0.truck](/download/Polaris_GP2.5.0.truck)
 
 
-# Conclusion
+## Conclusion
 
 Hopefully this page will be updated as motorbikes are further developed.
 Future development will probably look into adding riders and expanding into special types of bikes.

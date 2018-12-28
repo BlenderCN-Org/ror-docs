@@ -6,14 +6,14 @@ categories: [tools-tutorials]
 
 
 
-# Preperation
+## Preperation
 
 This tutorial assumes you already have:
 * A registered [GitHub Account](https://github.com/join)
 * [GitHub Desktop](https://desktop.github.com/) downloaded and installed
 * You are logged into GitHub
 
-# Forking the repository
+## Forking the repository
 
 Go to the [Rigs of Rods community website on GitHub](https://github.com/RigsOfRods-Community). Click on the project you want to work on (`baker-ranch-v2` in this example).
 
@@ -33,7 +33,7 @@ The repository should now fork to your profile. Once it's done, you should be re
 
 Verify you are viewing your own repository (indicated by `your username`/`project name` with `forked from ...` subtitle)
 
-# Cloning your local repository
+## Cloning your local repository
 
 Click on `Clone or download` then `Open in Desktop`:
 
@@ -61,11 +61,11 @@ After the download is finished, open the project's folder by clicking `Repositor
 
 ![9](/images/github-9.png)
 
-# Making changes
+## Making changes
 
 In this folder you work on the project like you would usually do.
 
-# Committing to your local repository
+## Committing to your local repository
 
 This step assumes you are done with your changes and made sure they work and are bugfree.
 
@@ -83,7 +83,7 @@ Your changes are now saved into the git subsystem but they are still offline...
 
 ![11](/images/github-11.png)
 
-# Uploading to GitHub
+## Uploading to GitHub
 
 You'll see a confirmation that your commit has been saved. Notice your changes are now in the `History` tab.
 
@@ -91,7 +91,7 @@ To upload your changes click on `Push origin`:
 
 ![12](/images/github-12.png)
 
-# Creating a pull request
+## Creating a pull request
 
 Now your changes are online but they are not in the central repository just yet.
 
@@ -130,7 +130,7 @@ Often there will be a discussion about your changes. Admins will inform you abou
 
 If someone replied to your pull request you will be notified by the GitHub interface. The GitHub icon at the top right of the page will have a blue dot to inform you about replies (similar to Facebook or Google+).
 
-# Keeping your local repository updated
+## Keeping your local repository updated
 
 To keep your local repository updated with the main repository:
 

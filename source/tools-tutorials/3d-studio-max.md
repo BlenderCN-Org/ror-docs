@@ -6,7 +6,7 @@ categories: [tools-tutorials]
 
 
 
-# Intro
+## Intro
 
 **3ds Max** is a professional 3D modeling, animation, and rendering package from
 [http://www.autodesk.com/ Autodesk].
@@ -16,12 +16,12 @@ You can export your meshes and materials using [http://www.ogremax.com/ OgreMax 
 There is also an old importer/exporter (described below) available which lets you import/export RoR-files in 3ds Max.
 You can also use this to build your node and beam structure.
 
-# importer/exporter tool
+## importer/exporter tool
 
 These are a set of scripts which allow RoR trucks to be edited within 3ds Max.
 These scripts don't work in 3ds Max 2013!
 
-## Features
+### Features
 
 The ultimate goal of these tools would be to give the user the ability
 to edit absolutely any part of a truck, so that they would never,
@@ -32,7 +32,7 @@ of restrictions with 3ds Max, the scripts have been with this 'philosophy' in mi
 One of the biggest advantages of these scripts is that there is no need to use node numbers
 when editing trucks: everything is done by object positions.
 
-## List of fully supported sections
+### List of fully supported sections
 
 The following truck file sections are fully supported by the scripts:
 
@@ -46,7 +46,7 @@ The following truck file sections are fully supported by the scripts:
     | cinecam || exhausts || hook nodes || rollon || wheels
     | commands || fileinfo || hydros || ropables || wheels2
 
-## Installation and compatibility
+### Installation and compatibility
 
 Download [http://modclub.rigsofrods.com/tommylommykins/RoRTools.zip this] zip
 file and extract the entire package into the scripts directory of your copy of 3ds max.
@@ -54,15 +54,15 @@ An example location would be "C:\Program Files\Autodesk\3ds Max 9\Scripts\RoRToo
 
 The tools will work with 3ds Max version 9 and above.
 
-## Quick Start  
+### Quick Start  
 
 There are 5 scripts in the package, you will only ever need to use three.
 they are "RoRImporter.ms" (for importing trucks into 3dsm), "RorExporter.3ds"
 (For exporting trucks out of 3dsm), and "editor.ms" (for opening the editor dialogue)
 
-## Running the scripts  
+### Running the scripts  
 
-### Importer
+#### Importer
 
 <a href="/images/tools-3dsmax-importexport01-runscript.png">
  <img src="/images/tools-3dsmax-importexport01-runscript.png">
@@ -79,13 +79,13 @@ An open file dialog will appear with the title "choose editor file".
 Open RoRImporter.ms. Another open file dialog will appear, with the title "Open".
 Select the truck you want to import with this dialog, and the truck will be imported.
 
-### Exporter  
+#### Exporter  
 
 Run RoRExporter.ms to export a truck. Unlike all the other editors for RoR trucks,
 the exporter will always write a completely new truck file when exporting:
 None of the data in a truck that you might be overwriting will be kept.
 
-### Editor  
+#### Editor  
 
 <a href="/images/tools-3dsmax-importexport03-data.png">
  <img src="/images/tools-3dsmax-importexport03-data.png">
@@ -96,11 +96,11 @@ the data editor can be accessed by running "editor.ms" in 3dsm, which places it
 in the utilities tab. It must be used to create all RoR objects,
 failure to do so will result in an incomplete export.
 
-## Detailed description
+### Detailed description
 
 the most important objects for 3dsm are the beam objects, since they are the only objects which can define nodes. No other objects, such as hydros, wheels, shocks can define nodes (ropes are an exception to this). When exporting these non-node-defining objects, their node references are created by finding the nearest corner of the beams and using its node.
 
-## Editing trucks in 3ds  
+### Editing trucks in 3ds  
 
 All objects (such as shocks, beams, hydros, etc) must be created in using the Data editor ("editor.ms").
 
@@ -112,17 +112,17 @@ Objects can largely be broken into a few small categories:
 
 3ds can only tell which object is which from the name of each object. usually, the first part of the object's nameis used to define things. Beams are in the format "beam_ABCXYZ", wheels are in the format "wheel_ABCXYZ" and shocks are in the format "shock_ABCXYZ". Not using a recognised format for an object, or changing the name of an object after creation (ie. changing "beam_1" to "xbeam_1") will result in it not being exported.
 
-## Beam-objects
+### Beam-objects
 
 With the exception of beams themselves, objects are made up on only one spline segment (beams can have many spline segments). These generally represent the special beams in RoR which are coloured white.
 
 To modify beam objects choose them, go to vertex mode and move the corresponding nodes where you want them. To add a new beam use the "create beam" button in the editor.ms. Activate "snap on vertex", click on the first node and drag to the second, the beam will be created.
 
-## Node-reference objects
+### Node-reference objects
 
 To create node-reference-objects, go to vertex mode and choose the nodes where you want the object to be created. Now go to the editor.ms panel and choose the type of object you want. It will be displayed as a small cube.
 
-## Submesh-objects
+### Submesh-objects
 
 <a href="/images/tools-3dsmax-importexport04-truck.png">
  <img src="/images/tools-3dsmax-importexport04-truck.png">
@@ -131,7 +131,7 @@ To create node-reference-objects, go to vertex mode and choose the nodes where y
 
 Submeshes are displayed as standard editable meshes in 3ds, separated by smoothing group. They do not have a texture applied on import, but a material can be applied with the truck's normal texture if the image needs to be displayed on the truck for UVW editing. To add a new submesh use the "add submesh" button in the editor.ms. Activate "snap on vertex" and draw the submesh.
 
-## Building mods completely with 3ds Max
+### Building mods completely with 3ds Max
 It is also possible to build a new mod completely in 3ds Max. A possible workflow:
 
 Step 1: Build the meshes (props/flexbodies) for your mod

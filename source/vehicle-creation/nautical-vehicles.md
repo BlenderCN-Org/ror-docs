@@ -6,7 +6,7 @@ categories: [vehicle-creation]
 
 
 
-# Making a buoyant hull
+## Making a buoyant hull
 
 Step1: What you have to do is make a simple boat hull shape out of nodes.
 You can make many different shaped hulls, they will affect the performance of the boat.
@@ -20,7 +20,7 @@ Step3: try it out ingame. It should float nicely.
 If it sinks, then there is a hole in the hull of the boat.
 Once you find your mistake, it will float.
 
-# Adding an engine, i.e. "screwprop"
+## Adding an engine, i.e. "screwprop"
 
 Step1: To create a chassis, or setup for the screwprop,
 you must have 3 nodes in a triangular shape

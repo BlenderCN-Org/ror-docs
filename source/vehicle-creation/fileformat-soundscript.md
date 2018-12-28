@@ -21,13 +21,13 @@ A sound script is defined by a line with his name
  <br>
  <br>
 
-# Parameters
+## Parameters
 
-## Sources
+### Sources
 
 Sources define which vehicle events or states will influence the sound.
 
-### trigger_source
+#### trigger_source
 
 This is the more important source, and it is mandatory. There can be only one trigger source. It will define how the sound will start and stop. Valid values are:
 
@@ -64,7 +64,7 @@ This is the more important source, and it is mandatory. There can be only one tr
 | gpws_minimums                | Minimums!
 
 
-### pitch_source
+#### pitch_source
 
 A pitch source will alter the pitch of the played sounds (if they are pitchable). There can be only one pitch source. Valid pitch sources are:
 
@@ -88,12 +88,12 @@ A pitch source will alter the pitch of the played sounds (if they are pitchable)
 | pump_rpm                                        | hydraulic pump RPM
 
 
-### gain_source
+#### gain_source
 
 A gain source will alter the gain of the played sounds (how loud it is heard).
 There can be only one gain source. Valid gain sources are the same as for pitch sources.
 
-## Modifiers
+### Modifiers
 
 Modifiers will take output value from the pitch or gain sources,
 and apply to it a polynomial equation (up to degree 2) to alter the value to match the intended effect.
@@ -105,35 +105,35 @@ Both modifiers take two or three parameter values (they can be negative value):
 
 The equation is&nbsp;: output = offset + mult_factor x source + square_factor x source x source
 
-### pitch_factors
+#### pitch_factors
 
 The parameter pitch_factors alters the pitch source. It is optional.
 
-### gain_factors
+#### gain_factors
 
 The parameter gain_factors alters the gain source. It is optional.
 The output value of the gain modifier is clamped to the interval from 0.0 to 1.0 before being applied to the sounds.
 
-## Sounds
+### Sounds
 
 These parameters define the WAV sound files used by the soundscript. All sounds parameters takes two parameters&nbsp;:
 
 * a reference pitch value&nbsp;: this is the "true" pitch value corresponding to the recorded sound. For example, if you record an engine at 100 RPM, the resulting sound will have a reference pitch value of 100, and will be correctly pitched by the source engine RPM (as long as the units match, if not, use the modifiers). You can also use the keyword "unpitched" to say that this sound shall never be pitched.
 * a WAV file name. This WAV file must be mono, uncompressed PCM.
 
-### start_sound
+#### start_sound
 
 This sound is optional and is played only once at the start of the trigger. There can be only one start sound.
 
-### sound
+#### sound
 
 This sound is optional and played in a loop as long as the trigger holds. There can be many sounds defined. If there are many sounds with different reference pitches, the sounds will be mixed together to obtain the best blend of sounds for a given source pitch. This allows the "texture" of sound to change depending on pitch.
 
-### stop sound
+#### stop sound
 
 This sound is optional and is played only once at the end of the trigger. There can be only one end sound.
 
-# Examples
+## Examples
 
 Note that you can compose sound scripts by playing several scripts at the same time (with the same trigger).
 In the following, the full diesel engine sound is composed of the 3 first sound scripts played together.
@@ -197,11 +197,11 @@ tracks/default_parkbrakes
 
 ```
 
-# Default
+## Default
 
 These are the default soundscripts for RoR.&nbsp; It is divided into sections according to engine type.
 
-## Engine (Diesel)
+### Engine (Diesel)
 
 ```
 tracks/default_diesel
@@ -330,7 +330,7 @@ tracks/default_turn_signal
 }
 ```
 
-## Engine (Gasoline)
+### Engine (Gasoline)
 
 ```
 tracks/default_car
@@ -417,7 +417,7 @@ tracks/default_turn_signal
 }
 ```
 
-## Airplane (Prop)
+### Airplane (Prop)
 
 ```
 tracks/default_turboprop_start1
@@ -613,7 +613,7 @@ tracks/default_turboprop_hipower8
 }
 ```
 
-## Airplane (Jet)
+### Airplane (Jet)
 
 ```
 tracks/default_turbojet_start1
@@ -1019,7 +1019,7 @@ tracks/default_pistonprop_hipower8
 }
 ```
 
-## Marine (Large)
+### Marine (Large)
 
 ```
 tracks/default_marine_large
@@ -1030,7 +1030,7 @@ tracks/default_marine_large
 }
 ```
 
-## Marine (Small)
+### Marine (Small)
 
 ```
 tracks/default_marine_small

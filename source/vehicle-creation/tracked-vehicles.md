@@ -54,7 +54,7 @@ title: "Tracked vehicles (using slidenodes)"
 [16-blender]:       /images/caterpillar-slidenodes-16-blender.png
 {: width="100%"}
 
-# Intro
+## Intro
 
 This is a step-by-step tutorial of how to make tracks for crawler crane/excavator/bulldozer/other heavy machines without suspension.
 
@@ -72,7 +72,7 @@ NOTES about the pictures:
 * models show very few beams just to make it easier to see the basic structure.
   Of course the actual N/B structure shall have more beams to make it stronger.
 
-# Step 1: Making the frame
+## Step 1: Making the frame
 
 The shape of the frame always varies depending on the vehicle you make or
 how you want to make it, of course. The picture shows a very simple structure
@@ -99,7 +99,7 @@ editor (View> Wheels) and remove the wheel when you are done.
 [ ![1-frame]    ](/images/caterpillar-slidenodes-01-frame.png)
 [ ![2-frame-3d] ](/images/caterpillar-slidenodes-02-frame-3d.png)
 
-# Step 2: Making the track links
+## Step 2: Making the track links
 
 **Placement:** As the track link nodes will work as slidenodes going around
 the crawler frame, they should be placed pretty accurately on the beams forming the rail,
@@ -146,7 +146,7 @@ Snowcats and other similar all-terrain machines would be more realistic
 with a larger number of track links, while heavy machines like excavators
 and crawler cranes could use less as they are driving quite slow.
 
-# Step 3: Making the driving sprocket
+## Step 3: Making the driving sprocket
 
 **Size**: The sprocket should not be too big or too small. If it is too small,
 there is a chance the nodes will slide/jump over the submeshes in the sprocket.
@@ -184,7 +184,7 @@ connect three beams per side like the picture shows:
 
 [ ![10-2sprockets] ](/images/caterpillar-slidenodes-10-double-sprocket-3d.png)
 
-# Step 4: Making the rotator for the driving sprocket
+## Step 4: Making the rotator for the driving sprocket
 
 Now it's time to define [rotator](/technical/fileformat-truck#rotators) for the sprocket.
 The size of the rotator can without problems be about the same size

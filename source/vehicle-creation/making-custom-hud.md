@@ -6,9 +6,9 @@ categories: [vehicle-creation]
 
 
 
-# Fundamental Concepts
+## Fundamental Concepts
 
-The GUI is described in a Layout file (*.layout). It is an XML file format.
+The GUI is described in a Layout file (.layout). It is an XML file format.
 
 The Layout Files should be edited by the provided GUI Editor
 
@@ -21,7 +21,7 @@ The controls are separated via Layers, so they can overlap each other in a defin
 
 Needles should go on top (<i>Main</i> Layer), static background images to the bottom (<i>Back</i> Layer)
 
-# Required Software
+## Required Software
 
 <a rel="nofollow" class="external text" href="http://sourceforge.net/projects/rigsofrods/files/rigsofrods/0.38-dev/MyGUI_Tools_4.zip/download"
     >Gui Editor 4</a>
@@ -31,14 +31,14 @@ Needles should go on top (<i>Main</i> Layer), static background images to the bo
 
 NOTE: some animations will not work exactly like in RoR yet. We are working on fixing this.
 
-# Workflow
+## Workflow
 
 1. Create graphics of gauges and needles
 2. Start GUIEditor and create the controls using your graphics
 3. Save the .layout and image files in your truck zip and use [`guisettings`](/vehicle-creation/fileformat-truck#guisettings) to integrate it with your vehicle.
 4. Test in RoR and fix in GUIEditor
 
-# Available animations
+## Available animations
 
 <!--
 <td><b>Animation</b></td>
@@ -47,7 +47,7 @@ NOTE: some animations will not work exactly like in RoR yet. We are working on f
 <td><b>Arguments</b></td>
 <td><b>MyGUI Control to use</b></td> -->
 
-## rotate
+### rotate
 
 <img src="/images/custom-hud-anim-rotate.png">
 
@@ -77,7 +77,7 @@ vmax=120
 link=speedo_kph
 ```
 
-## lamp
+### lamp
 
 Switches between two images
 
@@ -110,7 +110,7 @@ texture=clutch
 link=speedo_kph&gt;50
 ```
 
-## series
+### series
 
 Switches between N images
 
@@ -133,7 +133,7 @@ texture=secured
 link=ties_mode
 ```
 
-## scale
+### scale
 
 Scales one image
 
@@ -164,7 +164,7 @@ direction=right
 link=speedo_kph
 ```
 
-## translate
+### translate
 
 Moves around one image
 
@@ -195,7 +195,7 @@ direction=right
 link=speedo_kph
 ```
 
-## textstring / textformat
+### textstring / textformat
 
 Displays text
 
@@ -218,7 +218,7 @@ format=%04.0f km/h
 link=speedo_kph
 ```
 
-# Input sources
+## Input sources
 
 Color code represents the input type
 
@@ -492,7 +492,7 @@ Color code represents the input type
 
 </table>
 
-# Quickstart
+## Quickstart
 
 Perhaps the easiest thing to add is a text readout, here we will add a simple readout that shows the speed of a vehicle in MPH.
 

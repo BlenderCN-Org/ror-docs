@@ -14,7 +14,7 @@ The truckfile is divided into sections, each with defined purpose. Except the ti
 
 Comment lines can be inserted by putting `;` or `//` at the beginning of the line.
 
-# Building Philosophy
+## Building Philosophy
 
 See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the building philosophy. I recommend using the following method for construction:
 
@@ -26,7 +26,7 @@ See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the bui
 
 To see a simple truck file example, see the [Step by Step Truck Construction](/vehicle-creation/making-softbodies).
 
-# Is It a Truck, Plane, Train or Boat?
+## Is It a Truck, Plane, Train or Boat?
 
 Before we start, let's ask an important question: **Is it a truck, plane, train, or boat?** Or what makes a truck a truck and a plane a plane and a train a train, or a boat a boat? Simple:
 
@@ -43,7 +43,7 @@ Also, notice that:
 -   You should have a **fusedrag** section on a plane to have a better aerodynamic modeling.
 -   A boat needs to have a hull which is defined in the **submesh** section.
 
-# Light Cars
+## Light Cars
 
 Here a few recommendations for those who want to build a **light car**: RoR is optimized for heavy trucks, so you have to use some extra sections that help you create a realistic car:
 
@@ -54,7 +54,7 @@ Here a few recommendations for those who want to build a **light car**: RoR is o
 -   Lighten the **wheels** as much as possible. This is not very easy as they become unstable. Reducing the spring and damping of the wheels helps a lot. Suggested values for 100kg wheels: spring `150000` and damping `1000`.
 -   Use the **dashboard-small.mesh prop** as a dashboard. (unless you have a custom dashboard you want to use.)
 
-# Documentation style guide
+## Documentation style guide
 
 Every keyword (directive, inline-section or section) which has parameters should have them listed in this manner:
 
@@ -87,11 +87,11 @@ Every keyword (directive, inline-section or section) which has parameters should
     -   `b`: Another option
     -   `c` or `C`: Case insensitive option.
 
-# Required Sections
+## Required Sections
 
 The game will not run without these sections. Every one of these sections must be present for a vehicle to work in the game!
 
-## Title
+### Title
 
 This is the only section not introduced by a keyword. It is the name of the truck, and it absolutely positively must be the first line of the file.
 
@@ -99,7 +99,7 @@ This is the only section not introduced by a keyword. It is the name of the truc
 My nice truck
 ```
 
-## Globals
+### Globals
 
 This section defines some global parameters. Those parameters are:
 
@@ -119,7 +119,7 @@ globals
 10000.0,  1000.0,     tracks/semi
 ```
 
-## Nodes
+### Nodes
 
 This section begins the structural definition of the vehicle. Each line defines a node.
 
@@ -209,7 +209,7 @@ TOTAL VEHICLE MASS: 32399 kg
 
 You can set any option property, loadweight, friction, volume, and surface-coefficients as default with [set\_node\_defaults](#set_node_defaults).
 
-## Nodes2
+### Nodes2
 
 Nodes2 use the same syntax as nodes, except the first argument can be any string instead of a number. After using a name for a node in the nodes2 section, you can use it for any node parsing throughout the rest of the file. valid characters for the string: a-z,A-Z,0-9, \_
 
@@ -250,7 +250,7 @@ Things to keep in mind:
 -   Only use node names without any special characters or spaces (only a-z, A-Z, 0-9, \_, -)
 -   You don't need to convert all nodes to nodes2 with names, if a nodes2 named node is not found, it will fallback to using the number as classic node.
 
-## Beams
+### Beams
 
 This section defines all the beams connecting nodes. Each line describes a beam.
 
@@ -292,7 +292,7 @@ This section supports multiple options as argument. If you want a 'i' and 'r' no
 11,    26,       si 25.0
 ```
 
-## Cameras
+### Cameras
 
 This section is important. It helps to position the truck in space, by defining a local direction reference. This is used to measure the pitch and the roll of the truck. It is also very important to orient the truck's cameras.
 
@@ -308,7 +308,7 @@ cameras
 0, 2, 1
 ```
 
-## Cinecam
+### Cinecam
 
 This defines the position of the in-truck camera. It is a special node suspended from eight chassis nodes.
 
@@ -331,7 +331,7 @@ cinecam
 0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0,        20.0
 ```
 
-## End
+### End
 
 This section will stop the parser. Everything after it will be ignored.
 
@@ -341,11 +341,11 @@ Since version 0.4.5, it's optional. In previous versions it's STRICTLY REQUIRED 
 end
 ```
 
-# Organizational Sections
+## Organizational Sections
 
 These sections are not required, but will make it easier to locate your file or work with. Do not use carets in your syntax, they are used to mark sections!
 
-## GUID
+### GUID
 
 You should use the guid feature to allow RoR to recognize your truck uniquely.
 
@@ -358,7 +358,7 @@ guid 6daaee29-e462-4d99-96d2-4577294f7b10
 
 You can generate some GUIDs [here](https://www.guidgenerator.com).
 
-## Fileformatversion
+### Fileformatversion
 
 This tells RoR what version of RoR your truck is built for. Most trucks built today should use `fileformatversion 3`
 
@@ -372,7 +372,7 @@ This tells RoR what version of RoR your truck is built for. Most trucks built to
 fileformatversion 3
 ```
 
-## Author
+### Author
 
 ```
 author <Type> <AuthorID> <AuthorName> <Email>
@@ -396,7 +396,7 @@ author support 5487 otheruser                 otheruser@mail.com
 
 Please note: **Do not use spaces** in the type, authorname, or email. Instead, use an underscore ( \_ ). In the game, the underscore will be replaced with a space.
 
-## Description
+### Description
 
 ```
 description
@@ -408,7 +408,7 @@ end_description
 
 Pretty self-explanatory. **Only the first 3 lines** will get displayed in the Truck HUD. **Do not put keywords in the description;** they will mess up the truck file.
 
-## Fileinfo
+### Fileinfo
 
 General info about the vehicle.
 
@@ -477,7 +477,7 @@ fileinfo      000UID,          107,             2
 9993, Hidden
 ```
 
-## Help
+### Help
 
 **NOTE: This section is not used as of version 0.39.5+**
 
@@ -490,7 +490,7 @@ help
 tracks/semihelp
 ```
 
-## Comments
+### Comments
 
 Comments are ignored by RoR. They are useful for telling users what things do in the truck file. Comments can be put anywhere by putting a semicolon ( `;` ) as the first character of the line to be commented.
 
@@ -509,7 +509,7 @@ before his eyes.
 end_comment
 ```
 
-## hideInChooser
+### hideInChooser
 
 Excludes the vehicle/load from being shown in the vehicle menu on top of the screen. Place the single keyword somewhere in the vehicle/load file.
 
@@ -517,11 +517,11 @@ Excludes the vehicle/load from being shown in the vehicle menu on top of the scr
 hideInChooser
 ```
 
-# Vehicle-specific
+## Vehicle-specific
 
 The following sections define important vehicle parts, like wheels, shock absorbers, and the like.
 
-## Engine
+### Engine
 
 The engine section contains the engine parameters. Parameters are:
 
@@ -542,7 +542,7 @@ engine
 
 One good source of practical gear ratios is [Eaton Fuller](http://www.roadranger.com/Roadranger/productssolutions/transmissions/index.htm). To see the ratios, click the name of the transmission and find "Product Specifications Guide". It's wise to make sure you can get into final gear. If your vehicle decelerates in a gear you may not have enough power, or the gear ratio may be too high.
 
-## Engoption
+### Engoption
 
 Engoption sets optional parameters to the engine. It is mainly used for car engines. Parameters are:
 
@@ -568,7 +568,7 @@ engoption
 
 PROTIP: Use the "Engine inertia" value to make the engine start faster. With a value of 0.1, the engine will start instantly. With a value of 10, the engine requires about 30 seconds of cranking before it starts. Values between 1 and 3.5 are great for vehicles that you drive frequently, or race vehicles and the like that you want to start fast. However, using a higher value makes it harder to stall the engine. Making something to tow a lot of weight? Raise it up to 9 or 10 and it won't really stall, ever. (With values over 10, it may not start at all, so be careful.)
 
-## Engturbo
+### Engturbo
 
 Engine's Turbo settings:
 
@@ -617,7 +617,7 @@ engturbo
 2, 4, 1, 35, 3500, 1, 11, 1, 32, 0.02, 1, 0.9985, 3000, 250
 ```
 
-## Brakes
+### Brakes
 
 Parameters:
 
@@ -630,7 +630,7 @@ brakes
 20000,              15000
 ```
 
-## AntiLockBrakes
+### AntiLockBrakes
 
 AntiLockBrakes settings:
 
@@ -668,7 +668,7 @@ System deactivated at spawn and no dashboard indicator:
 
 In game, you can toggle the anti-lock brakes on/off with `SHIFT+B` Anti-lock Brakes do NOT have any impact on your parking brake behavior.
 
-## TractionControl
+### TractionControl
 
 **NOTE: wheelslip and fade\_speed have been made obsolete with 0.4.8.0** (see: <https://github.com/RigsOfRods/rigs-of-rods/commit/57dfbba4f16431e7b6db878223d86a17f97a92ce>)
 
@@ -703,7 +703,7 @@ Valid modes:
 TractionControl                 6,      0.01,       100,      2000, mode: ON
 ```
 
-## SlopeBrake
+### SlopeBrake
 
 **NOTE: This section has been made obsolete with 0.4.6.0** (see: <https://github.com/RigsOfRods/rigs-of-rods/commit/523c02f854853cc5159d4aacdd41cf1e73dff5dd>)
 
@@ -720,7 +720,7 @@ SlopeBrake settings:
 SlopeBrake                10,            5,            12
 ```
 
-## Wheels
+### Wheels
 
 This section is important: it defines the wheels! Parameters are:
 
@@ -753,7 +753,7 @@ Notes:
 -   Wheel breaking strength is set by the last Beam defaults in the truck file before the wheels section. This can help the wheel to go faster before it breaks.
 -   The order in which the wheels are declared is important: each consecutive pair of wheels is grouped into an axle. A truck cannot have an odd number of powered wheels, since one wheel would not be in a pair. If this happens, the odd wheel will not move.
 
-## Wheels2
+### Wheels2
 
 This section improves wheels by simulating both wheel tires and rims. The player is able to set tire pressure via key input.
 
@@ -785,7 +785,7 @@ wheels2
 0.335,   0.625,    -1,      12,   54,    55,     53,      1,         1,  33, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
 ```
 
-## Meshwheels
+### Meshwheels
 
 Mesh wheels allows you to do very nice wheels. It takes an Ogre3D mesh of a rim (the rim only, without the tire!). The mesh should be centered, and of the right size for the wheel you want to do: its outer diameter should be the same as the "rim\_radius" parameter, and its width should be the same as the distance between node1 and node2. The other parameters are similar to the [wheels](#wheels) section, though there are a few differences.
 
@@ -805,7 +805,7 @@ meshwheels
 ```
 
 
-## Meshwheels2
+### Meshwheels2
 
 This section works exactly the same way as meshwheels, except one difference.
 
@@ -826,7 +826,7 @@ meshwheels2
 0.660,      0.315, 0.375,      12,    27,    26,    38,      4,         1,  22, 100.0,    150000.0,        1500.0,    r, my-rim.mesh my-tire-material
 ```
 
-## Flexbodywheels
+### Flexbodywheels
 
 This section works exactly the same way then meshwheels2, except 2 differences:
 
@@ -843,7 +843,7 @@ flexbodywheels
 0.50,     0.300, 0.300,   16, 13, 11,  9999,      1,         1,      19,   92.5,      4500.0,     300.0,    3000000,      350,               r, testtruck-rim.mesh testtruck-wheel.mesh
 ```
 
-## Shocks
+### Shocks
 
 Shocks can be seen as tunable beams, useful for suspensions.
 
@@ -869,7 +869,7 @@ shocks
 38,   2, 200000,   10000,        0.3,       0.3,     1.0,       r
 ```  
 
-## Shocks2
+### Shocks2
 
 Shocks can be seen as tunable beams, useful for suspensions.
 
@@ -929,7 +929,7 @@ shocks2
 36,     6,   200000,  10000,            0,          0,    200000,   10000,             0,           0,        0.3,       0.3,     1.0
 ```
 
-## Shocks3
+### Shocks3
 
 <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> Shocks can be seen as tunable beams, useful for suspensions.
 
@@ -961,7 +961,7 @@ shocks3
 46, 55, 65000, 5800, 0.5, 1.2, 0.2, 65000, 1080, 0.5, 1.2, 0.2, 0.62, 0.00, 1.2, n
 ```
 
-## Hydros
+### Hydros
 
 The hydros section is concerned only with the steering actuators! They are beams which change their length depending on the steering of the truck. Hydros can use [inertia](#set_inertia_defaults).
 
@@ -996,7 +996,7 @@ hydros
 48,   36,    -0.2,       s
 ```
 
-## Animators
+### Animators
 
 The animator section concerns only Animators referring to game data! They are beams which change their length depending on the variables of the simulation.
 
@@ -1070,11 +1070,11 @@ animators
 49,     3,  -0.25, roll | vis | shortlimit: 0.02 | longlimit: 0.05
 ```
 
-# Behavior
+## Behavior
 
 These sections define behaviors for the vehicle, like command-operated hydraulics and modifications to how beams behave.
 
-## Commands
+### Commands
 
 The commands section describes the "real" hydros, that is, those you command with the function keys. They are like beams, but their length varies depending with the function keys you press. The parameters are:
 
@@ -1181,7 +1181,7 @@ Note that some keymapped commands are by default assigned to Windows commands.. 
 
 **If you hold `F4` then hold/press `ALT`, the window should stay open and the command will work.**
 
-## Commands2
+### Commands2
 
 Improved commands.
 
@@ -1257,7 +1257,7 @@ commands2
 136, 117,       0.4,      4.4,   1.0,   10,    5,    6
 ```
 
-## Set\_inertia\_defaults
+### Set\_inertia\_defaults
 
 This command will set the defaults for all following commands, hydros, animators and rotators.
 
@@ -1279,7 +1279,7 @@ set_inertia_defaults -1
 
 NOTE: Both commas and spaces are accepted as delimiters between parameters.
 
-## Rotators
+### Rotators
 
 Rotators are alternate commands(hydros) that allows you to do turntables, like in the base of a rotating crane. They use 10 reference nodes:
 
@@ -1310,7 +1310,7 @@ rotators
 
 ![Rotators](/images/truckfile-rotators.jpg)
 
-## Rotators2
+### Rotators2
 
 Same as rotators section, but more options that allow lightweight rotators, rotator force setting and tolerance (anti jitter) setting and correct description parsing. Additional options:
 
@@ -1324,7 +1324,7 @@ rotators2
 29,    30,   31, 32, 34, 33,   37, 38, 36, 35,    0.1,       1,        2, 1000000,     0.025, Superstructure_left/right,                       1,          1,         smooth,        smooth,             0.5,         true
 ```
 
-## Forwardcommands
+### Forwardcommands
 
 Forwards the command keys pressed while riding a truck to loads in close proximity. It is used to remote control the commands of a load. The load must have the "importcommands" tag.
 
@@ -1334,7 +1334,7 @@ forwardcommands
 
 In 0.4.0.5 and above it is possible to toggle forwardcommands on/off for the current beam object. The standard button assignment for this is `CTRL+SHIFT+F`.
 
-## Importcommands
+### Importcommands
 
 Enables a load to receive command keys from a manned vehicle in close proximity. The controlling vehicle must have the "forwardcommands" tag. The load only receives the keys that are pressed by the player, it must contain a commands section. Commands section for loads is defined in the same manner as in manned trucks.
 
@@ -1344,7 +1344,7 @@ importcommands
 
 In 0.4.0.5 and above it is possible to toggle importcommands on/off for the current beam object. The standard button assignment for this is `CTRL+SHIFT+I`.
 
-## Set\_beam\_defaults
+### Set\_beam\_defaults
 
 This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes all the beams (and the hydros and ropes) declared after this line. You can use this line many times to make different groups of beams that have different characteristics (e.g. stronger chassis, softer cab, etc.).
 
@@ -1439,7 +1439,7 @@ Valid values: `0.0` - `1.0`, do not exceed that range! A plastic deformation coe
 
 Never use a break setting lower then a deform setting! This will result in a beam breaking instantly when it starts deforming!
 
-## Set\_beam\_defaults\_scale
+### Set\_beam\_defaults\_scale
 
 This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes the scale of all following `set_beam_defaults` lines to a certain factor:
 
@@ -1465,7 +1465,7 @@ Take note:
 -   Unlike `set_beam_defaults`, you must always give all four arguments. Its not possible to leave some out.
 -   Any `set_beam_defaults` line that is scaled will output a line to `RoR.log` saying `Due to using set_beam_defaults_scale, this set_beam_defaults was interpreted as ...`
 
-## Set\_node\_defaults
+### Set\_node\_defaults
 
 This is a directive which affects all nodes (including wheel and camera nodes) declared on lines below it.
 You can use this line many times to make different groups of nodes that have different characteristics (e.g. more grip for wheels, more surface drag for chassis nodes, etc.).
@@ -1541,7 +1541,7 @@ set_node_defaults -1, -1, -1, -1, c
 
 The new `L` node option will help to understand and use `set_node_defaults`, `p` node option will boost fps even with tracked vehicles on slower computers. See: [nodes](#nodes)
 
-## Enable\_advanced\_deformation
+### Enable\_advanced\_deformation
 
 This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes the general beams deformation physics.
 
@@ -1555,7 +1555,7 @@ enable_advanced_deformation
 
 This will remove any limit and thresholds from the [set\_beam\_defaults](#set_beam_defaults) processing. Its recommended to use it for the development of properly deforming flexbody node\\beam structures.
 
-## Rollon
+### Rollon
 
 **NOTE: This directive has no effect as of version 0.39.5+**
 
@@ -1565,7 +1565,7 @@ Enables collision between wheels and the contactable textured surfaces of a truc
 rollon
 ```
 
-## Contacters
+### Contacters
 
 The contacters section lists the nodes that may contact with cab triangles. This concerns only contacts with other trucks or loads. You can easily omit this section at first.
 
@@ -1582,7 +1582,7 @@ contacters
 32
 ```
 
-## Triggers
+### Triggers
 
 Triggers are special beams which trigger user-specified events when extended/contracted to a given bound. They have no physics attributes and can extend indefinitely.
 
@@ -1653,7 +1653,7 @@ triggers
 11, 109,  1.000,  1.500,       0,       2, ctE
 ```
 
-## Lockgroups
+### Lockgroups
 
 This section defines lockgroups for nodes. It has to be AFTER the [nodes](#nodes) section
 
@@ -1687,7 +1687,7 @@ Allows you to define exactly where standard hooks can lock to your truck and boo
 
 **Its recommended to use this option as default.**
 
-## Hooks
+### Hooks
 
 This section defines special options for hooknodes setup in the nodes section. It has to be placed after the nodes section.
 
@@ -1722,7 +1722,7 @@ Standard hooks toggle with `L`, autolock and triggerd hooks detach with `ALT+L` 
 
 Hooks with hookgroups < `-2` can only be locked automatically or by a trigger.
 
-## Slide Nodes
+### Slide Nodes
 
 These are nodes which can slide freely along a 'rail', which is a sequence of connected beams. It's a simple constraining mechanism that introduces new possibilities into RoR and simplifies many existing mechanical structures.
 
@@ -1760,11 +1760,11 @@ slidenodes
 1,  7, 8, 9, 10,  s9000, b10000,      t0.1
 ```
 
-## slidenode_connect_instantly
+### slidenode_connect_instantly
 
 To be documented.
 
-## Rail Groups
+### Rail Groups
 
 Allows specifying a separate rail which can be linked to slidenode(s) later.
 
@@ -1795,7 +1795,7 @@ slidenodes
 1, g1
 ```
 
-## Detacher\_group
+### Detacher\_group
 
 This section defines group of the beams that are deleted if one beam in this group breaks. Very useful for detaching parts of the truck like bumpers, doors, wheels etc. falling of the truck when crashing. All kinds of beams can be set to a detacher\_group except wheel generation section, these one will always be "default" to avoid deleting the axle of the wheel which results in a crash.
 
@@ -1830,7 +1830,7 @@ detacher_group 0
 
 This will add beams `0,1` + `6,8` + `7,9` + `10,12` to group `1`, beam `16,17` to group `1(minor)` and beam `11,13` to group `2`. Breaking beam `16,17` will not break any other beam. Breaking beam `6,8` i.e, will break and disable beams `0,1` + `7,9` + `10,12` + `16,17` too in the same simulation cycle.
 
-## Ropes
+### Ropes
 
 Ropes are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain. They have also another peculiarity: the second node can "grab" the nearest reachable ropable node with the `O` key. Standard use is to use a chassis node as the first node, and a "free" node as the second node (free as in not attached by any other beam). The best example of this are the chains of the Multibennes truck.
 
@@ -1845,7 +1845,7 @@ ropes
 130,137
 ```
 
-## Fixes
+### Fixes
 
 Fixes are nodes that are fixed in place. That means that once put in place in the terrain, they will never move, whatever happens.
 
@@ -1860,7 +1860,7 @@ fixes
 12
 ```
 
-## Minimass
+### Minimass
 
 This sets the minimum node mass. Useful for very light vehicles with lots of nodes (e.g. small airplanes).
 
@@ -1871,7 +1871,7 @@ minimass
 10.0
 ```
 
-## Ties
+### Ties
 
 Ties are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain.
 
@@ -1899,7 +1899,7 @@ ties
 63,     1.5,  0.5,   0.3,  1.0, n, 5000, 2
 ```
 
-## Ropables
+### Ropables
 
 This section lists the nodes that can be caught by ropes or ties. Good use is to define some ropable nodes at the front and back of the truck to allow towing the truck.
 
@@ -1917,7 +1917,7 @@ The group and multilock arguments are only available in RoR 0.36.3 and later.
 -   Multilock:
     -   `0`=disable, `1`=enable: This specifies if this ropable can be locked by many ties/ropes.
 
-## Particles
+### Particles
 
 This enables/disables a particle cannon in the game (with the `G` key).
 
@@ -1932,11 +1932,11 @@ particles
 
 (You can create your own particle. A template can be found in `Rigs of Rods\resources\particles.zip\water.particle`)
 
-## Torque Curve
+### Torque Curve
 
 Torque curves affect the behavior of the engine. This section allows you to assign predefined or user-defined torque curve to a truck. It can be used in 2 ways:
 
-## Usage \#1: Predefined curve
+### Usage \#1: Predefined curve
 
 -   **curve\_name**: <span style="color:#BD0058">Torque curve name</span>; <span style="color:#0B8A00">default = default</span>; Predefined options are: `default`, `diesel`, `turbodiesel`, `gas`, `turbogas`, `wheelloader`, `compacttractor`, `tractor`, `hydrostatic`.
 
@@ -1945,7 +1945,7 @@ Torque curves affect the behavior of the engine. This section allows you to assi
     turbogas
 ```
 
-## Usage \#2: Defining custom curve
+### Usage \#2: Defining custom curve
 
 -   **power**: <span style="color:#BD0058">Real number</span>; RPM where the power begins
 -   **torque\_percentage**: <span style="color:#BD0058">Real number</span>; Power as a percent of total torque specified in [section "engine"](#engine) parameter \#3 "Torque" (0 = 0%, `0.5` = 50%, `1.5` = 150%)
@@ -1981,7 +1981,7 @@ The example to the left shows a screenshot of a torquecurve made for a small die
 
 Idle: `~600` RPM, Max @ `1900` RPM, slight and constant torque increase over the used RPM bandwidth, hard torque drop off in the over-rev area.
 
-## Cruise Control
+### Cruise Control
 
 This section offers options to the cruise control feature (activated by pressing space bar):
 
@@ -1995,7 +1995,7 @@ cruisecontrol        10         1
 
 In the example above, minimum speed for cruise control to be activated is `10`mps (`36`kph). The auto brake feature is activated.
 
-## Speedlimiter
+### Speedlimiter
 
 Limits the speed of a vehicle. If the speed is above the limit, the vehicle will not accelerate any further.
 
@@ -2008,7 +2008,7 @@ speedlimiter 10
 
 In the example above, the maximum speed of the vehicle is `10`mps (`36`kph), it will not accelerate any further.
 
-## Axles
+### Axles
 
 This section defines axles on a vehicle, allowing more accurate distribution of torque among the wheels.
 
@@ -2039,7 +2039,7 @@ w1(1 2), w2(3 4), d(ol)
 w1(5 6), w2(7 8), d(l)
 ```
 
-## Interaxles
+### Interaxles
 
 In RoR 0.4.8.0 and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles.
 
@@ -2057,7 +2057,7 @@ interaxles
 2, 3, d(vlso)
 ```
 
-## Transfercase
+### Transfercase
 
 In RoR 0.4.8.0 and above you can add a transfer case on a vehicle.
 
@@ -2077,7 +2077,7 @@ transfercase
 2, 1, 1, 0, 4.11, 3.1, 2.72
 ```
 
-## Wheeldetachers
+### Wheeldetachers
 
 <span style="background-color:#fb7">\[ Version 0.4.7.0+ \]</span> this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
 
@@ -2125,7 +2125,7 @@ wheeldetachers
 2, 2
 ```
 
-## Collisionboxes
+### Collisionboxes
 
 In RoR 0.4.0.5 and above you can define collisionboxes. In earlier versions of RoR, there was only one bounding box for truck activation per object, which was defined by the outermost nodes. With collisionboxes, you get the ability to define the nodes that should be used for the activation bounding box calculation. It is also possible to define multiple bounding boxes, for example to exclude some areas from activation.
 
@@ -2144,7 +2144,7 @@ collisionboxes
 
 Collisionboxes can give you a huge performance increase in situations where many beam objects would have been activated before, for example a container crane with many containers underneath.
 
-## Rescuer
+### Rescuer
 
 ```
 rescuer
@@ -2152,9 +2152,9 @@ rescuer
 
 This single keyword placed in the truck file will make the truck a rescuer, like the Scania Wrecker. These vehicles can be entered by pressing `R`.
 
-# Look & Feel
+## Look & Feel
 
-## Managedmaterials
+### Managedmaterials
 
 Managed materials helps you to use complex material effects (for example reflective materials like chromes, dynamic damage materials) without having to deal with the technical complexity of writing a shader for Ogre3D. Rigs of Rods comes with a set of standard shader effects, and with the Managedmaterial section you can pick the effect you want and adapt it for your vehicle. The shader library will grow with time, so the set of effects available in this section will grow with time.
 
@@ -2208,7 +2208,7 @@ You can still use your own, non managed, Cg shaders by manually defining your `.
 
 If you think you have made a good shader that can be helpful to other modders, submit it to [GitHub](https://github.com/RigsOfRods/rigs-of-rods) for inclusion to the managedmaterial library of RoR.
 
-## Set\_managedmaterials\_options
+### Set\_managedmaterials\_options
 
 This specifies options for all <u>FOLLOWING</u> managed material lines.
 
@@ -2222,7 +2222,7 @@ Parameters:
 set_managedmaterials_options 1
 ```
 
-## Flares
+### Flares
 
 Flares allow you to add lights to your truck. They work as light sources in OGRE and will illuminate other objects (if enabled in settings).
 
@@ -2277,7 +2277,7 @@ flares
 51,  1, 79,    0.23,    0.50,    u,             0,          0,  0.3 myTruck/MyFogFlare
 ```
 
-## Flares2
+### Flares2
 
 Flares2 are the same as normal flares, except that they add an offset-z argument in between:
 
@@ -2287,7 +2287,7 @@ flares2
 51,  1, 79,    0.23,    0.50,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
 ```
 
-## Materialflarebindings
+### Materialflarebindings
 
 See also: [Flares Tutorial](/vehicle-creation/flares)
 
@@ -2330,7 +2330,7 @@ This section should be after the flares section and before the props and flexbod
 
 COMPATIBILITY NOTE: Parameters \#1 and \#2 can also be separated by just space, the parser will silently accept it.
 
-## Props
+### Props
 
 This allows you to "stick" any 3D mesh to a triangle of points of a truck. You can use it to stick air intakes, horns, seats, dashboard, bumpers, whatever to the truck. Note that there will be no collision detection with these objects. Like flares, they use a vector coordinate system instead of normal right-angle coordinates. Props are positioned relative to 3 nodes of the chassis: One node is the reference node, and the two others define a base (x,y). Props are positioned relative to the reference node by adding proportions of the vectors ref-&gt;X, ref-&gt;Y, with the normal being used as well.
 
@@ -2399,7 +2399,7 @@ disable_prop_shadow
 
 COMPATIBILITY NOTE: Parameters \#9 "Z rotation" and \#10 "Mesh name" can be delimited by just space. Parser will emit a warning.
 
-## Special Prop: Dashboard
+### Special Prop: Dashboard
 
 Steering wheel <span style="background-color:#fb7">\[ Version 0.35+ \]</span>
 Here you can see the standard reference nodes, and offset for the dashboard. Then, there is the steering wheel mesh, and its offsets.
@@ -2491,7 +2491,7 @@ Here you can see the standard reference nodes, and offset for the dashboard. The
 72, 71, 74,    0.50,     1.0,   -0.05,    0,    0,    0,      my-dashboard.mesh my-wheel.mesh   -0.67,   -0.51,    0.14,           720
 ```
 
-## Special Prop: Beacon
+### Special Prop: Beacon
 
 Change the beacon's color and flare material <span style="background-color:#fb7">\[ Version 0.35+ \]</span>
 
@@ -2571,7 +2571,7 @@ NOTE: All special parameters are required, otherwise none of them will take effe
 19, 73, 16,     0.1,     0.1,       0,   90,    0,    0, beacon.mesh     tracks/greenflare           0,          1,         0
 ```
 
-## Add\_animation
+### Add\_animation
 
 This directive adds an animation to last defined prop. Up to **10** rotations and offsets depending on different sources can be used on one prop.
 
@@ -2736,13 +2736,13 @@ add_animation -0.005, 15, 20, source: permanent, mode: x-rotation, autoanimate
 
 To avoid axis corruption when rotating multiple props: - Use only the x and y axis together, skip z. If you need 3 axis rotation, do the z-axis with a n/b-rotator as the base for your prop definition nodes. [Gimbal lock](http://wapedia.mobi/en/Gimbal_lock)
 
-## Flexbodies
+### Flexbodies
 
 Flexbodies are pretty much the same as props. The only difference between them is that flexbodies deform.
 
 You can declare several flexbodies. Each must be composed of the two lines (prop-like line and forset line).
 
-## (sub-section) "Prop-like"
+### (sub-section) "Prop-like"
 
 The first line of this section is exactly the same format as on the props section. Parameters:
 
@@ -2757,7 +2757,7 @@ The first line of this section is exactly the same format as on the props sectio
 -   **z\_axis\_rotation**: <span style="color:#BD0058">Real number</span>; The amount the flexbody should be rotated about the 'straight up' axis
 -   **mesh\_name**: <span style="color:#BD0058">String</span>; The name of the Ogre3D mesh object used for the flexbody.
 
-## (sub-directive) forset
+### (sub-directive) forset
 
 As next, a line beginning with the word *forset* follows. Behind the word *forset*, you declare all nodes used for the deformation of the mesh (ranges are supported).
 
@@ -2770,13 +2770,13 @@ Notes about backwards compatibility:
 -   If there's a comma after last element, parser will ignore it silently.
 -   Accepted separators between keyword "forset" and node ranges are: whitespace, comma `,`, colon `:`, or nothing at all (lines like `forset12,34,56` will be correctly evaluated as `forset 12, 34, 56`) for backwards compatibility.
 
-## (sub-directive) disable\_flexbody\_shadow
+### (sub-directive) disable\_flexbody\_shadow
 
 <span style="color:#666">(optional)</span> <span style="background-color:#fb7">\[ Version 0.38.8+ \]</span>
 
 No parameters. Disables shadow casting of the last flexbody to improve complex truck FPS.
 
-## (sub-directive) flexbody\_camera\_mode
+### (sub-directive) flexbody\_camera\_mode
 
 <span style="color:#666">(optional)</span> <span style="background-color:#fb7">\[ Version 0.38.8+ \]</span>
 
@@ -2799,7 +2799,7 @@ flexbody_camera_mode -1
 
 Note: It's important to keep an eye on the number of vertices of your meshes. Not that there is a hard limit, but beyond `10000` vertices there could be a noticeable slowdown. As reference: the Dodge Charger mesh is about `4000` vertices.
 
-## Submesh
+### Submesh
 
 Defines the most visible part of the truck: the body. It will dress the chassis with solid triangles. You must define each body panel (a continuous almost-flat section) in a different submesh section, in order to have sharp body angles, and to simplify texturing.
 
@@ -2807,13 +2807,13 @@ Most modern flexbodied trucks do not need a submesh section for visual purposes.
 
 A submesh has two subsections: the texcoords, that places nodes of the submesh on the texture image (coordinates between `0.0` and `1.0`) , and then the cab subsection, that draws the triangles, with triplets of node numbers.
 
-### (sub-section) texcoords
+#### (sub-section) texcoords
 
 -   **node**: <span style="color:#BD0058">Node number</span>; Node representing a vertex in the resulting geometry.
 -   **u**: <span style="color:#BD0058">Real number 0.0 - 1.0</span>; The U texture coordinate: Position of this vertex on the X axis of the image.
 -   **v**: <span style="color:#BD0058">Real number 0.0 - 1.0</span>; The V texture coordinate: Position of this vertex on the Y axis of the image.
 
-### (sub-section) cab
+#### (sub-section) cab
 
 -   **node\_1**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 1 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
 -   **node\_2**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 2 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
@@ -2834,7 +2834,7 @@ The order in which the three points forming the triangles is given is important,
 
 The easiest way to create a submesh is to use [Blender 2.49b](https://forum.rigsofrods.org/downloads.php?do=file&id=180).
 
-### (sub-directive) backmesh
+#### (sub-directive) backmesh
 
 No params. If added, the triangles' backsides will be black instead of see-through.
 
@@ -2881,7 +2881,7 @@ cab
 ...
 ```
 
-## set_collision_range
+### set_collision_range
 
 set\_collision\_range is `0.02` as default value, and defines the maximum range (`2` cm) around a truck's collision triangles that collisions start to happen.
 
@@ -2891,7 +2891,7 @@ By increasing it, for example to `0.04`, penetrations become a lot more difficul
 set_collision_range 0.02
 ```
 
-## submesh\_groundmodel
+### submesh\_groundmodel
 
 Specifies groundmodel should be used for the trucks contactive submeshes. It has module-wide effect; it only needs to be defined once per file.
 
@@ -2904,7 +2904,7 @@ Parameter:
 submesh_groundmodel rock
 ```
 
-## Exhausts
+### Exhausts
 
 This replaces the x or y node options. The **factor** parameter should be "1", because it is not used yet. The material should be "default" if no user-created one is made. (You could create your own particle emitter based on the default one: data/smoke.particle). Remember: The direction node is behind the ref node!
 
@@ -2915,7 +2915,7 @@ exhausts
 105,             98,      1 default
 ```
 
-## Sections
+### Sections
 
 This section allows you to have different options selectable from the vehicle spawner menu. Almost any section (`managedmaterials`, `engine`, `props`, `flexbodies`, etc) can be used with this.
 
@@ -2937,7 +2937,7 @@ section 0 highspeed lowspeed
 end_section
 ```
 
-## Guisettings
+### Guisettings
 
 By using this section you can set some parameters of the Truck GUI. This can be helpful if you're building a vehicle that has a relatively higher or lower speed than average.
 
@@ -2971,7 +2971,7 @@ useMaxRPM 1
 ```
 
 
-## Set\_skeleton\_settings
+### Set\_skeleton\_settings
 
 Inline-section; modifies the skeleton display (activated by pressing `K`) of the truck. Has module-wide effect; only needs to be issued once per file.
 
@@ -2994,7 +2994,7 @@ set_skeleton_settings 150, 0.01
 set_skeleton_settings 2000, 0.09
 ```
 
-## Videocamera
+### Videocamera
 
 The videocamera section describes how to set up multiple mirrors and extra cameras like a backup-camera for a truck or hook-camera for a crane.
 
@@ -3002,11 +3002,11 @@ Both, cameras and mirrors, use the same technique, cameras just add a reflective
 
 Parameters:
 
--   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The node where the camera is placed. This is your reference node. Any existing node\# is valid.
--   **left\_node**: <span style="color:#BD0058">Node number/name</span>; The Z-reference of the camera, should be exactly right of the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
--   **bottom\_node**: <span style="color:#BD0058">Node number/name</span>; The Y-reference of the camera, should be exactly below the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
--   **alt\_reference\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative cam position node. It replaces the reference node for position but not for orientation. Good to setup mirrors and cams with just one extra node to an existing truck. Important for mirrors, read below! Any existing node\# is valid.
--   **alt\_orientation\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative camera orientation node. If set, it skips any camera orientation calculation and makes the cam permanent look at the set node. Good for hooks moving up and down. Any existing node\# is valid.
+-   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The node where the camera is placed. This is your reference node. Any existing node\## is valid.
+-   **left\_node**: <span style="color:#BD0058">Node number/name</span>; The Z-reference of the camera, should be exactly right of the reference node when the camera points forward to the trucks front. Any existing node\## is valid.
+-   **bottom\_node**: <span style="color:#BD0058">Node number/name</span>; The Y-reference of the camera, should be exactly below the reference node when the camera points forward to the trucks front. Any existing node\## is valid.
+-   **alt\_reference\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative cam position node. It replaces the reference node for position but not for orientation. Good to setup mirrors and cams with just one extra node to an existing truck. Important for mirrors, read below! Any existing node\## is valid.
+-   **alt\_orientation\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative camera orientation node. If set, it skips any camera orientation calculation and makes the cam permanent look at the set node. Good for hooks moving up and down. Any existing node\## is valid.
 -   **offset\_x** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; X-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional forth and back on its roll-axis.
 -   **offset\_y** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Y-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam up and down in meters on its rotation-axis.
 -   **offset\_z** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Z-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional left and right on its pitch-axis.
@@ -3030,7 +3030,7 @@ Parameters:
 -   Its recommended that mirrors always use the alternative cam position node placed precise in the center of the mirror-mesh (the reflecting part) of the related mirror. Otherwise, reflective calculation might be wrong. Mirrors can use y-axis rotation presets for easy adjustment, to rotate x/z axis move the reference nodes accordingly to avoid gimbal lock, offset preset work too, but are not recommended to use.
 -   Wrong or not existing materials might make RoR crash while parsing the truck. Be accurate !
 -   `.material` file material definition is strictly necessary and needs to match the material in the truck-file line. Material definition features a fall-back texture when camera is not active or not set. Just add a texture unit with a texture definition, it will be replaced with the generated texture when camera is setup correct and active automatically.
--   Do **NOT** the set alternative camera orientation node to the same node\# then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
+-   Do **NOT** the set alternative camera orientation node to the same node\## then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
 -   In 0.4.7.0, videocameras do not work with [skins](/vehicle-creation/alternate-skins). This has been fixed in the development builds.
 
 **Samples:**
@@ -3127,7 +3127,7 @@ Notes:
     2^13 = 8192
 ```
 
-## Extcamera
+### Extcamera
 
 The extcamera command allows you to change the 3rd person camera behavior.
 
@@ -3155,7 +3155,7 @@ extcamera node 123
 
 The final two modes are useful for a vehicle with detaching parts, so the camera is fixed in the view of the main vehicle.
 
-## Camerarail
+### Camerarail
 
 In RoR 0.39.7 and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.
 
@@ -3194,11 +3194,11 @@ Object A (active) - Object B (hooked) - Object C (hooked)
 
 The distance between the last camerarail node of one and the first camerarail node of another object needs to be under 5 meters.
 
-# Sounds
+## Sounds
 
 Since version 0.36, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
 
-## disabledefaultsounds
+### disabledefaultsounds
 
 Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example :
 
@@ -3206,7 +3206,7 @@ Use this simple statement to disable all sounds that RoR automatically adds to y
 disabledefaultsounds
 ```
 
-## Soundsources
+### Soundsources
 
 Adds a sound source to your vehicle.
 
@@ -3223,7 +3223,7 @@ soundsources
 135, tracks/default_horn
 ```
 
-## Soundsources2
+### Soundsources2
 
 Parameters:
 
@@ -3243,13 +3243,13 @@ soundsources2
 135,    0, tracks/default_horn
 ```
 
-## List of default soundsources
+### List of default soundsources
 
 This is a list of all default soundsources separated by engine type
 
 This can be inserted in the file as is.
 
-### Engine (Diesel)
+#### Engine (Diesel)
 
 ```
 soundsources
@@ -3272,7 +3272,7 @@ soundsources
 1, tracks/default_turn_signal
 ```
 
-### Engine (Gasoline)
+#### Engine (Gasoline)
 
 ```
 soundsources
@@ -3293,7 +3293,7 @@ soundsources
 
  
 
-### Airplane (Prop)
+#### Airplane (Prop)
 
 ```
 soundsources
@@ -3325,7 +3325,7 @@ soundsources
 
  
 
-### Airplane (Jet)
+#### Airplane (Jet)
 
 ```
 soundsources
@@ -3363,7 +3363,7 @@ soundsources
 1, tracks/default_turbojet_afterburner8
 ```
 
-### Airplane (Piston)
+#### Airplane (Piston)
 
 ```
 soundsources
@@ -3389,21 +3389,21 @@ soundsources
 1, tracks/default_pistonprop_hipower8
 ```
 
-### Marine (Large)
+#### Marine (Large)
 
 ```
  1, tracks/default_marine_large
 ```
 
-### Marine (Small)
+#### Marine (Small)
 
 ```
 1, tracks/default_marine_small
 ```
 
-# Aircraft
+## Aircraft
 
-## Wings
+### Wings
 
 
 **Please see [this page](/vehicle-creation/aircraft-and-aerodynamics/) for more information**
@@ -3532,7 +3532,7 @@ wings
 A,B,A,B,E,F,E,F,0,0,0,0,0,0,0,0,n,0,0,0, NACA0009.afl
 ```
 
-## Airbrakes
+### Airbrakes
 
 Airbrakes are a moving panel used to slow down an airplane (key bindings: `3` and `4`). They are positioned similarly to [props](#props).
 
@@ -3562,7 +3562,7 @@ airbrakes
 95,   105,   113,   125,     0.2,     0.0,     0.0,   2.0,    3.0,      60.0,      0.044,       0.205,       0.124,       0.146
 ```
 
-## Turboprops
+### Turboprops
 
 The turboprops section defines the turboprop engines, and makes the truck a plane!
 
@@ -3589,7 +3589,7 @@ turboprops
 119,163,164,165,166,167, 3000.0, Clark-Y.afl
 ```
 
-## Fusedrag
+### Fusedrag
 
 The fusedrag section helps the correct modeling of the fuselage contribution to the aerodynamic drag of a plane.
 
@@ -3623,7 +3623,7 @@ fusedrag
 131, 51, autocalc, 1.75 airfoil_name.afl
 ```
 
-## Turbojets
+### Turbojets
 
 Defines a turbojet. Parameters:
 
@@ -3644,7 +3644,7 @@ turbojets
 274,       275,       276,             0,            3.5,          100.1,            1.2,          1.66,          0.73
 ```
 
-## Pistonprops
+### Pistonprops
 
 Pistonprops act in almost the exact same way as turboprops minus two differences. The pitch is manually set and stays at a set value and it has a couplenode.
 
@@ -3670,11 +3670,11 @@ pistonprops
  119,  163, 164, 165, 166, 167,         -1, 3000.0,   -10, Clark-Y.afl
 ```
 
-# Boats
+## Boats
 
 See: [Boats](/vehicle-creation/boats)
 
-## Screwprops
+### Screwprops
 
 Screwprops are boats' propellers. Currently, steering is only done by thrust vectoring.
 

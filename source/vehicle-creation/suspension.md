@@ -10,9 +10,9 @@ Suspension is a flexible component which connects a car's body to its wheels. be
 
 For syntax, see [truckfile reference](/vehicle-creation/fileformat-truck#shocks).
 
-# Types
+## Types
 
-## Coilovers
+### Coilovers
 
 Coilover springs (standing for 'coil-over-oil') are extremely simple to model in RoR, since the game's shocks simulate them directly.
 
@@ -23,7 +23,7 @@ Things to keep in mind:
 
 So, for soft suspension you would want low spring and relatively low damp, and the opposite for stiff suspension (high spring and relatively high damp). Shocks behave differently based on the force acted upon them. So a shock that is good for a truck weighing several tonnes will be much too 'stiff' for the same shock on a street car.
 
-## Leaf springs
+### Leaf springs
 
 ![leafspring](/images/softbody-suspension-leafspring-ingame-tn.jpg)
 
@@ -33,11 +33,11 @@ A fully working concept vehicle is available in the repository.
 
 <div style="clear: both;"></div>
 
-# Dependent suspension
+## Dependent suspension
 
 The wheels of each axle are securely connected to each other using non independent suspension systems. The force from every bump that a wheel on one side goes over is transmitted into the other wheel too. These systems do not tend produce very good handling, and therefore are not often used on sports cars. Non independent suspension is much more commonly found on heavy duty vehicles, where the link between the wheels makes axles much stronger
 
-## Beam axle
+### Beam axle
 
 ![beamaxle](/images/softbody-suspension-beamaxle-ingame.jpg)
 
@@ -64,7 +64,7 @@ Simple beam Axle:
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
-## Watt's linkage
+### Watt's linkage
 
 ![wattslinkage](/images/softbody-suspension-watts-linkage.jpg)
 
@@ -85,7 +85,7 @@ Watt's Linkage:
 
 <div style="clear: both;"></div>
 
-## Panhard rod
+### Panhard rod
 
 
 ![panhardrod](/images/softbody-suspension-panhard-rod.jpg)
@@ -105,7 +105,7 @@ Panhard rod:
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
-## De Dion tube
+### De Dion tube
 
 ![dediontube](/images/softbody-suspension-dedion-tube.jpg)
 
@@ -131,7 +131,7 @@ The wheels connected to the tube are kept parallel, regardless of body roll or s
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
-## Walking beam
+### Walking beam
 
 
 ![walkingbeam1](/images/softbody-suspension-walking-beam.png)
@@ -178,11 +178,11 @@ On the right: the concept vehicle in game.
 
 <div style="clear: both;"></div>
 
-# Independent suspension
+## Independent suspension
 
 There are no significant connections between wheels in independent suspension setups. They are therefore much more suited to vehicles where roadholding is especially important.
 
-## Swing axle
+### Swing axle
 
 ![swingaxle](/images/softbody-suspension-swing-axle.jpg)
 
@@ -204,7 +204,7 @@ Because of its strange handling characteristics, swing axle suspension is uncomm
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
-## Double wishbone
+### Double wishbone
 
 
 ![doublewishbone](/images/softbody-suspension-double-wishbone.jpg)
@@ -226,7 +226,7 @@ Double wishbone suspension is most common in racing cars and larger passenger ca
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
-## McPherson strut
+### McPherson strut
 
 ![mcph](/images/softbody-suspension-mcpherson.jpg)
 
@@ -252,15 +252,15 @@ On the left: [An old-style example truck](/download/suspension-demo-mcpherson-wi
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
-## Other forms of independent suspension
+### Other forms of independent suspension
 
 -   **Twin Traction Beam** - A beam that goes to the other side of the truck where it is connected to the chassis. [Example](http://www.explorer4x4.com/zimmods97.jpg).
 -   **Multilink** - Multilink, or 5-link, system are called so because they use 5 different points to connect the fusee to the chassis.
 -   **Trailing-arm** - Two arms that look like the 4 link system except that there is not solid axle.
 
-# Special parts
+## Special parts
 
-## Anti roll bars
+### Anti roll bars
 
 ![antiroll](/images/softbody-suspension-anti-roll-bars.jpg)
 
@@ -276,7 +276,7 @@ The two trucks here are identical except the second truck does not have an anti 
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
-## Liftable Axles
+### Liftable Axles
 
 Liftable axles have been implemented in a couple of ways in RoR.
 

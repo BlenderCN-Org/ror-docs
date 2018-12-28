@@ -42,7 +42,7 @@ categories: [tools-tutorials]
 [[Image:Materials-pic6.jpg|thumb|right|250px|Pic 6 - Tennis ball normal map texture]]
 [[Image:Materials-pic7.jpg|thumb|right|250px|Pic 7 - Tennis ball 3D with diffuse, specular and normal textures (render blender)]]
 
-# What is a material?
+## What is a material?
 
 At the beginning of everything is a mesh. Note that a terrain is itself some kind of mesh too.
 
@@ -71,9 +71,9 @@ or quite complex (normal shading, alpha-splatting).
 This part is not covered here, just know that those shaders contains
 new algorithms to produce new advanced effects.**
 
-# Tutorial
+## Tutorial
 
-## Get a silo mesh
+### Get a silo mesh
 
 TODO: fix old link: http://www.rigsofrods.com/attachment.php?attachmentid=196679&d=1303428882
 
@@ -86,7 +86,7 @@ When you load the map, the silo looks terrible plain white. It is because the ma
 See <u>pic 1</u>
 ![pic1-white-ball]
 
-## "Hello world": write your first material by yourself! Give it a plain colour
+### "Hello world": write your first material by yourself! Give it a plain colour
 
 If you look inside the map zip, you will find two interesting files, neglect the rest:
 silo.mesh: This is the 3D model of the ball, with no material
@@ -119,7 +119,7 @@ That way you can ask the graphic engine to apply different "layers" of effects
 Load the map, there is a strange reddish cucumber, like in <u>pic 8</u>, that's it!
 OK, you've managed to get your first simple material working.
 
-## Play with ambient, diffuse and specularity
+### Play with ambient, diffuse and specularity
 
 In the file, you can see only one line "ambient" followed by some values.
 
@@ -187,7 +187,7 @@ See result in <u>pic 10</u>.
 For nice results, you will need to adjust the intensity of each source.
 Most often the colour is not changed much, but the intensity is set different for each section.
 
-## Add a texture to it
+### Add a texture to it
 
 Now we want to add a metal plate texture to our silo. For that, you should have "unwrapped" your 3D model before.
 It means telling the model where to apply which part of the texture.
@@ -245,7 +245,7 @@ You should have a silo looking like the one in <u>pic 12</u>, which looks better
 
 ![pic12] caption: Pic 12 - Silo with metal plates tiled texture better
 
-## Advanced multi-pass material for combining leaks with metal plates tiles texture (alpha-splatting)
+### Advanced multi-pass material for combining leaks with metal plates tiles texture (alpha-splatting)
 
 ![pic13] image caption: Pic 13 - Silo with metal plates tiled and leaks
 
@@ -308,7 +308,7 @@ A line begining by // means that it is commented.
         }
     }
 
-# Further information ==
+## Further information ==
 
 Links to exhaustive Ogre documentation:
 

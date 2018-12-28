@@ -7,7 +7,7 @@ categories: [tools-tutorials]
 
 
 
-# Introduction
+## Introduction
 
   <p>This tutorial is designed to provide a simple introduction to blender. This will not be covering any advance topics, it's sole purpose is to provide a small amount of knowledge that you can use to proverbially get your foot in the door of using blender. I am not going to cover how to install blender as i going to assume you are capable of doing that by yourself.</p>
   <p>This tutorial is designed for Blender 2.65a
@@ -15,14 +15,14 @@ categories: [tools-tutorials]
   </p>
 
 
-# Useful links
+## Useful links
 
   <p><a rel="nofollow" class="external text" href="http://www.blender.org/">Blender homepage</a></p>
   <p><a rel="nofollow" class="external text" href="http://www.blender.org/download/get-blender/">Download Blender</a></p>
   <p><a rel="nofollow" class="external text" href="http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro#Table_of_Contents">A different Blender tutorial</a> (This goes into much more depth and may be harder to understand, but covers almost everything you could ever want to know)</p>
 
 
-# This is Blender
+## This is Blender
 
  <div class="thumb tleft">
     <div class="thumbinner" style="width:602px;">
@@ -86,7 +86,7 @@ categories: [tools-tutorials]
  </div>
  <p>If you have done this correctly then your cube should now be tinted orange, this is because by default all of the faces (sides), edges (lines) and vertices (angles/joints) have been selected. This is also similar to when you selected the object earlier. if you haven't already noticed the theme, anything that has been selected will be orange in some way or form.</p>
 
-# Editing your cube
+## Editing your cube
 
  <div class="thumb tleft">
     <div class="thumbinner" style="width:602px;">
@@ -128,7 +128,7 @@ categories: [tools-tutorials]
  <p>You will now have something that looks vaguely reminiscent of this house shaped model. It doesn't have to be identical, as long as you are doing the same things you are learning the same things.</p>
  <p>But believe it or not most 3d house models are slightly more complex than this, so more work may be needed. Unless you are creating models for a scene where you never get more than 100 meters within said model if that is the case then job well done, get yourself a cup of tea and a well deserved chocolate digestive.</p>
 
-# More detail
+## More detail
 
   <p>In this section we are going to add more detail to the building, please note that while more detail makes something look nicer it can also decrease the in game fps. So when you create a "to scale 1:1 replica of the uss enterprise" be warned that it may lag a little in blender its self, never mind rigs of rods or whatever else you wish to add this into.</p>
   <div class="thumb tleft">

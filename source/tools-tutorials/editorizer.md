@@ -10,13 +10,13 @@ The Editorizer is a free program written by Ben for making vehicles. Contributio
 
 It's a fairly old and simple program. Note you can't use it to create a new vehicle from scratch, you need to manually create a _.truck_ file with a basic structure. A  _.truck_ file with the basic structure has been included to get you started.
 
-# Download and run on Windows
+## Download and run on Windows
 
 [Download here](/download/Editorizer.zip) (ZIP archive)
 
 Run as administrator! (only needed on the first run or if you move Editorizer's directory)
 
-## Troubleshooting
+### Troubleshooting
 
 If you don't run Editorizer as administrator for the first time, or you subsequently move it's directory, you may encounter this error:
 ![](/images/editorizer-error-comdlg32ocx.jpeg)
@@ -41,7 +41,7 @@ To resolve this, try running as administrator again, and if it doesn't help, try
         regsvr32 c:\Windows\SysWOW64\mscomctl.ocx
         ```
 
-# Download and run on MacOSX
+## Download and run on MacOSX
 
 [Download here](http://www.mediafire.com/download/ji2edf2ng4rcy9b/MAC%20RoR%20Editorizer.zip) (ZIP archive)
 
@@ -51,7 +51,7 @@ The mac port is standalone with all the files needed built into the app, Huge th
 
 Warning: the file is quite large (511.6MB) because of all of the required frameworks.
 
-# Truck file template
+## Truck file template
 
 Editorizer loads and saves files in [truck file format](technical/fileformat-truck).
 
@@ -129,7 +129,7 @@ engoption
 end
 ```
 
-# Using blueprints
+## Using blueprints
 
 Blueprints are technical drawings of vehicles and machinery, very useful as reference. Many good blueprints can be found on the internet.
 
@@ -137,7 +137,7 @@ To load a blueprint, find _Blueprints_ in the top toolbar, and load in the files
 
 To adjust blueprints, click on _Place Blueprints_ on the far right, and place your blueprints in a desired position .
 
-# Editing Nodes
+## Editing Nodes
 
 When you want to add nodes, just click on _Add Nodes_ up in the right. Click where you want the node to go, either in the Top Left, Bottom Left or Botton Right areas. If you want to make the node only get placed on the "grid" that divides the areas up-check the "snap nodes to grid" box.
 Special Nodes
@@ -146,7 +146,7 @@ Check [truckfile reference](technical/fileformat-truck) for special node types.
 
 If you want to give your nodes these special options, just click on the _Nodes_ tab, pick the one you want to change, and put the corresponding node option in the options part.
 
-# Editing Beams
+## Editing Beams
 
 When you want to add beams, just click on the _Add Beams_ up in the right. Click the first node where you want the beam to start. Click the second node which is where you want the beam to end.
 
@@ -154,7 +154,7 @@ Check [truckfile reference](technical/fileformat-truck) for special beam types.
 
 If you want to give your beams these special options, just click on the _Beams_ tab, pick the beam you want to change, and put the corresponding beam option in the options box, along with any variables for that type of beam.
 
-# Wheels
+## Wheels
 
 To add wheels, look at this example. Just click on the Wheels tab and add in the correct information in the correct spaces.
 
@@ -174,10 +174,10 @@ REAR WHEELS:
     ;EXAMPLE2:
     0.5,0.1,12,14,15,-12,1,1,9,350.0,300000,4000, tracks/wheelfaceb tracks/wheelband1
 
-# Scaling
+## Scaling
 
 To scale your vehicle if you find it a little bit too big, just go to the Visible Nodes tab at the very top. Click on Scale..., then put in decimal numbers from 0.01 to 0.99 in the X,Y,Z lines to scale it down, put in decimal numbers from 1.0 and up(experiment) to scale it up.
 
-# Tools to avoid
+## Tools to avoid
 
 In the _Visible Nodes_ tab at the top, I would advise to not use the _Interconnect_ or _Variable Interconnect_ options with any vehicle as it can mess up the structure and other things. Basically these options will join every node to every other node in the object...
