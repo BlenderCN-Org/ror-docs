@@ -15,4 +15,4 @@ theme:
   name: 'material'
   palette:
     primary: 'blue'
-    accent: 'orange'
+    accent: 'blue'
