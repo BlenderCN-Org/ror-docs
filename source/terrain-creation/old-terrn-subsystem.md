@@ -8,7 +8,7 @@ This subsystem is obsolete since RoR version 0.4.0.
 It was based upon Ogre engine's TerrainManager component,
 which was obsoleted, and thus we couldn't rely on it anymore.
 
-# File type overview
+## File type overview
 
 -   **.terrn** - You define terrain name, associated .cfg name, spawn point position, ambient colour and various object positions.
 -   **.cfg** - You define Terrain Texture, RAW Heightmap file, World Sizes and Height, Tiles the map get divided into, Terrain LOD and additional stuff.
@@ -22,7 +22,7 @@ which was obsoleted, and thus we couldn't rely on it anymore.
     The light source (the sun) heading is -60 degree and altitude of 25 degree.
 -   **.png/./jpg/.dds** - A miniature map: a 256x256 image (that can be the reduction of the texture file) used as a map in RoR.
 
-# The .terrn format
+## The .terrn format
 
 Basics
 ------
