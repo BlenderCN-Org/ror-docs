@@ -4,19 +4,11 @@ title:  "Beginner's Guide"
 categories: [gameplay]
 ---
 
-
-
-For installation help, see [Installation Guide](https://archives.rigsofrods.org/wiki/index.php/Installation_Guide).
-
-This guide is converted from the old wiki backup at [archives.rigsofrods.org](https://archives.rigsofrods.org/wiki/index.php/Beginner%27s_Guide).
-
-Note: You can watch some videotutorials instead reading this page at [Beginner's Guide videotutorials](https://archives.rigsofrods.org/wiki/index.php/Beginner%27s_Guide_videotutorials) page
-
 ## First Run
 
-You are now ready to launch RoR! You spawn as a country person (grey if using 0.34 or lower) known lovingly as RoRbot. You control him with the arrow keys while using `SHIFT` to run and `SPACE` to jump (good for getting over bumps, or if you get stuck).
+You spawn as a country person known lovingly as RoRbot. You control him with the arrow keys while using `SHIFT` to run and `SPACE` to jump (good for getting over bumps, or if you get stuck).
 
-For the sake of this tutorial, select *North St. Helens*. You spawn you in front of a building known as the *Rig-a-Deal*. This is where you will spawn new trucks. Walk into the "Office" to bring up the selection menu. If your game seems to freeze, don't panic! The truck list can be intensive to load and may take a few seconds. Use the arrow keys to move through the menus. Go to `Transport Trucks` and select the *DAF Semi truck*. The truck spawns inside the Rig-a-Deal with you inside it. If you happen to spawn the truck with RoRbot outside of the vehicle, simply hit `ENTER`/`RETURN` to get in a vehicle.
+For the sake of this tutorial, select *North St. Helens*. You spawn you in front of a building known as the *Rig-a-Deal*. This is where you will spawn new trucks. Walk into the "Office" to bring up the selection menu. Go to `Transport Trucks` and select the *DAF Semi truck*. The truck spawns inside the Rig-a-Deal with you inside it. If you happen to spawn the truck with RoRbot outside of the vehicle, simply hit `ENTER`/`RETURN` to get in a vehicle.
 
 ## Driving
 
@@ -60,35 +52,14 @@ This tutorial does not make use of the autopilot. For more information regarding
 
 We must explore beyond Coldwater to get to the marina. Take the main road out of Coldwater, heading southwest toward the Elk Hotel. Take the second left after you leave town. You should see the water soon. When you arrive at the marina, you should see marina-style boat docks and a ramp along with a building. Walk around to the front of the building and enter the open door. Choose the Wahoo boat. Boats are are still a bit primitive at this stage. Hence they are relatively easy to drive. Use `PGUP`/`PGDOWN` to throttle and `LEFT`/`RIGHT` to steer. Use `UP` to center the throttle (to neutral) and `DOWN` to center the rudder. It may take you awhile to get your sea legs. If you have waves enabled, see how far out you can go before you flip over waves!
 
-If your boat is unresponsive to throttle commands, remap your boat keys in the [configurator](http://docs.rigsofrods.org/gameplay/configurator).
-
 ## Conclusion
 
-Now that you have a basic grasp of the basic vehicles in RoR, it is now up to you to create your own scenarios. If you feel bored, try your hand at creating your own vehicles, starting with the [Tutorials](https://archives.rigsofrods.org/wiki/index.php/Tutorials), or add files from the [repository backup](https://repofiles.avrintech.net/).
+Now that you have a basic grasp of the basic vehicles in RoR, it is now up to you to create your own scenarios. If you feel bored, try your hand at creating your own vehicles, starting with the [Tutorials](/vehicle-creation/making-softbodies/), or add files from the [repository](http://forum.rigsofrods.org/resources/).
 
 ## Multiplayer
 
-If you feel like sharing the experience, you can play on one of the many public multiplayer servers. Note that multiplayer is the newest feature to RoR and is still in development and can be unstable at times! Please be patient and if you encounter errors, be sure to read the [Troubleshooting](https://archives.rigsofrods.org/wiki/index.php/Troubleshooting) page.
-
-*Please see the [Beginner's Guide to Multiplayer](https://archives.rigsofrods.org/wiki/index.php/Beginner%27s_Guide_to_Multiplayer).*
+If you feel like sharing the experience, you can play on one of the many public multiplayer servers. Note that multiplayer is the newest feature to RoR and is still in development and can be unstable at times! Please be patient and if you encounter errors, be sure to read the [Troubleshooting](http://localhost:8000/gameplay/general-faq/) page.
 
 ## Default Commands
 
-*Please see the [Input.map](http://docs.rigsofrods.org/gameplay/controls-config) file for a full list of commands.*
-
-## Adding Content
-
-To add new vehicles or terrains, go to [Installing Files from the Repository](https://archives.rigsofrods.org/wiki/index.php/Installing_Files_from_the_Repository_post_0.36). To add objects/vehicles or make changes to a terrain you already have, see [Terrn file description](http://docs.rigsofrods.org/terrain-creation/terrn2-subsystem) or [Adding truck/load to the maps](https://archives.rigsofrods.org/wiki/index.php/Adding_truck/load_to_the_maps).
-
-## Changing The Sky Type
-
-Here are 4 easy steps to guide you changing the sky type.
-
-1. Go into the configurator
-2. Once inside, go down until you're in the Sky Type section
-3. Change `Sandstorm (fastest)` to Caelum `(best looking,slower)` by simply clicking in the drop down box.
-4. Start RoR and to speed up the time press the addition/plus key `+` in the number pad section of your keyboard.
-5. To reverse the time press the minus key `-` which is also in the number pad section of your keyboard.
-6. If you would like to advance time at an even faster rate, press the shift key and use either the `+` or `-` keys.
-
-If done so correctly you will see instant results. Here are some great examples: Example 1 and example 2.
+*Please see the [Input.map](/gameplay/controls-config) file for a full list of commands.*
