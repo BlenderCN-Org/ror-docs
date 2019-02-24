@@ -7,9 +7,9 @@ docs_dir: source
 
 repo_name: AnotherFoxGuy/ror-docs
 repo_url: https://github.com/AnotherFoxGuy/ror-docs
-edit_uri: blob/master/docs/
+edit_uri: blob/master/source/
 
-copyright: 'Copyright &copy; 2018 Rigs of Rods Community'
+copyright: 'Copyright &copy; 2019 Rigs of Rods Community'
 
 theme:
   name: 'material'
