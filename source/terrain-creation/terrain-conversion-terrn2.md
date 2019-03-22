@@ -27,7 +27,7 @@ WorldTexture=texture.dds
 This is the texture image for this single-layer. A majority of 0.3x terrains only use this layer for their terrain texture. Terrains that have more than one texture layer use [Alpha Splatting](http://ror.avrintech.net/rorwikibackup/index.php/Tutorials/Bump_Map_Alpha_Splatting) which is not covered in this tutorial.
 
 ### Getting the template
-I have made and uploaded a template terrain [here](https://forum.rigsofrods.org/content-creation/150-template-raw-png-terrains.html) with the right file structure which will be used throughout this tutorial.
+I have made and uploaded a template terrain [here](https://forum.rigsofrods.org/resources/template-raw-png-terrains.262/) with the right file structure which will be used throughout this tutorial.
 Download the raw heightmap version, as 0.3x terrains use .raw heightmaps.
 
 

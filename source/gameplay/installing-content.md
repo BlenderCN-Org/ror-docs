@@ -31,6 +31,9 @@ If you see ![repository-no-perms](/images/repository-download-no-perms.png) that
 
 ### Installing
 
+!!! warning
+    As of 0.4.8 RC4, the default content folder is now called `mods`. Place the zip in that folder if you don't have the `packs` folder.
+
 Once the mod is downloaded, simply place the `*.zip` file into `Documents\Rigs of Rods 0.4\packs` or `~/.rigsofrods/packs` on Linux:
 
 ![repository-install](/images/repository-installing-mod.png)
@@ -39,11 +42,13 @@ Once the mod is downloaded, simply place the `*.zip` file into `Documents\Rigs o
 
 If you want more organization, you can place the `.zip` file into `vehicles` or `terrains`, depending on what type of mod you downloaded.
 
+If you have 0.4.8 RC4, you can place subfolders inside the `mods` folder. (e.g. `mods/vehicles/mod.zip`)
+
 That's it! You can launch Rigs of Rods now and your shiny new mod should be ready to use.
 
 ## Installing skinzips
 
-Some mods may provide a `*.skinzip` which contains some extra liveries/skins for the vehicle. To install these, they are also placed in the `packs` folder.
+Some mods may provide a `*.skinzip` which contains some extra liveries/skins for the vehicle. To install these, they are also placed in the `packs`/`mods` folder.
 
 For more information about skinzips, see [this page](/vehicle-creation/alternate-skins/).
 

@@ -8,7 +8,7 @@ categories: [vehicle-creation]
 
 This tutorial covers the theory and concepts used to build real 2-wheeled vehicles in Rigs of Rods.
 
-Based off [this forum thread](https://www.rigsofrods.org/old-forum/forums/120-Mod-tech/95634/page-0001.html).
+Based off [this archived forum thread](http://archives.rigsofrods.net/old-forum/forums/120-Mod-tech/95634/page-0001.html).
 
 ## Theory
 

@@ -97,7 +97,11 @@ You can use this line as much as you like. As noted earlier, this only works wit
 
 `authorName` - Your username.
 
-`AuthorID` - Your forum ID. This ID cannot be acquired without contacting a staff member now, so it can be just set to `0`.
+`AuthorID` - Your forum ID. To get your ID, view your forum profile and check the number shown in the URL. For example:
+
+<https://forum.rigsofrods.org/members/curiousmike.5831/>
+
+`5831` would be the ID.
 
 `GUID` - The GUID that matches the GUID in the `.truck` file. See [Step 1 - GUID](#step-1---guid).
 
@@ -150,7 +154,7 @@ Antonov 12 - Green Skin
     // Preview image. Should be at least 256x256 pixels.
 	preview          = an-12-green-skin-mini.png
 	// Short description
-	description      = sarens skin for the sennebogen 5500
+	description      = Green skin for the An-12
     // Name of the author, optional
 	AuthorName = Yourname
     // Forum ID of the author, optional
@@ -171,7 +175,7 @@ Like above - package your skin files to .skinzip, and enjoy it ingame!
 
 ### More examples
 
-An example skin that replaces materials: [1982 DI Sportster Scheme: HotWheels Challenge](https://forum.rigsofrods.org/downloads.php?do=file&id=242)
+An example skin that replaces materials: [1982 DI Sportster Scheme: HotWheels Challenge](https://forum.rigsofrods.org/resources/1982-di-sportster-390c.252/)
 
 ```
 HotWheels Challenge Livery
