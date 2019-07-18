@@ -188,11 +188,11 @@ nodes
 14, 1.36, 0.00, 1.97, cl 2000
 ```
 
-You can debug your truck's node masses by enabling `Debug Truck Mass` in RoRConfig:
+You can debug your truck's node masses by enabling `Debug actor mass` in settings:
 
-![rorconfig-truckmassdebug](/images/rorconfig-truckmassdebug.png)
+![massdebug](/images/fileformat-truck-massdebug.png)
 
-Look into your `RoR.log` after loading and you could see something like this:
+Look into your `RoR.log` after spawning and you could see something like this:
 
 ```
 Node 0 : 3662 kg
@@ -734,10 +734,10 @@ This section is important: it defines the wheels! Parameters are:
 -   **Node 1** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where the one side of the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where one side of the wheel ends.
     To clarify, if you imagine a beam that goes right through the middle of the wheel along the axis of rotation, Node 1 and Node 2 would be at the intersection between one side of the wheel and the beam and the intersection between other side of the wheel and the beam.
--   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use `9999` if there is no rigidity node.
+-   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#axle-rigidity)). Use `9999` if there is no rigidity node.
 -   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span>`0` for unbraked wheels, `1` for braked wheels. For directional braking, as found in airplanes, use `2` for a left wheel, `3` for a right wheel. In 0.37+, `4` is used for a wheel with a footbrake, but no parking brake.
 -   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> `0` for undriven wheels, `1` for wheels driven forwards, `2` for wheels driven backwards
--   **Reference arm node** - <span style="color:#BD0058">Node number or name</span>; The [reference arm node](https://archives.rigsofrods.org/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction. Setting the reference arm node to the same node as **Node 1** or **Node 2** gets rid of the effects of the Reference Arm Node.
+-   **Reference arm node** - <span style="color:#BD0058">Node number or name</span>; The [reference arm node](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#reference-arm-node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction. Setting the reference arm node to the same node as **Node 1** or **Node 2** gets rid of the effects of the Reference Arm Node.
 -   **Mass** - <span style="color:#BD0058">Real number</span>; Mass of the wheel, in kilograms.
 -   **Springiness** - <span style="color:#BD0058">Real number</span>; The stiffness of the wheel, somewhat equivalent to tire pressure. Having too much spring will make the steering wheels bounce back and forth during understeer, sending vibrations through the entire vehicle.
 -   **Damping** - <span style="color:#BD0058">Real number</span>; The rebound rate of the wheel
@@ -767,10 +767,10 @@ This section improves wheels by simulating both wheel tires and rims. The player
 -   **Number of rays** - <span style="color:#BD0058">Real number</span> The number of 'pie pieces', or corners, that make up the wheel. For reference, `3` makes the wheel triangular, and `4` makes the wheel square. Recommended values are between `10` and `16`.
 -   **Node 1** - <span style="color:#BD0058">Node number/name</span> The node where the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number/name</span> The node where the wheel ends. (See [Wheels](#wheels) for an explanation of how this works.)
--   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use `9999` if there is no rigidity node.
+-   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#axle-rigidity)). Use `9999` if there is no rigidity node.
 -   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span> `0` for unbraked wheels, `1` for braked wheels. For directional braking, as found in airplanes, use `2` for a left wheel, `3` for a right wheel. In 0.37+, `4` is used for a wheel with a footbrake, but no parking brake.
 -   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> `0` for an undriven wheel, `1` for a wheel driven forwards, `2` for a wheel driven backwards.
--   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://archives.rigsofrods.org/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
+-   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#reference-arm-node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
 -   **Mass** - <span style="color:#BD0058">Real number</span> Mass of the wheel in kilograms.
 -   **Rim springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the wheel rim.
 -   '''Rim damping '''- <span style="color:#BD0058">Real number</span> The rebound rate of the wheel rim.
@@ -1090,8 +1090,9 @@ The commands section describes the "real" hydros, that is, those you command wit
 -   **Contraction key**: <span style="color:#BD0058">Function key code (decimal number)</span> A number representing the function key used to control the command beam. More than one can be controlled with the same key. (See below for the keymap.)
 -   **Extension key**: <span style="color:#BD0058">Function key code (decimal number)</span> The key used to extend the command beam.
 -   **Option flag** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Single character</span>
-    -   `i`: makes the command beam invisible.
-    -   `r`: makes the command behave like a rope or a winch (no compression strength).
+    -   `i`: Makes the command beam invisible.
+    -   `r`: Makes the command behave like a rope or a winch (no compression strength).
+	- 	`c`: Makes the command beam auto-center: It will automatically return it to its starting position when a lengthening/shortening key is released.
     -   `n`: Placeholder, does nothing (useful as filler when you need to specify description)
 -   **Description** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> A text description that tells the user what the command beam does when the it is activated. This is shown by pressing `CTRL+T` ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
 
@@ -1360,7 +1361,7 @@ Parameters:
         The overall stiffness of a beam. The higher the value the stiffer the beam.
 -   **Damping constant**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: `12000<`/span>;
+        <span style="color:#0B8A00">Default: `12000`</span>;
         The resistance to motion of a beam. Higher values make the beam less likely to deform.
 -   **Deformation threshold constant**:
         <span style="color:#BD0058">Real number</span>;
@@ -2016,7 +2017,7 @@ In the example above, the maximum speed of the vehicle is `10`mps (`36`kph), it 
 
 This section defines axles on a vehicle, allowing more accurate distribution of torque among the wheels.
 
-The axle section introduces open differentials, and spooled (aka locked) differentials.
+The axle section introduces open differentials, and spooled (aka locked) differentials. They are toggled with the `W` key.
 
 By adding axles to your vehicle file you override the propulsed property for the tires. Only wheels connected to an axle are powered, if multiple axles are defined the axles are interconnected in a locked manner. If no axle section is defined the old model of equal power distribution is used.
 
@@ -2028,11 +2029,11 @@ The axle section is different from other sections in that it is broken into prop
 -   **w2(&lt;node1&gt; &lt;node2&gt;)** - Wheel 2, same as w1, this is the second wheel attached to the axle. `w1` and `w2` are interchangeable.
 -   **d(type)** - Defines the available differential types for this axle. the list of axles is cycled through in the order specified, differential types maybe specified more than once. Each differential type is specified by a single letter, the letters are not to be separated by spaces or any other character. If no differentials are specified the axles will default to opened and locked.
     -   **Available differential types**
-        -   `o` - open
-        -   `l` - locked
+        -   `o` - Open
+        -   `l` - Locked (wheels locked together regardless of torque input)
         -   `s` - Split evenly (each wheel gets equal torque regardless of wheel speed)
-        -   `v` - viscous (added in 0.4.8.0)
-
+        -   `v` - Viscous <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> (applies locking force based on the amount of torque)
+		
 Sample axle section:
 
 ```
@@ -2045,13 +2046,13 @@ w1(5 6), w2(7 8), d(l)
 
 ### Interaxles
 
-In RoR 0.4.8.0 and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles.
+In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `CTRL+W`.
 
 Parameters:
 
 -   **axle_1**: The number of the first axle, with the first defined axle starting at `1`.
 -   **axle_2**: The number of the second axle, with the first defined axle starting at `1`.
--   **d(type)**: Similar to the axles section
+-   **d(type)**: Similar to the `axles` section
 
 Sample interaxles section:
 
@@ -2063,19 +2064,33 @@ interaxles
 
 ### Transfercase
 
-In RoR 0.4.8.0 and above you can add a transfer case on a vehicle.
+In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can add a transfer case on a vehicle.
 
 Parameters:
 
 -   **axle_1**: The number of the first axle, the one which is always driven.
 -   **axle_2**: The number of the second axle, the one which is only driven in 4WD mode.
--   **2wd_mode**: Allows/disallows 2WD mode.
--   **2wd_lo_mode**: Allows/disallows 2WD Lo mode.
--   **gear_ratio(s)**: Alternate gear ratios in Lo mode.
+-   **2wd_mode**: Allows/disallows 2WD mode. 
+-   **2wd_lo_mode**: Allows/disallows 2WD Lo mode. 
+-   **gear_ratio(s)**: Alternate gear ratios in Lo mode. If none are specified, Lo mode will be disabled.
+
+Notes:
+
+- 	Requires an `axles` section defined first!
+- 	`SHIFT+W` switches between 2WD/4WD mode.
+- 	If alternate gear ratios are specified, `ALT+W` switches between Hi/Lo mode.
 
 Sample transfercase section:
 
 ```
+;Basic transfer case, no alternate ratio(s) 
+
+transfercase
+;default driven axle, alternate axle, has 2wd mode, has 2wd lo mode
+1, 2, 1, 0
+
+;Transfer case with alternate ratio(s)
+
 transfercase
 ;default driven axle, alternate axle, has 2wd mode, has 2wd lo mode, alternate ratio(s)
 2, 1, 1, 0, 4.11, 3.1, 2.72
@@ -2901,7 +2916,7 @@ Specifies groundmodel should be used for the trucks contactive submeshes. It has
 
 Parameter:
 
--   **groundmodel\_name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = concrete</span>; The groundmodel to use. See also [Groundmodel Description File](https://archives.rigsofrods.org/wiki/index.php/Groundmodel_Description_File)
+-   **groundmodel\_name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = concrete</span>; The groundmodel to use. See also [Groundmodel Description File](https://archives.rigsofrods.net/wiki/index.php/Groundmodel_Description_File)
 
 ```
 ;submesh_groundmodel groundModelName
@@ -2934,10 +2949,6 @@ end_section
 section 0 highspeed
 engine
 1000.000000, 15000.000000, 5000.000000, 2.000000, 10.850000, 9.520000, 6.560000, -1.000000
-end_section
-
-section 0 highspeed lowspeed
-;triggered with both
 end_section
 ```
 
@@ -3006,11 +3017,11 @@ Both, cameras and mirrors, use the same technique, cameras just add a reflective
 
 Parameters:
 
--   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The node where the camera is placed. This is your reference node. Any existing node\## is valid.
--   **left\_node**: <span style="color:#BD0058">Node number/name</span>; The Z-reference of the camera, should be exactly right of the reference node when the camera points forward to the trucks front. Any existing node\## is valid.
--   **bottom\_node**: <span style="color:#BD0058">Node number/name</span>; The Y-reference of the camera, should be exactly below the reference node when the camera points forward to the trucks front. Any existing node\## is valid.
--   **alt\_reference\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative cam position node. It replaces the reference node for position but not for orientation. Good to setup mirrors and cams with just one extra node to an existing truck. Important for mirrors, read below! Any existing node\## is valid.
--   **alt\_orientation\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative camera orientation node. If set, it skips any camera orientation calculation and makes the cam permanent look at the set node. Good for hooks moving up and down. Any existing node\## is valid.
+-   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The node where the camera is placed. This is your reference node. Any existing node\# is valid.
+-   **left\_node**: <span style="color:#BD0058">Node number/name</span>; The Z-reference of the camera, should be exactly right of the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
+-   **bottom\_node**: <span style="color:#BD0058">Node number/name</span>; The Y-reference of the camera, should be exactly below the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
+-   **alt\_reference\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative cam position node. It replaces the reference node for position but not for orientation. Good to setup mirrors and cams with just one extra node to an existing truck. Important for mirrors, read below! Any existing node\# is valid.
+-   **alt\_orientation\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative camera orientation node. If set, it skips any camera orientation calculation and makes the cam permanent look at the set node. Good for hooks moving up and down. Any existing node\# is valid.
 -   **offset\_x** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; X-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional forth and back on its roll-axis.
 -   **offset\_y** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Y-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam up and down in meters on its rotation-axis.
 -   **offset\_z** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Z-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional left and right on its pitch-axis.
@@ -3034,8 +3045,8 @@ Parameters:
 -   Its recommended that mirrors always use the alternative cam position node placed precise in the center of the mirror-mesh (the reflecting part) of the related mirror. Otherwise, reflective calculation might be wrong. Mirrors can use y-axis rotation presets for easy adjustment, to rotate x/z axis move the reference nodes accordingly to avoid gimbal lock, offset preset work too, but are not recommended to use.
 -   Wrong or not existing materials might make RoR crash while parsing the truck. Be accurate !
 -   `.material` file material definition is strictly necessary and needs to match the material in the truck-file line. Material definition features a fall-back texture when camera is not active or not set. Just add a texture unit with a texture definition, it will be replaced with the generated texture when camera is setup correct and active automatically.
--   Do **NOT** the set alternative camera orientation node to the same node\## then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
--   In 0.4.7.0, videocameras do not work with [skins](/vehicle-creation/alternate-skins). This has been fixed in the development builds.
+-   Do **NOT** the set alternative camera orientation node to the same node\# then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
+-   In 0.4.7.0, videocameras do not work with [skins](/vehicle-creation/alternate-skins). This has been fixed in the development builds. 
 
 **Samples:**
 
@@ -3061,7 +3072,7 @@ videocamera
 43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     1,    -2, video-camera1
 ```
 
-**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/downloads.php?do=file&id=274): (They are currently disabled)**
+**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/resources/1988-audi-ur-quattro.85/): (They are currently disabled)**
 
 ```
 videocamera
@@ -3100,13 +3111,9 @@ material Quattro_LM
 
 ![videocamera-nodes](/images/videocamera-nodes.png)
 
-Make sure `vidscreen-disabled.png` is in your truck folder. **Use your own texture and material names to avoid conflicts !**
+Make sure `vidscreen-disabled.png` is in your truck zip. **Use your own texture and material names to avoid conflicts!**
 
-**Note: Only works in the development builds**
-
-You can enable videocamera debug in RoRConfig which activates helpful meshes which show position and orientation of the video-cameras set up:
-
-![rorconfig-debugvideocameras](/images/rorconfig-debugvideocameras.png)
+You can enable videocamera debug in settings (Diagnostic tab) which activates helpful meshes which show position and orientation of the video-cameras set up:
 
 ![videocamera-debug-ingame](/images/videocamera-debug-ingame.png)
 
@@ -3161,7 +3168,7 @@ The final two modes are useful for a vehicle with detaching parts, so the camera
 
 ### Camerarail
 
-In RoR 0.39.7 and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.
+In <span style="background-color:#fb7">\[ Version 0.39.7+ \]</span> and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.
 
 Camera controls:
 
@@ -3200,7 +3207,7 @@ The distance between the last camerarail node of one and the first camerarail no
 
 ## Sounds
 
-Since version 0.36, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
+Since <span style="background-color:#fb7">\[ Version 0.36+ \]</span>, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
 
 ### disabledefaultsounds
 

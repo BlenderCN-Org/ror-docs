@@ -4,8 +4,6 @@ title:  "Jargon"
 categories: [gameplay]
 ---
 
-
-
 This is a glossary of un-intuitive terms used by members of RoR community.
 
 
@@ -57,6 +55,8 @@ The 3D rendering engine used in Rigs of Rods.
 ### Stolen!
 
 This means the mod in question contains elements, in most cases meshes (3d models) which aren't the author's original work. This includes meshes obtained from public repositories, most notably SketchUp warehouse.
+
+More information: [Terms of Service#STOLEN CONTENT](/rules/terms-of-service/#stolen-content)
 
 ### Unreleased
 

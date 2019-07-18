@@ -64,7 +64,6 @@ Your brain also has a naturally built-in physics simulator. Try to use it when y
 Look at your structure, imagine the nodes moving around as they would do in RoR,
 and try to see if your structure will work. It's not hard.
 
-This tutorial was originally published in [http://www.rigsofrods.com/threads/73237-Tutorial-Creating-TRACKS-CRAWLERS-with-slidenodes] ((TODO: fix link))
 
 NOTES about the pictures:
 

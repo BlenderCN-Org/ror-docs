@@ -39,10 +39,10 @@ If you're new to terrain creation, read [intro to terrain creation](/terrain-cre
     Water = 1
 
     # (Real) Height of water surface.
-    WaterLine = -100
+    WaterLine = 6
 
     # (Real) Height of the black ground plane
-    WaterBottomLine = -120
+    WaterBottomLine = -150
 
     # (RGB, float notation) Color of the ambient light.
     AmbientColor = 1,1,1
@@ -266,6 +266,7 @@ For explanation of used images, see [Images & color channels](/tools-tutorials/i
 ```
 
 ## Terrain Objects (.tobj)
+Defines object placement on terrain. More info: [Static objects](/terrain-creation/intro/#static-objects-1)
 
 Defines object placement on terrain. More info in archived wikipage "Placing_objects_on_terrains_(For_0.38_and_0.4)"
 

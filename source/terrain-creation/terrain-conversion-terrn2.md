@@ -4,27 +4,25 @@ title: "Converting terrain to `terrn2` format"
 categories: [terrain-creation]
 ---
 
-
-
 ## Basic (Single-layer) 0.3x terrain to 0.4 conversion
 
-As of 0.4.0, The terrain format changed into what's now called [.terrn2](https://archives.rigsofrods.org/wiki/index.php/0.4_Terrain_System), This page will teach you how to easily convert a basic terrain to 0.4.
+As of 0.4.0, The terrain format changed into what's now called [.terrn2](/terrain-creation/terrn2-subsystem/), This page will teach you how to easily convert a basic terrain to 0.4.
 
 Programs needed:
 
 - Any text editor (I recommend [Notepad++](http://notepad-plus-plus.org/) as I will use one of its features)
 - [GIMP (Version 2.8.x is used in this tutorial)](https://www.gimp.org/downloads/)
-- [DDS texture plugin for GIMP](http://registry.gimp.org/node/70) This page will not explain how to install it.
+- [DDS texture plugin for GIMP](https://code.google.com/archive/p/gimp-dds/downloads) This page will not explain how to install it.
 
 ### What defines a "Single-layer" terrain?
 
-In the old [.terrn](https://archives.rigsofrods.org/wiki/index.php/.terrn) format's .cfg file, you will find a line at the top in this format:
+In the old [.terrn](/terrain-creation/old-terrn-subsystem/) format's .cfg file, you will find a line at the top in this format:
 
 ```
 WorldTexture=texture.dds
 ```
 
-This is the texture image for this single-layer. A majority of 0.3x terrains only use this layer for their terrain texture. Terrains that have more than one texture layer use [Alpha Splatting](http://ror.avrintech.net/rorwikibackup/index.php/Tutorials/Bump_Map_Alpha_Splatting) which is not covered in this tutorial.
+This is the texture image for this single-layer. A majority of 0.3x terrains only use this layer for their terrain texture. Terrains that have more than one texture layer use [Alpha Splatting](/terrain-creation/custom-texture-splatting/) which is not covered in this tutorial.
 
 ### Getting the template
 I have made and uploaded a template terrain [here](https://forum.rigsofrods.org/resources/template-raw-png-terrains.262/) with the right file structure which will be used throughout this tutorial.
@@ -32,8 +30,8 @@ Download the raw heightmap version, as 0.3x terrains use .raw heightmaps.
 
 
 ### Choosing your terrain to convert
-Lots of terrains have already been converted, you can find them [here](http://rigsofrods.org/thread-10.html), **don't waste your time converting a terrain that has already been converted!**
-In this tutorial I will be converting the [Cliffdrop](https://repofiles.avrintech.net/repofiles-3rd-batch/Cliffdrop.zip) terrain.
+Lots of terrains have already been converted, you can find them [here](https://forum.rigsofrods.org/threads/updated-terrains-for-0-4-5.154/), **don't waste your time converting a terrain that has already been converted!**
+In this tutorial I will be converting the [Cliffdrop](http://archives.rigsofrods.net/repo/files/repofiles-3rd-batch/Cliffdrop.zip) terrain.
 
 ### Getting started
 Once you've downloaded the template terrain, extract it into a folder using any zipping program (Windows can extract files by default,
@@ -216,7 +214,7 @@ When you load the terrain in Rigs of Rods, You should have a working 0.4-ported 
 
 ![FinishedMap](/images/terrain-conversionfin.png)
 
-#### Download the finished terrain [here.](https://forum.rigsofrods.org/downloads.php?do=file&id=248)
+#### Download the finished terrain [here.](https://forum.rigsofrods.org/resources/cliff-drop-crash-test-map.66/)
 
 ## Removing the alpha mask
 

@@ -23,7 +23,7 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 - [Torchlight-To-Blender plug-in](/download/ImportExportTL_blender25x_v0.6.2.zip)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
 - (Optional) [OgreCommandLineTools-Windows](https://sourceforge.net/projects/ogre/files/ogre-tools/1.7.2/OgreCommandLineTools_1.7.2.zip/download) (If you don't want to use the OgreXMLConverter located in your RoR install directory)
-- (Optional) [OgreMeshTool](https://code.google.com/archive/p/ogre-meshtool/downloads)
+- (Optional) [OgreMeshy](https://sourceforge.net/projects/ogremeshy/)
 
 ## Getting started
 
@@ -241,7 +241,7 @@ Congratulations!
 
 **Q:**: I get a plug-in install error/other Blender errors!
 
-**A:**: First, just Google the issue. If you can't find a solution then you can create a thread on the [Forums](https://forum.rigsofrods.org/forum-23.html) about it.
+**A:**: First, just Google the issue. If you can't find a solution then you can create a thread on the [content creation forum](https://forum.rigsofrods.org/forums/content-creation.15/).
 
 
 ---------------------------------------
