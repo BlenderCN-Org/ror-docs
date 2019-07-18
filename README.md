@@ -1,4 +1,5 @@
 # Rigs of Rods project documentation
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2316619c-d883-475d-842f-af3de2e4b93a/deploy-status)](https://app.netlify.com/sites/rigsofrods-docs/deploys)
 
 For full documentation visit [mkdocs.org](http://mkdocs.org).
 
