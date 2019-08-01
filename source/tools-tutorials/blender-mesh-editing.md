@@ -4,12 +4,8 @@ title:  "Blender mesh editing"
 categories: [tools-tutorials]
 ---
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.</div>
-</div>
-
-
+!!! warning
+    This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.
 
 
 ## Introduction
@@ -44,10 +40,8 @@ If you're on Linux, you can use WINE to run `OgreXMLConverter.exe`by running thi
 wine PATH/OgreXmlConverter.exe PATH/MESH_NAME.mesh
 ```
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />Some meshes are exported in OGRE 1.8 format, which only RoR 0.4+ supports. You'll have to use OgreXMLConverter from those versions. The OgreCommandLineTools download only supports OGRE 1.7.2.</div>
-</div>
+!!! warning
+    Some meshes are exported in OGRE 1.8 format, which only RoR 0.4+ supports. You'll have to use OgreXMLConverter from those versions. The OgreCommandLineTools download only supports OGRE 1.7.2.
 
 You should now have a `.mesh.xml` file in the same folder:
 
@@ -100,13 +94,11 @@ Press the `Z` key twice to get out of that shading mode. You should now see this
 
 ![11](/images/blender-edit-zkeytwice.png)
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />The importer will automatically separate the meshes if the `.mesh.xml` contains multiple groups. The object names match the material name. If there's many objects with the same name, you should be safe to join them:
-<br>
-<a href="/images/blender-edit-joiningobjects.png" class="image"><img alt="blender-edit-joiningobjects.png" src="/images/blender-edit-joiningobjects.png" width="620" height="320" /></a>
-</div>
-</div>
+!!! warning
+    The importer will automatically separate the meshes if the `.mesh.xml` contains multiple groups. The object names match the material name. If there's many objects with the same name, you should be safe to join them:
+    <br>
+    <a href="/images/blender-edit-joiningobjects.png" class="image"><img alt="blender-edit-joiningobjects.png" src="/images/blender-edit-joiningobjects.png" width="620" height="320" /></a>
+
 
 It should look similar to this now:
 
