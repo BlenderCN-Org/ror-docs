@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Terrain subsystem (Terrn2)"
-categories: [terrain-creation]
----
+# Terrain subsystem (Terrn2)
 
 This is a technical reference of terrain system in Rigs of Rods. It provides commented examples of various files needed to compose a terrn2 terrain.
 

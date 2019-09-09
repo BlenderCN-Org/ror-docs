@@ -1,8 +1,4 @@
----
-layout: page
-title:  "General FAQ"
-categories: [gameplay]
----
+# General FAQ
 
 Welcome to the General FAQ! Here you'll find answers to common questions and errors.
 It is organized into sections to make finding answers easier.

@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Making custom HUD"
-categories: [vehicle-creation]
----
+# Making custom HUD
 
 
 

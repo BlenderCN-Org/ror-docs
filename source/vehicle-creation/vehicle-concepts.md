@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Vehicle concepts"
-categories: [vehicle-creation]
----
+# Vehicle concepts
 
 **Rigs of Rods (RoR)** is not your typical vehicle simulator. Other vehicle simulators use fake suspension, mesh-based vehicles with no mass distribution, predetermined damage from collisions, and approximated fuzzy-dice sway models. 
 

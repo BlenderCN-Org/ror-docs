@@ -1,8 +1,4 @@
----
-layout: page
-title: "Building rail tracks"
-categories: [terrain-creation]
----
+# Building rail tracks
 
 
 

@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Visual editors"
-categories: [tools-tutorials]
----
+# Visual editors
 
 
 

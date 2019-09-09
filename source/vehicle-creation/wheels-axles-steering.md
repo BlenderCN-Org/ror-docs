@@ -1,8 +1,4 @@
----
-layout: page
-categories: [vehicle-creation]
-title: "Wheels, axles, steering"
----
+# Wheels, axles, steering
 
 ## Wheels
 

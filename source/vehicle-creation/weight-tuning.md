@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Weight tuning"
-categories: [vehicle-creation]
----
+# Weight tuning
 
 
 

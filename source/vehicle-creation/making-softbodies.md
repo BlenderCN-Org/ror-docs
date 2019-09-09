@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Making softbody objects"
-categories: [vehicle-creation]
----
+# Making softbody objects
 
 
 

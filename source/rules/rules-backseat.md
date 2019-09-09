@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Backseat"
----
+# Rules: Backseat
 
 This page exists as a clarification for the following rule:
 

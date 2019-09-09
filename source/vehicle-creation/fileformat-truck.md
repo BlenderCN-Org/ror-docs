@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Truck file format"
-categories: [vehicle-creation]
----
+# Truck file format
 
 
 

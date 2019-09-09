@@ -1,8 +1,4 @@
----
-layout: page
-title: "Shadows"
-categories: [terrain-creation]
----
+# Shadows
 
 
 

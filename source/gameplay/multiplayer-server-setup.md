@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Multiplayer server setup"
-categories: [gameplay]
----
+# Multiplayer server setup
 
 ## Introduction
 

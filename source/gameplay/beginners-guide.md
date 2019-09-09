@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Beginner's Guide"
-categories: [gameplay]
----
+# Beginner's Guide
 
 ## Introduction 
 

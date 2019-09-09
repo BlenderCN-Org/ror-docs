@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Aircraft handling"
-categories: [gameplay]
----
+# Aircraft handling
 
 ## How to use the autopilot
 

@@ -1,8 +1,4 @@
----
-title: "Making alternate skins"
-layout: page
-categories: [vehicle-creation]
----
+# Making alternate skins
 
 
 

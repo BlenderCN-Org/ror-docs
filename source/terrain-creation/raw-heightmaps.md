@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Heightmap RAW files"
-categories: [terrain-creation]
----
+# Heightmap RAW files
 
 
 

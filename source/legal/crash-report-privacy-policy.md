@@ -1,8 +1,4 @@
----
-layout: page
-title: "Crash Report Privacy Policy"
-categories: [legal]
----
+# Crash Report Privacy Policy
 
 ### What information do we collect?
 We collect information from you when you send us an error report from Rigs of Rods. The information includes:

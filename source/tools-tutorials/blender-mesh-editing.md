@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Blender mesh editing"
-categories: [tools-tutorials]
----
+# Blender mesh editing
 
 !!! warning
     This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.

@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Custom texture splatting"
-categories: [terrain-creation]
----
+# Custom texture splatting
 
 # Introduction
 

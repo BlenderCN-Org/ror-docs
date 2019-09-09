@@ -1,8 +1,4 @@
----
-title: "Nautical vehicles"
-layout: page
-categories: [vehicle-creation]
----
+# Nautical vehicles
 
 
 

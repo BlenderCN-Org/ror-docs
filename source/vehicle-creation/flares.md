@@ -1,8 +1,4 @@
----
-title: "Flares (how to add lights)"
-layout: page
-categories: [vehicle-creation]
----
+# Flares (how to add lights)
 
 
 

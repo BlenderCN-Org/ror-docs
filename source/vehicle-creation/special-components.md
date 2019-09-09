@@ -1,8 +1,4 @@
----
-layout: page
-categories: [vehicle-creation]
-title: "Special components"
----
+# Special components
 
 ## Command hydraulics - `commands`
 

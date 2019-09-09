@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Stolen Content"
----
+# Rules: Stolen Content
 
 This page exists as a clarification for the following rule:
 

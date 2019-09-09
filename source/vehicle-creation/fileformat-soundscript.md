@@ -1,8 +1,4 @@
----
-title: "Soundscript file reference"
-layout: page
-categories: [vehicle-creation]
----
+# Soundscript file reference
 
 
 

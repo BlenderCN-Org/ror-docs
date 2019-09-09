@@ -1,8 +1,4 @@
----
-title: "Building rail vehicles"
-layout: page
-categories: [vehicle-creation]
----
+# Building rail vehicles
 
 
 

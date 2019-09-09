@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Search"
----
+# Rules: Search
 
 This page exists as a clarification for the following rule:
 

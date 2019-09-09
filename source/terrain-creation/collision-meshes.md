@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Collision meshes"
-categories: [terrain-creation]
----
+# Collision meshes
 
 A collision mesh is a "substitute" or "replacement" mesh for a given model. Except, this mesh does not replace the original model, it is transparent and simplifies your model. It does not simplify how it looks, but how it behaves as an object in Rigs of Rods. For example, if you want to model a log cabin with a detailed roof, drainpipes, and window frames, then the framerate/physic lag in Rigs of Rods would be a single digit. However, a collision mesh will make it behave like it is the most simple model out there. Now that you (hopefully) comprehend this concept, let's begin the tutorial.
 

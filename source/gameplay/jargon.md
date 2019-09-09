@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Jargon"
-categories: [gameplay]
----
+# Jargon
 
 This is a glossary of un-intuitive terms used by members of RoR community.
 

@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Singularity"
----
+# Rules: Singularity
 
 This page exists as a clarification for the following rule:
 

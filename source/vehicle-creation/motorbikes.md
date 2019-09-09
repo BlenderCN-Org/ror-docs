@@ -1,8 +1,4 @@
----
-title: "Motorbikes"
-layout: page
-categories: [vehicle-creation]
----
+# Motorbikes
 
 
 

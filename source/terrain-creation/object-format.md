@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Object format (.odef)"
-categories: [terrain-creation]
----
+# Object format (.odef)
 ### Introduction
 
 The `.odef` format specifies a static object that can be placed on a terrain.

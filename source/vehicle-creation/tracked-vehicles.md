@@ -1,8 +1,4 @@
----
-layout: page
-categories: [vehicle-creation]
-title: "Tracked vehicles (using slidenodes)"
----
+# Tracked vehicles (using slidenodes)
 
 
 

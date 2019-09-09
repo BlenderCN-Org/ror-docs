@@ -1,8 +1,4 @@
----
-title: "Engine"
-layout: page
-categories: [vehicle-creation]
----
+# Engine
 
 
 

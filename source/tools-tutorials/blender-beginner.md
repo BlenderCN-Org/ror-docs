@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Blender for beginners"
-categories: [tools-tutorials]
----
+# Blender for beginners
 
 
 

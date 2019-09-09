@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Old Terrain System (pre 0.4)"
-categories: [terrain-creation]
----
+# Old Terrain System (pre 0.4)
 
 This subsystem is obsolete since RoR version 0.4.0.
 It was based upon Ogre engine's TerrainManager component,

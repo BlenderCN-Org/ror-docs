@@ -1,8 +1,4 @@
----
-title: "Boats"
-layout: page
-categories: [vehicle-creation]
----
+# Boats
 
 
 

@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Suspension"
-categories: [vehicle-creation]
----
+# Suspension
 
 
 

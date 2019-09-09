@@ -1,8 +1,4 @@
----
-layout: page
-title:  "L3DT Map Making"
-categories: [terrain-creation]
----
+# L3DT Map Making
 
 ## Introduction
 

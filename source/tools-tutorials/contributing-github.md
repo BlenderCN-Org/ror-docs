@@ -1,8 +1,4 @@
----
-layout: page
-title:  "How to contribute to community projects using GitHub"
-categories: [tools-tutorials]
----
+# How to contribute to community projects using GitHub
 
 
 

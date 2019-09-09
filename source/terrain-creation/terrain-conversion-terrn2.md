@@ -1,8 +1,4 @@
----
-layout: page
-title: "Converting terrain to `terrn2` format"
-categories: [terrain-creation]
----
+# Converting terrain to `terrn2` format
 
 ## Basic (Single-layer) 0.3x terrain to 0.4 conversion
 

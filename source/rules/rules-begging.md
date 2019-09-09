@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Begging"
----
+# Rules: Begging
 
 This page exists as a clarification for the following rule:
 

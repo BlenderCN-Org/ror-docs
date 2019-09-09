@@ -1,8 +1,4 @@
----
-title: "Aircraft and aerodynamics"
-layout: page
-categories: [vehicle-creation]
----
+# Aircraft and aerodynamics
 
 
 

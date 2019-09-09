@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Branding"
-categories: [tools-tutorials]
----
+# Branding
 
 # Usage Guidelines
 

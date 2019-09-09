@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Ogre legacy materials"
-categories: [tools-tutorials]
----
+# Ogre legacy materials
 
 
 

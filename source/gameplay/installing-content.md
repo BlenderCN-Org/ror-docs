@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Installing content"
-categories: [gameplay]
----
+# Installing content
 
 This page will show you how to install vehicles and terrains for Rigs of Rods.
 

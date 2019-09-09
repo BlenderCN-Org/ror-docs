@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Controls and configuration"
-categories: [gameplay]
----
+# Controls and configuration
 
 ## Intro
 

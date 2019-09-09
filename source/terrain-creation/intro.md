@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Intro to terrain creation"
-categories: [terrain-creation]
----
+# Intro to terrain creation
 
 
 

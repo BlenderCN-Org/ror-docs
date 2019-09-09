@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Useless"
----
+# Rules: Useless
 
 This page exists as a clarification for the following rule:
 

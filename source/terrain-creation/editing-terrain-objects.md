@@ -1,13 +1,4 @@
----
-layout: page
-title:  "Adding/moving terrain objects"
-categories: [terrain-creation]
----
-
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
+# Adding/moving terrain objects
 
 # Introduction
 

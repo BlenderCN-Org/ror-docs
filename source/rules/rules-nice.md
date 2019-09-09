@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Nice"
----
+# Rules: Nice
 
 This page exists as a clarification for the following rule:
 

@@ -1,8 +1,4 @@
----
-layout: page
-title:  "Terrain Scripting"
-categories: [terrain-creation]
----
+# Terrain Scripting
 
 
 

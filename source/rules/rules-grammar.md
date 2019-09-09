@@ -1,7 +1,4 @@
----
-layout: page
-title:  "Rules: Grammar"
----
+# Rules: Grammar
 
 This page exists as a clarification for the following rule:
 
