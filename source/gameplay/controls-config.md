@@ -20,7 +20,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
 	<tr bgcolor="#E5A36C"><th style="color: #000000">General</th><th style="color: #000000">Key</th></tr>
     <tr><td>Pause game            </td><td>ESC</td></tr>
     <tr><td>Quit game            </td><td>ALT+F4</td></tr>
-	<tr><td>Spawn new vehicle</td><td>CTRL+G</td></tr>
+	  <tr><td>Spawn new vehicle</td><td>CTRL+G</td></tr>
     <tr><td>Enter or exit vehicle</td><td>ENTER</td></tr>
     <tr><td>Reset vehicle       </td><td>I    </td></tr>
     <tr><td>Reset vehicle in place</td><td>BACKSPACE</td></tr>
@@ -110,7 +110,6 @@ Note: You can load a savegame from the main menu.
     <tr><td>Steer Left                               </td><td>LEFT     </td></tr>
     <tr><td>Steer Right                              </td><td>RIGHT    </td></tr>
     <tr><td>Accelerate/Brake                         </td><td>UP / DOWN</td></tr>
-    <tr><td>Tire Pressure<br>(not for all trucks)</td><td>RBRACKET / LBRACKET</td></tr>
 </table>
 
 #### Shifting
@@ -149,6 +148,7 @@ Note: You can load a savegame from the main menu.
     <tr><td>Toggle beacons    </td><td>M     </td></tr>
     <tr><td>Rescue truck      </td><td>R     </td></tr>
     <tr><td>Particle cannon   </td><td>G     </td></tr>
+		<tr><td>Tire Pressure<br>(not for all trucks)</td><td>RBRACKET / LBRACKET</td></tr>
 </table>
 
 #### Commands

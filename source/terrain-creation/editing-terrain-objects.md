@@ -13,11 +13,11 @@ categories: [terrain-creation]
 
 As of Rigs of Rods 0.4.x, terrain objects are stored in `.tobj` files, they contain placements for all objects/trees/grass/etc on a terrain. This page will show you how to add/move terrain objects. There are multiple ways to do this, however this page will only explain the two easiest methods.
 
-# Adding a new object 
+# Adding a new object
 
-For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/downloads.php?do=file&id=6) using Rigs of Rods version 0.4.7.0+. 
+For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/downloads.php?do=file&id=6) using Rigs of Rods version 0.4.7.0+.
 
-Open Rigs of Rods and select the map you want to add an object to. 
+Open Rigs of Rods and select the map you want to add an object to.
 
 Go to where you want the object to be without being in a vehicle, for example here:
 ![image1](/images/adding-terrain-object1.png)
@@ -62,7 +62,7 @@ Save the file and reopen Rigs of Rods. Your new object should appear roughly whe
 
 To precisely place your object, you can use the built-in "terrain/object editor" that is included with 0.4.7.0+. I'll explain how to use it below.
 
-# Moving objects 
+# Moving objects
 
 **Note: The editor cannot move roads/Paged Geometry trees/grass.**
 
@@ -72,7 +72,7 @@ Next, load the terrain you want to edit. While not in a vehicle, press `CTRL+Y`.
 
 ![4](/images/adding-terrain-object4.png)
 
-You should now be in "terrain editing mode". 
+You should now be in "terrain editing mode".
 
 These are the controls for the editor:
 ```
@@ -93,11 +93,6 @@ In this example I will rotate the truckshop. Move RoRBot near the object and pre
 Use the keys listed above to move/rotate. You may have to switch the rotation axis using the `R` key to correctly rotate the object.
 
 Once you have your object(s) placed where you want it press `CTRL+Y` again to exit the editor:
-
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>IMPORTANT NOTE:</strong><br />In 0.4.8RC4, to save your changes you must enter the editor again by pressing CTRL+Y after exiting. This has been fixed in the development builds.</div>
-</div>
 
 ![6](/images/adding-terrain-object6.png)
 
@@ -135,8 +130,3 @@ And finally, copy the correct placement line to your map's `.tobj` file. Example
 Open Rigs of Rods again and load your map, the object should be in the same place as when you moved it using the editor.
 
 Congratulations! You have learned how to easily add/move objects.
-
-
-
-
-
