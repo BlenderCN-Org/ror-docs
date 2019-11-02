@@ -1,7 +1,5 @@
 # Truck file format
 
-
-
 "Truck" is a text-based file format which defines all physically simulated objects in the game, be it vehicles of any kind, machinery, loads or any other things. The name is historical - Rigs of Rods was originally a heavy truck simulator, other kinds of vehicles came later.
 
 Recognized filename extensions for this format are: `.truck`, `.car`, `.boat`, `.airplane`, `.train`, `.machine`, `.trailer`, `.load`, `.fixed`. Note the extension is only informative, the actual type of object is determined by file contents.
@@ -1546,7 +1544,7 @@ The new `L` node option will help to understand and use `set_node_defaults`, `p`
 
 This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes the general beams deformation physics.
 
-Use this only once per truck file, it's a general activation and setting of advanced beam physics . Its recommended to place the enable\_advanced\_deformation before the first beams section in your truck-file.
+Use this only once per truck file, it's a general activation and setting of advanced beam physics . Its recommended to place the enable\_advanced\_deformation before the first beams section in your truck-file.
 
 Truck file syntax:
 
@@ -1887,7 +1885,8 @@ Parameters:
 -   **Max. length**: <span style="color:#BD0058">Real number</span>; The greatest length possible (proportional to original length; `1.0` means no extension; recommended you keep it as `1.0`).
 -   **Options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = `n`</span>
     -   `n`: Visible (default)
-    -   `i`: Invisible.
+    -   `i`: Invisible
+    -	`s`: <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> Prevents self locking.
 -   **Max. stress** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 12000</span>; The force (in Newtons) when the ties stop to shorten.
 -   **Group** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = `none`</span>
 
@@ -2029,7 +2028,7 @@ The axle section is different from other sections in that it is broken into prop
         -   `l` - Locked (wheels locked together regardless of torque input)
         -   `s` - Split evenly (each wheel gets equal torque regardless of wheel speed)
         -   `v` - Viscous <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> (applies locking force based on the amount of torque)
-		
+
 Sample axle section:
 
 ```
@@ -2066,8 +2065,8 @@ Parameters:
 
 -   **axle_1**: The number of the first axle, the one which is always driven.
 -   **axle_2**: The number of the second axle, the one which is only driven in 4WD mode.
--   **2wd_mode**: Allows/disallows 2WD mode. 
--   **2wd_lo_mode**: Allows/disallows 2WD Lo mode. 
+-   **2wd_mode**: Allows/disallows 2WD mode.
+-   **2wd_lo_mode**: Allows/disallows 2WD Lo mode.
 -   **gear_ratio(s)**: Alternate gear ratios in Lo mode. If none are specified, Lo mode will be disabled.
 
 Notes:
@@ -2079,7 +2078,7 @@ Notes:
 Sample transfercase section:
 
 ```
-;Basic transfer case, no alternate ratio(s) 
+;Basic transfer case, no alternate ratio(s)
 
 transfercase
 ;default driven axle, alternate axle, has 2wd mode, has 2wd lo mode
@@ -2099,13 +2098,13 @@ transfercase
 ```
 wheeldetachers
 ;wheel_id, detacher_group
-1, 1
-2, 2
+0, 1
+1, 2
 ```
 
 Parameters:
 
--   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at `1`.
+-   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at `0`.
 -   **detacher_group**: <span style="color:#BD0058">Real number</span>; The d`etacher_group` number.
 
 Example usage:
@@ -2136,8 +2135,8 @@ meshwheels
 
 wheeldetachers
 ;wheel_id, detacher_group
-1, 1
-2, 2
+0, 1
+1, 2
 ```
 
 ### Collisionboxes
@@ -2252,11 +2251,11 @@ Parameters:
 -   **Flare Y offset**: <span style="color:#BD0058">Real number</span>; Flare position on Y axis in % of distance from ref-node to Y-node
 -   **Type**: <span style="color:#BD0058">Character</span>; <span style="color:#0B8A00">default = f (headlight)</span>; Type of flare
     -   `f` (default mode when not stated): Headlight.
-    -   `b` : Brakelight.
-    -   `l` : Left blinker.
-    -   `r` : Right blinker.
-    -   `R` : Reverse light (on when driving in R gear)
-    -   `u` : User controlled light. (i.e. fog light) (see control numbers)
+    -   `b` : Brakelight.
+    -   `l` : Left blinker.
+    -   `r` : Right blinker.
+    -   `R` : Reverse light (on when driving in R gear)
+    -   `u` : User controlled light. (i.e. fog light) (see control numbers)
 -   **Control number**: <span style="color:#BD0058">Decimal number</span>; - This determines how this light is switched on and off, if you chose a user controlled light. Valid user defined control numbers are `0-500`. If you chose a non-user controlled light(i.e. brake light) you should put `-1` here. `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on.
 
 Some custom control numbers found in 0.38+:
@@ -2816,42 +2815,35 @@ Note: It's important to keep an eye on the number of vertices of your meshes. No
 
 ### Submesh
 
-Defines the most visible part of the truck: the body. It will dress the chassis with solid triangles. You must define each body panel (a continuous almost-flat section) in a different submesh section, in order to have sharp body angles, and to simplify texturing.
+Defines the collision surface of the truck; see required subsection `cab` and option `c`
 
-Most modern flexbodied trucks do not need a submesh section for visual purposes. However, the section is still required for collision to work.
+It may also generate textured mesh to visualize the truck; see optional subsection `texcoords`
 
-A submesh has two subsections: the texcoords, that places nodes of the submesh on the texture image (coordinates between `0.0` and `1.0`) , and then the cab subsection, that draws the triangles, with triplets of node numbers.
+#### (sub-section) cab
+
+Specifies a series of triangles. Order of nodes defines orientation - the side with counterclockwise winding will be 'front' (or 'positive'), the other 'rear' (or 'negative'). If `texcoords` are used, only the 'front' side will be visible, the 'rear' side will be see-through (or black if you use `backmesh`).
+
+-   **node\_1**: <span style="color:#BD0058">Node number</span>; First point of collision triangle.
+-   **node\_2**: <span style="color:#BD0058">Node number</span>; Second point of collision triangle.
+-   **node\_2**: <span style="color:#BD0058">Node number</span>; Third point of collision triangle.
+-   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>
+    -   `n`: Placeholder. Does nothing.
+    -   `c`: This triangle will be a contact triangle that can contact with contacters nodes. Deprecated aliases: `p`, `u`.
+    -   `b`: This triangle will be part of a buoyant hull. Deprecated aliases: `D`, `F`, `S`.
+    -   `s`: This triangle will be part of a buoyant hull, mouse dragging will be disabled.
+    -   `r`: This triangle will be part of a buoyant hull, mouse dragging only.
 
 #### (sub-section) texcoords
+
+Specifies texture coordinates (also called 'UV coordinates') for `cab` triangles. Only triangles with all 3 texcoords are displayed. The texture is specified in `globals` section.
 
 -   **node**: <span style="color:#BD0058">Node number</span>; Node representing a vertex in the resulting geometry.
 -   **u**: <span style="color:#BD0058">Real number 0.0 - 1.0</span>; The U texture coordinate: Position of this vertex on the X axis of the image.
 -   **v**: <span style="color:#BD0058">Real number 0.0 - 1.0</span>; The V texture coordinate: Position of this vertex on the Y axis of the image.
 
-#### (sub-section) cab
-
--   **node\_1**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 1 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
--   **node\_2**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 2 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
--   **node\_2**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 2 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
--   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>
-    -   `n`: Placeholder. Does nothing.
-    -   `c`: This triangle will be a contact triangle that can contact with contacters nodes.
-    -   `b`: This triangle will be part of a buoyant hull.
-    -   `s`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging will be disabled.
-    -   `r`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging only.
-    -   `D`: (Combination of **b** and **c** flags) This triangle will be both a contact triangle AND a buoyant hull part.
-    -   `p`: <span style="background-color:#fb7">\[ Version 0.36a - 0.4.7.0 \]</span> Makes the force required to pierce through the submesh triangle ten times bigger.
-    -   `u`: <span style="background-color:#fb7">\[ Version 0.36a - 0.4.7.0 \]</span> Makes it impossible to pierce the submesh.
-    -   `F`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `p` but also a boat hull.
-    -   `S`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `u` but also a boat hull.
-
-The order in which the three points forming the triangles is given is important, as its winding defines in which direction it will be visible. The winding must be counterclockwise to be visible.
-
-The easiest way to create a submesh is to use [Blender 2.49b](https://forum.rigsofrods.org/downloads.php?do=file&id=180).
-
 #### (sub-directive) backmesh
 
-No params. If added, the triangles' backsides will be black instead of see-through.
+No params. If added, the triangles' backsides (see `texcoords`) will be black instead of see-through.
 
 ```
 ;cabin top
@@ -2882,7 +2874,7 @@ cab
 backmesh
 ```
 
-When making an invisible collision submesh for a flexbody vehicle, the "texcoords" section is not needed and should not be used.
+Example of invisible collision submesh for a flexbody vehicle (`texcoords` section is not used):
 
 ```
 ;front bumper
@@ -3013,11 +3005,11 @@ Both, cameras and mirrors, use the same technique, cameras just add a reflective
 
 Parameters:
 
--   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The node where the camera is placed. This is your reference node. Any existing node\# is valid.
--   **left\_node**: <span style="color:#BD0058">Node number/name</span>; The Z-reference of the camera, should be exactly right of the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
--   **bottom\_node**: <span style="color:#BD0058">Node number/name</span>; The Y-reference of the camera, should be exactly below the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
--   **alt\_reference\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative cam position node. It replaces the reference node for position but not for orientation. Good to setup mirrors and cams with just one extra node to an existing truck. Important for mirrors, read below! Any existing node\# is valid.
--   **alt\_orientation\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative camera orientation node. If set, it skips any camera orientation calculation and makes the cam permanent look at the set node. Good for hooks moving up and down. Any existing node\# is valid.
+-   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The node where the camera is placed. This is your reference node. Any existing node\## is valid.
+-   **left\_node**: <span style="color:#BD0058">Node number/name</span>; The Z-reference of the camera, should be exactly right of the reference node when the camera points forward to the trucks front. Any existing node\## is valid.
+-   **bottom\_node**: <span style="color:#BD0058">Node number/name</span>; The Y-reference of the camera, should be exactly below the reference node when the camera points forward to the trucks front. Any existing node\## is valid.
+-   **alt\_reference\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative cam position node. It replaces the reference node for position but not for orientation. Good to setup mirrors and cams with just one extra node to an existing truck. Important for mirrors, read below! Any existing node\## is valid.
+-   **alt\_orientation\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative camera orientation node. If set, it skips any camera orientation calculation and makes the cam permanent look at the set node. Good for hooks moving up and down. Any existing node\## is valid.
 -   **offset\_x** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; X-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional forth and back on its roll-axis.
 -   **offset\_y** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Y-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam up and down in meters on its rotation-axis.
 -   **offset\_z** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Z-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional left and right on its pitch-axis.
@@ -3041,8 +3033,8 @@ Parameters:
 -   Its recommended that mirrors always use the alternative cam position node placed precise in the center of the mirror-mesh (the reflecting part) of the related mirror. Otherwise, reflective calculation might be wrong. Mirrors can use y-axis rotation presets for easy adjustment, to rotate x/z axis move the reference nodes accordingly to avoid gimbal lock, offset preset work too, but are not recommended to use.
 -   Wrong or not existing materials might make RoR crash while parsing the truck. Be accurate !
 -   `.material` file material definition is strictly necessary and needs to match the material in the truck-file line. Material definition features a fall-back texture when camera is not active or not set. Just add a texture unit with a texture definition, it will be replaced with the generated texture when camera is setup correct and active automatically.
--   Do **NOT** the set alternative camera orientation node to the same node\# then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
--   In 0.4.7.0, videocameras do not work with [skins](/vehicle-creation/alternate-skins). This has been fixed in the development builds. 
+-   Do **NOT** the set alternative camera orientation node to the same node\## then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
+-   In 0.4.7.0, videocameras do not work with [skins](/vehicle-creation/alternate-skins). This has been fixed in the development builds.
 
 **Samples:**
 
@@ -3207,7 +3199,7 @@ Since <span style="background-color:#fb7">\[ Version 0.36+ \]</span>, vehicles c
 
 ### disabledefaultsounds
 
-Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example :
+Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example :
 
 ```
 disabledefaultsounds
@@ -3298,7 +3290,7 @@ soundsources
 1, tracks/default_turn_signal
 ```
 
- 
+
 
 #### Airplane (Prop)
 
@@ -3330,7 +3322,7 @@ soundsources
 1, tracks/default_turboprop_hipower8
 ```
 
- 
+
 
 #### Airplane (Jet)
 
