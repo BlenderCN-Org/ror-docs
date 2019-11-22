@@ -3,25 +3,34 @@
 Welcome to the General FAQ! Here you'll find answers to common questions and errors.
 It is organized into sections to make finding answers easier.
 
+## Supported operating systems 
+ 
+Rigs of Rods supports Windows 7 SP1, Windows 8/8.1, Windows 10, and Linux.
+
+Windows XP & Vista are no longer supported as of 0.4.8 RC5. 
+
+ChromeOS (Chromebooks), MacOS, and mobile platforms (Android/iOS) are not supported and most likely never will be.
+
 ## Downloading Rigs of Rods
 
-#### Latest version
+#### Windows
 
 You can find the latest version on the [home page](https://www.rigsofrods.org/). If you need help, check out the [Beginner's Guide](/gameplay/beginners-guide/).
 
-#### Old versions
+#### Linux
 
-You can find old RoR versions on [SourceForge](https://sourceforge.net/projects/rigsofrods/files/rigsofrods/). These versions are entirely unsupported!
+Linux users can download the latest version from [Itch.io](https://rigs-of-rods.itch.io/rigs-of-rods).
 
-#### Linux/MacOS
+It is recommended to install using the [Itch desktop app](https://itch.io/app).
 
-For Linux, You can download the latest version from [Itch.io](https://rigs-of-rods.itch.io/rigs-of-rods).
-
-Due to the lack of MacOS developers, RoR does not currently support MacOS. The only way is to run the Windows version using [Wine](https://www.winehq.org/).
-
-#### Development builds
+#### Development builds 
 
 If you want to try the latest changes to RoR, you can download a [development build](https://forum.rigsofrods.org/threads/ror-development-builds-for-0-4-8-for-windows-and-linux.696/).
+
+
+#### Old versions 
+
+You can find old RoR versions on [SourceForge](https://sourceforge.net/projects/rigsofrods/files/rigsofrods/). These versions are entirely unsupported!
 
 ## Mods
 
@@ -54,11 +63,11 @@ The latest version, 0.4.8.0-RC5, supports RoRNet 2.41.
 
 When launching RoR, you may receive a MSVCP140.dll/MSVCP110.dll/MSVCP100.dll error.
 
-This is caused by the required Visual C++ x86/x64 Redistributable not being installed.
+This is caused by the required Visual C++ x86/x64 Redistributable not being installed. 
 
 Install the correct version that matches the `.dll` name in the error then restart your PC.
 
-When the site asks what version to download, just install both.
+When the site asks what version to download, just install both. 
 
 - [MSVCP140.dll](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
@@ -67,22 +76,24 @@ When the site asks what version to download, just install both.
 - [MSVCP100.dll](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 
 
-#### Cannot open Xbox 360 input map
+#### Cannot open Xbox 360 input map 
 #### Failed to generate list of installed content
 
-When you launch RoR, you may receive this error:
+When you launch RoR, you may receive the following errors:
 
 ![error](/images/error-special-chars.png)
 
-This is caused by having special characters in your Windows username (e.g. `Miké`).
+![error2](/images/error-generatecontent.png)
+
+This is caused by having special characters in your Windows username (e.g. `Usér`).  
 
 Current workaround:
 
 1. Inside the installation directory, where RoR.exe is (usually `C:\Program Files\Rigs of Rods`) create a folder called `config`
 2. Right click `RoR.exe` and click `Properties`
-3. Under the `Compatibility` tab, check the `Run this program as administrator` box, then click `Apply` and close the window.
+3. Under the `Compatibility` tab, check the `Run this program as administrator` box, then click `Apply` and close the window. 
 
-RoR will now use the `config` folder instead of the default `Documents\Rigs of Rods 0.4` folder.
+RoR will now use the `config` folder instead of the default `Documents\Rigs of Rods 0.4` folder. 
 
 If you installed the content packs, you will have to move the `*.zip` files from `Documents\Rigs of Rods 0.4\mods` to `config\mods`. New mods are also installed there.
 
@@ -90,12 +101,8 @@ If you installed the content packs, you will have to move the `*.zip` files from
 
 #### Reporting bugs
 
-You can report bugs and other issues on RoR's [GitHub repo issue tracker.](https://github.com/RigsOfRods/rigs-of-rods/issues)
+You can report bugs and other issues on RoR's [GitHub repo issue tracker.](https://github.com/RigsOfRods/rigs-of-rods/issues) 
 
 Make sure your issue hasn't already been reported.
 
-**The issue tracker is only for issues relating to the latest development build, if you're using 0.4.8.0-RC5, please post on the [correct support forum](https://forum.rigsofrods.org/#troubleshooting.7) instead.**
-
-#### Windows XP support
-
-The latest RoR version does not support any Windows version older than Vista.
+**The issue tracker is only for issues relating to the latest development build, if you're using 0.4.8.0-RC5, please post on the [correct support forum](https://forum.rigsofrods.org/#troubleshooting.7) instead.** 
